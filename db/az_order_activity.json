@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "60a3c79488359269db72a222"
+  },
+  "note": "<span class=\"co-purple bold\">Ghi chú: Tài khoản admin đã gán đơn hàng cho sale zm.sale.duong</span>",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "order_id": "60a3c768139da43b8d26b594",
+  "product_id": "608677af8600561c67020972",
+  "source_id": "5fda80e62eef2e49cccb17be",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-18T13:58:49.634Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T13:56:36.612Z"
+  },
+  "reason": "success"
+},{
+  "_id": {
+    "$oid": "60a3c79488359269db72a223"
+  },
+  "note": "<span class=\"co-purple bold\">Ghi chú: Tài khoản admin đã gán đơn hàng cho sale zm.sale.duong</span>",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "order_id": "60a3c4e7858c1b36b067fa52",
+  "product_id": "608677af8600561c67020972",
+  "source_id": "5fda7e146f1e9582b5bfcb71",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-18T13:56:36.621Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T13:56:36.621Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a3c819f402e9176e5e2f72"
+  },
+  "note": "Tài khoản sale zm.sale.duong đã cập nhật đơn hàng. <br><span class=\"co-red bold\">Ghi chú: Đã chốt</span>",
+  "origin_note": "Đã chốt",
+  "user_create_id": "5fda84042eef2e49cccb17c8",
+  "order_id": "60a3c768139da43b8d26b594",
+  "product_id": "608677af8600561c67020972",
+  "source_id": "5fda80e62eef2e49cccb17be",
+  "reason": "success",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-18T13:58:49.635Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T13:58:49.635Z"
+  }
+}]

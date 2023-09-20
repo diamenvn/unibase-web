@@ -1,0 +1,332 @@
+[{
+  "_id": {
+    "$oid": "5fda7aa46f1e9582b5bfcb6c"
+  },
+  "type": "filter_confirm",
+  "type_confirm": 4,
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Đơn hoàn trả"
+},{
+  "_id": {
+    "$oid": "5fda7b9b2eef2e49cccb17a8"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Không có nhu cầu"
+},{
+  "_id": {
+    "$oid": "5fda7fad2eef2e49cccb17a9"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Khách hẹn gọi lại sau"
+},{
+  "_id": {
+    "$oid": "5fda7fb72eef2e49cccb17aa"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Đơn giao nội thành"
+},{
+  "_id": {
+    "$oid": "5fda7fc22eef2e49cccb17ab"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Suy nghĩ thêm"
+},{
+  "_id": {
+    "$oid": "5fda7fc92eef2e49cccb17ac"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Khách trêu"
+},{
+  "_id": {
+    "$oid": "5fda7fd22eef2e49cccb17ad"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Đơn ship hỏa tốc"
+},{
+  "_id": {
+    "$oid": "5fda7fd92eef2e49cccb17ae"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Đơn upsale"
+},{
+  "_id": {
+    "$oid": "5fda7fe22eef2e49cccb17af"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Khách không nghe máy"
+},{
+  "_id": {
+    "$oid": "5fda7feb2eef2e49cccb17b0"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Sai số điện thoại"
+},{
+  "_id": {
+    "$oid": "5fda7ff42eef2e49cccb17b1"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Điện thoại bận"
+},{
+  "_id": {
+    "$oid": "5fda7ffb2eef2e49cccb17b2"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Số nước ngoài"
+},{
+  "_id": {
+    "$oid": "5fda80022eef2e49cccb17b3"
+  },
+  "type": "filter_status",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Chờ chuyển hàng"
+},{
+  "_id": {
+    "$oid": "5fda802d2eef2e49cccb17b4"
+  },
+  "type": "filter_ship",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Viettel Post"
+},{
+  "_id": {
+    "$oid": "5fda804d2eef2e49cccb17b5"
+  },
+  "type": "filter_ship",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "VNPOST"
+},{
+  "_id": {
+    "$oid": "5fda80552eef2e49cccb17b6"
+  },
+  "type": "filter_ship",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Giaohangtietkiem.vn"
+},{
+  "_id": {
+    "$oid": "5fda805d2eef2e49cccb17b7"
+  },
+  "type": "filter_ship",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Giaohangnhanh.vn"
+},{
+  "_id": {
+    "$oid": "5fda80642eef2e49cccb17b8"
+  },
+  "type": "filter_ship",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Grab"
+},{
+  "_id": {
+    "$oid": "5fda806b2eef2e49cccb17b9"
+  },
+  "type": "filter_ship",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Đơn nội thành"
+},{
+  "_id": {
+    "$oid": "5fda80732eef2e49cccb17ba"
+  },
+  "type": "filter_ship",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Đơn ngoại thành"
+},{
+  "_id": {
+    "$oid": "5fda80ab2eef2e49cccb17bb"
+  },
+  "type": "filter_confirm",
+  "type_confirm": 4,
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Chuyển sang kế toán"
+},{
+  "_id": {
+    "$oid": "5fda80b32eef2e49cccb17bc"
+  },
+  "type": "filter_confirm",
+  "type_confirm": 4,
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Chuyển hàng"
+},{
+  "_id": {
+    "$oid": "5fda80bc2eef2e49cccb17bd"
+  },
+  "type": "filter_confirm",
+  "type_confirm": 4,
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Chưa xác nhận được"
+},{
+  "_id": {
+    "$oid": "60a41238dac6f9ac351966ed"
+  },
+  "type": "filter_confirm",
+  "type_confirm": 0,
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Đơn đã xác nhận"
+},{
+  "_id": {
+    "$oid": "60a412bfdac6f9ac351966ee"
+  },
+  "type": "filter_confirm",
+  "type_confirm": 5,
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "status": 1,
+  "text": "Đơn thành công"
+}]

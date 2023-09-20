@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "5fda7e146f1e9582b5bfcb71"
+  },
+  "source_name": "Zalo",
+  "status": 1,
+  "updated_at": "23423",
+  "created_at": "234234"
+},{
+  "_id": {
+    "$oid": "5fda80e62eef2e49cccb17be"
+  },
+  "source_name": "Facebook",
+  "status": 1,
+  "updated_at": "23423",
+  "created_at": "234234"
+},{
+  "_id": {
+    "$oid": "5fda80ec2eef2e49cccb17bf"
+  },
+  "source_name": "Báo mới",
+  "status": 1,
+  "updated_at": "23423",
+  "created_at": "234234"
+},{
+  "_id": {
+    "$oid": "5fda80f22eef2e49cccb17c0"
+  },
+  "source_name": "Tiktok",
+  "status": 1,
+  "updated_at": "23423",
+  "created_at": "234234"
+},{
+  "_id": {
+    "$oid": "5fda80fb2eef2e49cccb17c1"
+  },
+  "source_name": "Zing new",
+  "status": 1,
+  "updated_at": "23423",
+  "created_at": "234234"
+},{
+  "_id": {
+    "$oid": "5fda81012eef2e49cccb17c2"
+  },
+  "source_name": "Messenger",
+  "status": 1,
+  "updated_at": "23423",
+  "created_at": "234234"
+}]

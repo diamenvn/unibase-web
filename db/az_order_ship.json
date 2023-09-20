@@ -1,0 +1,3742 @@
+[{
+  "_id": {
+    "$oid": "5fda7e62eb25000031004975"
+  },
+  "order_id": "5fda7e3beb25000031004973",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "Nam",
+  "phone": "0888633630",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2020-12-16T21:38:42.050Z"
+  },
+  "created_at": {
+    "$date": "2020-12-16T21:38:42.050Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fda8081ddb729190d1ab333"
+  },
+  "order_id": "5fda7eefeb25000031004978",
+  "user_create_id": "5fda84042eef2e49cccb17c8",
+  "name": "Nguyễn Đắc Tuấn",
+  "phone": "0855510590",
+  "provin": "Hà Nội",
+  "district": "Triệu Phong",
+  "town": "TT Ái Tử",
+  "address": "17 Phan Văn Dật",
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "1",
+      "price": "890000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "890000",
+  "updated_at": {
+    "$date": "2020-12-16T22:17:57.478Z"
+  },
+  "created_at": {
+    "$date": "2020-12-16T21:47:45.607Z"
+  },
+  "date_success_order": {
+    "$date": "2020-12-16T22:17:57.103Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e685e1cb3545235404502e3"
+  },
+  "order_id": "5e65ab2fb94ff263f5346582",
+  "user_create_id": "5e65a5ff5461e269757b2f2a",
+  "name": "Nam đào 2",
+  "phone": "0977110331",
+  "provin": "Hà Nội",
+  "district": "Quận Hai Bà Trưng",
+  "town": "Phường Trúc Bạch",
+  "address": "13",
+  "product": [
+    {
+      "product_id": "5e5023daadbec995873377f6",
+      "amount": "2",
+      "price": "0"
+    },
+    {
+      "product_id": "5e675a09f4c695bae57bf5c0",
+      "amount": "1",
+      "price": "0"
+    },
+    {
+      "product_id": "5e675a30f4c695bae57bf5c2",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "viettel",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1600000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T04:01:40.526Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T03:42:20.525Z"
+  },
+  "filter_lading_ship": "5e64e6225461e269757b2f24",
+  "filter_ship": "5e63d3165461e269757b2f1d"
+},{
+  "_id": {
+    "$oid": "5e689ee8ceddd452d46c54c3"
+  },
+  "order_id": "5e68809eab4e5f23393c18c4",
+  "user_create_id": "5e687014b052a21136080112",
+  "name": "Võ Xuân Thi  (cho khách xem hàng không làm rách tem niêm phong)",
+  "phone": "0919978199",
+  "provin": "Trà Vinh",
+  "district": "Thành Phố Trà Vinh",
+  "town": "Phường 4",
+  "address": "50 Chu Văn , Phường 4, Thành Phố Trà Vinh, tỉnh Trà Vinh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "520000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:00:22.498Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:18:48.314Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e689eebceddd452d46c54c5"
+  },
+  "order_id": "5e68827eda7af61fb04dc002",
+  "user_create_id": "5e676bd2c0a64507f665f232",
+  "name": "Lê Thị Kim Oanh ( CHO KHÁCH XEM HÀNG - KHÔNG LÀM RÁCH TEM NIÊM PHONG)",
+  "phone": "0987387778",
+  "provin": "Bà Rịa - Vũng Tàu",
+  "district": "Huyện Xuyên Mộc",
+  "town": "Xã Bàu Lâm",
+  "address": "Ấp 2 Đông, Xã Bàu Lâm, Huyện Xuyên Mộc, Bà Rịa - Vũng Tàu",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "4",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1960000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T09:59:55.872Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:18:51.312Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68a13eeeeb7f32573aad25"
+  },
+  "order_id": "5e6893cc66ed4601003a3c74",
+  "user_create_id": "5e686b6cdd6a642274240932",
+  "name": "Trần Thị Huyền (cho khách xem hàng không làm rách tem)",
+  "phone": "0934711126",
+  "provin": "Khánh Hòa",
+  "district": "Thành Phố Cam Ranh",
+  "town": "Phường Cam Lộc",
+  "address": "Số 3B/2 Lê Hồng Phong, Lộc Hòa",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "4",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Lọ thủy tinh dễ vỡ, gọi trước khi giao 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1960000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:05:29.169Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:28:46.134Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68a1657353b65c891f23a3"
+  },
+  "order_id": "5e68997a2c368c54bf033c42",
+  "user_create_id": "5e68945ab913b67849784322",
+  "name": "Nguyễn Hương (cho khách xem hàng không làm rách tem)",
+  "phone": "0898700689",
+  "provin": "Điện Biên",
+  "district": "Huyện Mường Ảng",
+  "town": "Thị Trấn Mường Ảng",
+  "address": "Tổ dân phố 7, Thị Trấn Mường Ảng, Huyện Mường Ảng, Điện Biên",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "520000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng thủy tinh dễ vỡ xin nhẹ tay.",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:02:54.226Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:29:25.981Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68a1827353b65c891f23a6"
+  },
+  "order_id": "5e68809dab4e5f23393c18c3",
+  "user_create_id": "5e687014b052a21136080112",
+  "name": "Anh Lê Hường(cho khách xem hàng không làm rách tem niêm phong)",
+  "phone": "0979823199",
+  "provin": "Hà Nội",
+  "district": "Huyện Thường Tín",
+  "town": "Xã Thắng Lợi",
+  "address": "Cây xăng số 4 Thắng,Xã Thắng Lợi, huyện Thắng Lợi, huyện Thường Tín, TP Hà Nội",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:01:48.786Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:29:54.266Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68a1a07353b65c891f23aa"
+  },
+  "order_id": "5e68726d331ab970d25fe8e2",
+  "user_create_id": "5e686cc48ca7aa18823d1122",
+  "name": "Nguyên Đỗ ( cho khách xem hàng, không làm rách tem)",
+  "phone": "0967465936",
+  "provin": "Quảng Ninh",
+  "district": "Thành Phố Uông Bí",
+  "town": "Phường Vàng Danh",
+  "address": "Tổ 7 khu 8,Phường Vàng Danh,Thành Phố Uông Bí,Quảng Ninh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ, gọi trước 30 phút khi giao",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:08:39.139Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:30:24.261Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68a2206822fd0493474355"
+  },
+  "order_id": "5e68937f588f873ad9571f12",
+  "user_create_id": "5e676e191e55bb27cc2e8a52",
+  "name": "Nguyễn Thị Tuyết Oanh( Cho khách xem hàng không làm rách tem)",
+  "phone": "0369887314",
+  "provin": "Bình Phước",
+  "district": "Thị Xã  Phước Long",
+  "town": "Phường Sơn Giang",
+  "address": "Khu phố Bình Giang 1, Phường Sơn Giang, Thị xã Phước Long, Tỉnh Bình Phước",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "520000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Lọ thủy tinh dễ vỡ, gọi trước giao hàng 15 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:18:07.557Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:32:32.154Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68a23f886f7a1082204243"
+  },
+  "order_id": "5e6884a61f4fed1ee80846d2",
+  "user_create_id": "5e676b8086985667917da8c2",
+  "name": "Hoàng Hậu  ( ĐƯỢC CHO XEM KHÔNG LÀM RÁCH TEM NIÊM PHONG)",
+  "phone": "0888652081",
+  "provin": "Bắc Ninh",
+  "district": "Thành Phố Bắc Ninh",
+  "town": "Phường Đại Phúc",
+  "address": "Khu 9, Phường Đại Phúc, Thành phố Bắc Ninh, Bắc Ninh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay.",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:02:54.345Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:33:03.169Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68a2e3ebefee26c72b79e4"
+  },
+  "order_id": "5e68920f05f5544daa7186b2",
+  "user_create_id": "5e6766e7412efb27a328e0b2",
+  "name": "Nguyễn Thị Mai Hương- cho khách xem hàng không làm rách tem",
+  "phone": "0974273277",
+  "provin": "Nghệ An",
+  "district": "Thành Phố Vinh",
+  "town": "Phường Hưng Dũng",
+  "address": "số 20 - Đường Nguyễn Gia Thiều-Phường Hưng Dũng -Thành Phố Vinh-Tỉnh Nghệ An",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi trước khi giao hàng- hàng  dễ vơ xin nhẹ tay",
+  "discount": "",
+  "transport": "30000",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:15:20.517Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:35:47.056Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68a31cc1d735055b0a4f95"
+  },
+  "order_id": "5e687eccd5569213537d08e2",
+  "user_create_id": "5e68945ab913b67849784322",
+  "name": "Huỳnh Thị Như Quỳnh (cho khách xem hàng không làm rách tem)",
+  "phone": "0905605605",
+  "provin": "Thừa Thiên Huế",
+  "district": "Thành phố Huế",
+  "town": "P. Phú Hòa",
+  "address": "Chợ Đông Ba, P. Phú Hòa, Thành phố Huế, Thừa Thiên Huế",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng thủy tinh dễ vỡ xin nhẹ tay.",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:03:30.316Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:36:44.547Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68a31ec1d735055b0a4f97"
+  },
+  "order_id": "5e687db101fee52e4e1854b2",
+  "user_create_id": "5e686d4903351a20663be6c2",
+  "name": "Đỗ Hồng Linh (cho khách xem hàng không làm rách tem)",
+  "phone": "0355556274",
+  "provin": "Quảng Ninh",
+  "district": "Huyện Vân Đồn",
+  "town": "Thị Trấn Cái Rồng",
+  "address": "Số 425, khu 7, thị trấn Cái Rồng, huyện Vân Đồn, tỉnh Quảng Ninh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "03",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Lọ thủy tinh dễ vỡ, gọi trước khi giao hàng 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:14:12.141Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:36:46.304Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68a4655cfd6731d22a0963"
+  },
+  "order_id": "5e6871f7c58a7350665cc673",
+  "user_create_id": "5e686cc48ca7aa18823d1122",
+  "name": "Phạm Kim Dung ( cho khách xem hàng, không làm rách tem)",
+  "phone": "0912587882",
+  "provin": "Vĩnh Phúc",
+  "district": "Thành Phố Phúc Yên",
+  "town": "Phường Phúc Thắng",
+  "address": "Số nhà 13 đường Ngô Miễn,Phường Phúc Thắng,Thành Phố Phúc Yên,Vĩnh Phúc",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ, gọi trước 30 phút khi giao",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:01:34.309Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:42:13.597Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68a54817e29376ca3807e3"
+  },
+  "order_id": "5e68999cab0a3b627a0c2802",
+  "user_create_id": "5e686d090661f4458f685ba2",
+  "name": "Phạm thị ngọc-cho khách xem hàng không làm rách tem",
+  "phone": "987555714",
+  "provin": "Vĩnh Phúc",
+  "district": "Thành Phố Vĩnh Yên",
+  "town": "Phường Định Trung",
+  "address": "107 chùa hà",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ- gọi trước khi giao hàng 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T09:19:57.704Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T08:46:00.775Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68ad611f456227c6137c83"
+  },
+  "order_id": "5e6894e183cb0d007348b862",
+  "user_create_id": "5e676714b880d42a0c7a0622",
+  "name": "Trần Thị Kim Loan  ( Được cho xem , không làm rách tem niêm phong )",
+  "phone": "0905255410",
+  "provin": "Bà Rịa-Vũng Tàu",
+  "district": "Huyện Xuyên Mộc",
+  "town": "Xã Phước Thuận",
+  "address": "Trạm Y Tế Xã Phước Thuận, Huyện Xuyên Mộc, Bà Rịa-Vũng Tàu",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "520000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:22:33.784Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:20:33.664Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68ad881f456227c6137c85"
+  },
+  "order_id": "5e68919f4617245ad96028a2",
+  "user_create_id": "5e6766e7412efb27a328e0b2",
+  "name": "Phạm Thị Ngọc cho khách xem hàng không làm rách tem",
+  "phone": "0987555714",
+  "provin": "Vĩnh Phúc",
+  "district": "Thành Phố Vĩnh Yên",
+  "town": "Xã Định Trung",
+  "address": "107  Chùa Hà",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "gọi cho khách 30p trước khi giao hàng - hàng thủy tinh dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:20:27.420Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:21:12.189Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68ada0c6af0d3c321f53b3"
+  },
+  "order_id": "5e688254b5e33162ea214592",
+  "user_create_id": "5e676bd2c0a64507f665f232",
+  "name": "Thu Hiền  ( CHO KHÁCH XEM HÀNG - KHÔNG LÀM RÁCH TEM NIÊM PHONG)",
+  "phone": "0982273068",
+  "provin": "Phú Thọ",
+  "district": "Huyện Thanh Ba",
+  "town": "Xã Khải Xuân",
+  "address": "Khu 11 cổng chợ Khải Xuân, xã Khải Xuân, huyện Thanh Ba, tỉnh Phú Thọ",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:25:15.784Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:21:36.048Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68ae01c6af0d3c321f53b8"
+  },
+  "order_id": "5e68843d2823122c9571b012",
+  "user_create_id": "5e676b8086985667917da8c2",
+  "name": "Vũ Anh Tuấn  ( ĐƯỢC CHO XEM KHÔNG LÀM RÁCH TEM NIÊM PHONG)",
+  "phone": "0982649677",
+  "provin": "Tuyên Quang",
+  "district": "Thành Phố Tuyên Quang",
+  "town": "Phường Minh Xuân",
+  "address": "Số nhà 60 tổ 11, Phường Minh Xuân, Thành Phố Tuyên Quang, Tuyên Quang",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:16:39.308Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:23:13.268Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68ae22c6af0d3c321f53bb"
+  },
+  "order_id": "5e68837dbe6bc374b6540ed2",
+  "user_create_id": "5e676714b880d42a0c7a0622",
+  "name": "Nguyễn Thị Mận  ( Được cho xem , không làm rách tem niêm phong )",
+  "phone": "0396226806",
+  "provin": "Bắc Giang",
+  "district": "Huyện Yên Dũng",
+  "town": "Xã Nội Hoàng",
+  "address": "Lô 15.17 Cụm CN Nội Hoàng, Xã Nội Hoàng, Huyện Yên Dũng, Bắc Giang",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "4",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1960000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:22:59.392Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:23:46.367Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68aea2b1e37a5e5b2144f4"
+  },
+  "order_id": "5e6878f7c392ac6dc5622532",
+  "user_create_id": "5e686b6cdd6a642274240932",
+  "name": "Trần Thị Gái (cho khách xem hàng không làm rách tem)",
+  "phone": "0965890632",
+  "provin": "Thanh Hoá",
+  "district": "Thành Phố Sầm Sơn",
+  "town": "Phường Quảng Cư",
+  "address": "Gần trường THCS Quảng Cư, khu phố Thanh Thái",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "4",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Lọ thủy tinh dễ vỡ, gọi trước khi giao 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1960000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T09:46:24.235Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:25:54.762Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68aeb1b1e37a5e5b2144f6"
+  },
+  "order_id": "5e6881f6dcb6d4620321a772",
+  "user_create_id": "5e676bd2c0a64507f665f232",
+  "name": "Nguyễn Thị Linh  ( CHO KHÁCH XEM HÀNG - KHÔNG LÀM RÁCH TEM NIÊM PHONG)",
+  "phone": "0905670142",
+  "provin": "Kon Tum",
+  "district": "Thành Phố Kon Tum",
+  "town": "Lê Văn Tám",
+  "address": "17 Lê Văn Tám, Thành Phố Kon Tum, Kon Tum",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "520000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:01:15.492Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:26:09.151Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68aed4f66c012627034324"
+  },
+  "order_id": "5e68845c510fc54368287072",
+  "user_create_id": "5e676b8086985667917da8c2",
+  "name": "Nguyễn Thị Thảo ( ĐƯỢC CHO XEM KHÔNG LÀM RÁCH TEM NIÊM PHONG)",
+  "phone": "0902187833",
+  "provin": "Nghệ An",
+  "district": "Thành Phố Vinh",
+  "town": "Xã Nghi Liên",
+  "address": "Sân bay Quốc tế Vinh,Xã Nghi Liên, thành phố Vinh , tỉnh Nghệ An.",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay.",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:01:49.763Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:26:44.701Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68af8cf66c01262703432a"
+  },
+  "order_id": "5e687016b052a21136080113",
+  "user_create_id": "5e676df18ac58407e31f0102",
+  "name": "Đinh Thị An( cho khách xem hàng không làm rách tem)",
+  "phone": "0983377824",
+  "provin": "Thái Bình",
+  "district": "Huyện Quỳnh Phụ",
+  "town": "Xã An Dục",
+  "address": "Công ty HOA ĐÔ 3, Thôn An Lạc",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ ,gọi trước khi giao 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T09:29:48.923Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:29:48.923Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68b014f2abde5d622fb773"
+  },
+  "order_id": "5e689eae5163641221124d35",
+  "user_create_id": "5e6894a8b3b1a8364145dfa2",
+  "name": "Nguyễn Thị Hồng Luyến ( Cho khách xem hàng không làm rách tem)",
+  "phone": "0362639208",
+  "provin": "Nam Định",
+  "district": "Huyện Hải Hậu",
+  "town": "Xã Hải Triều",
+  "address": "Xóm Tân Thịnh - Xã Hải Triều - Huyện Hải Hậu - Tỉnh Nam Định",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:10:22.408Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:32:04.662Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68b0cb47da7818f52ec737"
+  },
+  "order_id": "5e689db16465e130a46e84e2",
+  "user_create_id": "5e6894a8b3b1a8364145dfa2",
+  "name": "Huỳnh Thị Phi Phụng ( Cho khách xem hàng không làm rách tem )",
+  "phone": "0389642209",
+  "provin": "TP Hồ Chí Minh",
+  "district": "Quận Thủ Đức",
+  "town": "Phường Linh Trung",
+  "address": "35  Đường Lê Văn Chí - Phường Linh Trung - Quận Thủ Đức - TP Hồ Chí Minh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:08:29.148Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:35:07.467Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68b0e0539c300dee0173d3"
+  },
+  "order_id": "5e687dc3291dca65603518c2",
+  "user_create_id": "5e686d4903351a20663be6c2",
+  "name": "Nguyễn Thị Thu Hằng (cho khách xem hàng không làm rách tem)",
+  "phone": "0988867765",
+  "provin": "Hà Nội",
+  "district": "Quận Ba Đình",
+  "town": "Phường Trúc Bạch",
+  "address": "Số 11 Cửa Bắc, phường Trúc Bạch, quận Ba Đình, Hà Nội",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "03",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "01",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "ĐƠN NỘI THÀNH KHÁCH NHẬN HÀNG VÀO GIỜ HÀNH CHÍNH. Lọ thủy tinh dễ vỡ, gọi trước khi giao hàng 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:19:41.357Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:35:28.858Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68b0ee539c300dee0173d5"
+  },
+  "order_id": "5e65aa233a89ae6d8436f1d2",
+  "user_create_id": "5e65a5ff5461e269757b2f2a",
+  "name": "Đào Nam",
+  "phone": "0973007254",
+  "provin": "TP Hồ Chí Minh",
+  "district": "Quận 2",
+  "town": "Phường An Phú",
+  "address": "21",
+  "product": [
+    {
+      "product_id": "5e5023daadbec995873377f6",
+      "amount": "2",
+      "price": "0"
+    },
+    {
+      "product_id": "5e675a1ff4c695bae57bf5c1",
+      "amount": "2",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1600000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T09:51:24.370Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:35:42.391Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63d3165461e269757b2f1d"
+},{
+  "_id": {
+    "$oid": "5e68b20993ab147c19627444"
+  },
+  "order_id": "5e68831b3628e86cb8120c22",
+  "user_create_id": "5e676714b880d42a0c7a0622",
+  "name": "Cao Thị Nam  ( Được cho xem , không làm rách tem niêm phong )",
+  "phone": "0984381833",
+  "provin": "Hà Nội",
+  "district": "Huyện Ba Vì",
+  "town": "Xã Phú Châu",
+  "address": "Xóm 16 , Thôn Phú Xuyên 4, Xã Phú Châu, Huyện Ba Vì, Hà Nội",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:23:38.804Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:40:25.130Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68b31d303c896c94146be7"
+  },
+  "order_id": "5e6891f7bb11326ecb046482",
+  "user_create_id": "5e6766e7412efb27a328e0b2",
+  "name": "Phạm Thị Nguyện   cho khách xem hàng không làm rách tem",
+  "phone": "0977206594",
+  "provin": "Kon Tum",
+  "district": "Thành Phố Kon Tum",
+  "town": "Phường Thắng Lợi",
+  "address": "261/6  Bà Triệu-Phường Thắng Lợi-Thành Phố Kon Tum-Tinh Kon Tum",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "gọi cho khách 30p trước khi giao hàng - hàng thủy tinh dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "30000",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:01:22.321Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:45:01.956Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68b5c904e88625c9710fe3"
+  },
+  "order_id": "5e68908efe1a6f71ca37e122",
+  "user_create_id": "5e68732d5658e547c25bed72",
+  "name": "Nguyễn Thị Hằng Nga",
+  "phone": "0983924538",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "0",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T09:56:25.331Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T09:56:25.331Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68b6ef4683b44f597faf0d"
+  },
+  "order_id": "5e687fef3a566601ca46b443",
+  "user_create_id": "5e686d090661f4458f685ba2",
+  "name": "Vũ thị dung",
+  "phone": "0917555320",
+  "provin": "Quảng Ninh",
+  "district": "Thành Phố Cẩm Phả",
+  "town": "Phường Cẩm Bình",
+  "address": "Số 4 minh tiến b,phường cẩm bình, thành phố cẩm phả quảng ninh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:04:14.476Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T10:01:19.014Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68b8bbd6a91c06a7790113"
+  },
+  "order_id": "5e688541910980309c534702",
+  "user_create_id": "5e676e191e55bb27cc2e8a52",
+  "name": "Nguyễn Thị Mỹ Lan( Cho khách xem hàng không làm rách tem)",
+  "phone": "0763734611",
+  "provin": "Bình Dương",
+  "district": "TX Thuận An",
+  "town": null,
+  "address": "Số C1/10B khu phố Bình Thuận 2, Phường Thuận Giao, TX Thuận An, Bình Dương.",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": "Khách đặt thêm 1 hộp là 2.",
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T12:42:03.726Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T10:08:59.369Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68b92dcf69ce1b6971cfb3"
+  },
+  "order_id": "5e688a91b58cc717b5249242",
+  "user_create_id": "5e68732d5658e547c25bed72",
+  "name": "Nguyễn Thị Ngoan ( cho khách xem hàng - không làm rách tem)",
+  "phone": "0984064761",
+  "provin": "Hưng Yên",
+  "district": "Huyện Văn Giang",
+  "town": "Xã Cửu Cao",
+  "address": "nhà hàng Ngoan Chanh,  Tỉnh lộ 179, Xã Cửu Cao, Văn Giang, Hưng Yên",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:30:10.823Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T10:10:53.372Z"
+  },
+  "filter_lading_ship": "5e64e60b5461e269757b2f22",
+  "filter_ship": "5e63b71d5461e269757b2f1b"
+},{
+  "_id": {
+    "$oid": "5e68c45ce389264fcd369753"
+  },
+  "order_id": "5e68bd58e8f3810176472c72",
+  "user_create_id": "5e65a5ff5461e269757b2f2a",
+  "name": "cường 2",
+  "phone": "0912121212",
+  "provin": "Hưng Yên",
+  "district": "Huyện Văn Giang",
+  "town": "Xã Phụng Công",
+  "address": "13",
+  "product": [
+    {
+      "product_id": "5e5023daadbec995873377f6",
+      "amount": "2",
+      "price": "0"
+    },
+    {
+      "product_id": "5e675a09f4c695bae57bf5c0",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "bưu cục",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1200000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T10:58:36.254Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T10:58:36.254Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68e19fd576fd67d12e45f3"
+  },
+  "order_id": "5e68af19bed921731b09d4c3",
+  "user_create_id": "5e686cc48ca7aa18823d1122",
+  "name": "Nguyễn Thị Sinh ( cho khách xem hàng, không làm rách tem)",
+  "phone": "0915619249",
+  "provin": "Hà Nội",
+  "district": "Quận Long Biên",
+  "town": null,
+  "address": "số 7, ngõ 229B/18 Nguyễn Văn Linh, Long Biên, Hà Nội",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "ĐI NỘI THÀNH, NHẬN HÀNG TRONG GIỜ HÀNH CHÍNH, lọ thủy tinh dễ vỡ, gọi trước 30 phút khi giao",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:03:27.655Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:03:27.655Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68e25849110f76156bdc03"
+  },
+  "order_id": "5e68b9a9d66d7f53ad2b4e54",
+  "user_create_id": "5e676df18ac58407e31f0102",
+  "name": "Nguyễn thi thuy",
+  "phone": "0983606879",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "0",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:06:32.211Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:06:32.211Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68e6e055e60007ad4c7b44"
+  },
+  "order_id": "5e68c6d7b7944812e83a5b92",
+  "user_create_id": "5e686cc48ca7aa18823d1122",
+  "name": "Trần Thị Kim Hoa ( cho khách xem hàng, không làm rách tem)",
+  "phone": "0933118583",
+  "provin": "Đồng Nai",
+  "district": "Huyện Long Thành",
+  "town": "Xã Tân Hiệp",
+  "address": "ấp 6, Xã Tân Hiệp, Huyện Long Thành, Đồng Nai",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ, gọi trước 30 phút khi giao",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:25:52.944Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:25:52.944Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68e6f0e12674382132eb73"
+  },
+  "order_id": "5e68a2c83ab16e7f20309685",
+  "user_create_id": "5e686d4903351a20663be6c2",
+  "name": "Ngô Thị Quyên (cho khách xem hàng không làm rách tem)",
+  "phone": "0987002966",
+  "provin": "Bắc Ninh",
+  "district": "Huyện Quế Võ",
+  "town": "Thị Trấn Phố Mới",
+  "address": "Trường THPT Phố Mới, khu 5, Thị trấn Phố Mới, huyện Quế Võ, tỉnh Bắc Ninh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "03",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "01",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Lọ thủy tinh dễ vỡ, gọi trước khi giao hàng 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:26:08.828Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:26:08.828Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68e82b9d464c2a5460d993"
+  },
+  "order_id": "5e68c3d50b622d4a0f2bdca2",
+  "user_create_id": "5e676e191e55bb27cc2e8a52",
+  "name": "Bùi Ngọc Diễm( Cho khách xem hàng không làm rách tem)",
+  "phone": "0915480204",
+  "provin": "TP Hồ Chí Minh",
+  "district": "Quận 10",
+  "town": null,
+  "address": "Số 1063 ,Tỉnh Lộ 10, Khu Phố 5, P. Tân Tạo, Q. Bình Tân, TP. Hồ Chí Minh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Lọ thủy tinh dễ vỡ, gọi trước giao hàng 15 phú",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:31:23.756Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:31:23.756Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68e98cca040d13da324703"
+  },
+  "order_id": "5e68c19c5ae4a24dd338ca92",
+  "user_create_id": "5e686d4903351a20663be6c2",
+  "name": "Hoàng Minh Phượng (cho khách xem hàng không làm rách tem)",
+  "phone": "0915511280",
+  "provin": "Hà Giang",
+  "district": "Thành Phố Hà Giang",
+  "town": "Phường Minh Khai",
+  "address": "Số nhà 118D, đường Lý Tự Trọng, phường Minh Khai, thành phố Hà Giang, tỉnh Hà Giang",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "01",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Lọ thủy tinh dễ vỡ, gọi trước khi giao hàng 30 phút",
+  "discount": "",
+  "transport": "30000",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:37:16.876Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:37:16.876Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68eacbc5b2a4516d674063"
+  },
+  "order_id": "5e68d2072160ea2cd505bb32",
+  "user_create_id": "5e676b8086985667917da8c2",
+  "name": "Nguyễn Thảo Sương ( ĐƯỢC CHO XEM KHÔNG LÀM RÁCH TEM NIÊM PHONG)",
+  "phone": "0965028898",
+  "provin": "Bình Phước",
+  "district": "Thị Xã  Bình Long",
+  "town": "Xã Thanh Phú",
+  "address": "Ấp 3 ,Xã Thanh Phú, Thị xã Bình Long, Bình Phước",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:42:35.933Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:42:35.933Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68eb97654f60222010ed13"
+  },
+  "order_id": "5e68dab2c0e3df74cd2632b2",
+  "user_create_id": "5e68e6f8e12674382132eb74",
+  "name": "Phan thi toái",
+  "phone": "0362740370",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "0",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:45:59.753Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:45:59.753Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68ec91a5558f7f960cefd4"
+  },
+  "order_id": "5e68cf4a94643278cd671292",
+  "user_create_id": "5e686b6cdd6a642274240932",
+  "name": "Phạm Thanh(cho khách xem hàng không làm rách tem)",
+  "phone": "0974224618",
+  "provin": "Hà Nội",
+  "district": "Huyện Mê Linh",
+  "town": "Thị Trấn Chi Đông",
+  "address": "Công ty cổ phần Thuận Hưng, Lô 49 Khu CN Quang Minh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Lọ thủy tinh dễ vỡ, gọi trước khi giao 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:50:09.747Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:50:09.747Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68ed7c6caad626ce7c1ee3"
+  },
+  "order_id": "5e68da8b7962a5532d027d54",
+  "user_create_id": "5e68e6f8e12674382132eb74",
+  "name": "Hòang yến",
+  "phone": "0984531986",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "0",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:54:04.090Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:54:04.090Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68edf920935c3b807c9433"
+  },
+  "order_id": "5e68b42a56bdd11edb4d9792",
+  "user_create_id": "5e68732d5658e547c25bed72",
+  "name": "Cao Thị Sâm ( cho khách xem hàng - không làm rách tem)",
+  "phone": "0983728512",
+  "provin": "Đồng Nai",
+  "district": "Thành Phố Biên Hoà",
+  "town": "Phường Tân Phong",
+  "address": "Tổ 7, khu phố 1, Phường Tân Phong, Thành Phố Biên Hoà, Đồng Nai",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T13:56:09.551Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T13:56:09.551Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68ef193a47e5107f54a634"
+  },
+  "order_id": "5e68db2df7d80a7d4925c732",
+  "user_create_id": "5e686cc48ca7aa18823d1122",
+  "name": "Lê Thị Thu Hiền ( cho khách xem hàng, không làm rách tem)",
+  "phone": "0987355344",
+  "provin": "Đắk Lắk",
+  "district": "Huyện Cư Kuin",
+  "town": "Xã Ea Bhốk",
+  "address": "Thôn 6, xã eabhok, huyện Cư Kuin, tỉnh Đak Lak",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ, gọi trước 30 phút khi giao",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:00:57.994Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:00:57.994Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68ef2a3a47e5107f54a637"
+  },
+  "order_id": "5e68d65872cf4d6607102922",
+  "user_create_id": "5e686d090661f4458f685ba2",
+  "name": "Hà thùy linh-cho khách xem hàng không làm rách tem",
+  "phone": "0916732156",
+  "provin": "Hải Phòng",
+  "district": "Huyện Vĩnh Bảo",
+  "town": "Xã Nhân Hoà",
+  "address": "xã nhân hòa ,thị trấn vĩnh bảo, thành phố hải phòng",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ-gọi trước khi giao hàng 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:01:14.916Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:01:14.916Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68ef6fdd3c731e5051e8c6"
+  },
+  "order_id": "5e68da827962a5532d027d52",
+  "user_create_id": "5e68e6f8e12674382132eb74",
+  "name": "Hoàng Thuý Hà",
+  "phone": "0326678666",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "0",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:02:23.469Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:02:23.469Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68f02cfbcea6536739dc55"
+  },
+  "order_id": "5e68b4066379380f5358ead2",
+  "user_create_id": "5e68732d5658e547c25bed72",
+  "name": "Nguyễn Thị Hoàng Yến",
+  "phone": "0918342827",
+  "provin": "Đồng Nai",
+  "district": "Thành Phố Biên Hoà",
+  "town": null,
+  "address": "Công ty Tae Kwang Vina , số 8, đường 9A, khu công nghiệp Biên Hòa 2, Tp Biên HÒa, Đồng Nai",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "30000",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:05:32.621Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:05:32.621Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68f07fe7d2f76424748784"
+  },
+  "order_id": "5e68cc35d4c8ce2ce27335a2",
+  "user_create_id": "5e676df18ac58407e31f0102",
+  "name": "Phan Thị Hạnh(cho khách xem hàng không làm rách team)",
+  "phone": "0975562899",
+  "provin": "Nghệ An",
+  "district": "Huyện Yên Thành",
+  "town": "Thị Trấn Yên Thành",
+  "address": "Kính Thuốc Hồng Hạnh, Khối 1",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ, gọi trước khi giao 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:06:55.459Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:06:55.459Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68f114458bcc40cb732dc3"
+  },
+  "order_id": "5e68cfeb69ccdc79a00c0be2",
+  "user_create_id": "5e686b6cdd6a642274240932",
+  "name": "Trương Thị Thanh Nhàn (cho khách xem hàng không làm rách tem)",
+  "phone": "0944786794",
+  "provin": "Nam Định",
+  "district": "Thành Phố Nam Định",
+  "town": "Phường Lộc Vượng",
+  "address": "gần chùa Thiên Trường",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Lọ thủy tinh dễ vỡ, gọi trước khi giao 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:09:24.912Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:09:24.912Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68f13da655f7639d073ff5"
+  },
+  "order_id": "5e68d7d06e6176053c58b7f2",
+  "user_create_id": "5e686d090661f4458f685ba2",
+  "name": "Ngô thị hồng nhung-cho khách xem hàng không làm rách tem",
+  "phone": "0832272468",
+  "provin": "Hà Nội",
+  "district": "Quận Long Biên",
+  "town": "Phường Phúc Đồng",
+  "address": "Bidv 469 nguyễn văn linh,phường phúc đồng  quận long biên, hà nội",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ- gọi trước khi giao hàng 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:10:05.687Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:10:05.687Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68f316c2cdd05d19070da3"
+  },
+  "order_id": "5e68dbd2b6ac4939ae400142",
+  "user_create_id": "5e686cc48ca7aa18823d1122",
+  "name": "Nguyễn thị thúy Hoa ( cho khách xem hàng, không làm rách tem)",
+  "phone": "0357057175",
+  "provin": "TP Hồ Chí Minh",
+  "district": "Quận Thủ Đức",
+  "town": "Phường Tam Phú",
+  "address": "104 đường số 4 kp3, phường Tam Phú, Quận Thủ Đức, Hồ Chí Minh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "490000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ, gọi trước 30 phút khi giao",
+  "discount": "",
+  "transport": "30000",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:17:58.122Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:17:58.122Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68f37fc744aa6c2e009133"
+  },
+  "order_id": "5e68d801c6e3e663fa246982",
+  "user_create_id": "5e686d090661f4458f685ba2",
+  "name": "Tuyết lan",
+  "phone": "0919824676",
+  "provin": "Hà Nội",
+  "district": "Quận Hai Bà Trưng",
+  "town": "Phường Minh Khai",
+  "address": "T6 timcity,phường  minh khai Hà Nội",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "520000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:19:43.946Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:19:43.946Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68f3d9aa6b2215a21e2dc8"
+  },
+  "order_id": "5e68c7a63f86a468383188c2",
+  "user_create_id": "5e676df18ac58407e31f0102",
+  "name": "Lê Thị Hồng Gấm",
+  "phone": "0908361046",
+  "provin": "TP Hồ Chí Minh",
+  "district": "Quận 7",
+  "town": "Phường Tân Phú",
+  "address": "Số 7, Đường Tân Phú",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "4",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "lọ thủy tinh dễ vỡ, gọi trước khi giao 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1960000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:21:13.929Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:21:13.929Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68f437f649dc0a8151e653"
+  },
+  "order_id": "5e68bc215c7b6463573cfe4b",
+  "user_create_id": "5e686b6cdd6a642274240932",
+  "name": "Trang Lê (cho khách xem hàng không làm rách tem)",
+  "phone": "0927033303",
+  "provin": "TP Hồ Chí Minh",
+  "district": "Quận 4",
+  "town": "Phường 03",
+  "address": "189L Tôn Thất Thuyết",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "1",
+      "price": "520000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Lọ thủy tinh dễ vỡ, gọi trước khi giao 30 phút",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "520000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T14:22:47.227Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:22:47.227Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68fa1b379de714e5429703"
+  },
+  "order_id": "5e68e32f52d61c18100f89b3",
+  "user_create_id": "5e676bd2c0a64507f665f232",
+  "name": "Phan Thị Toại  ( CHO KHÁCH XEM HÀNG - KHÔNG LÀM RÁCH TEM NIÊM PHONG)",
+  "phone": "0362740370",
+  "provin": "Tây Ninh",
+  "district": "Thành Phố Tây Ninh",
+  "town": "Phường 3",
+  "address": "35 Đường Nguyễn Chí Thanh , Khu Phố 1 , Phường 3 , Tp Tây Ninh, Tỉnh Tây Ninh",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": "Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T15:15:11.768Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:47:55.657Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e68fc1c3f39df08c44710b4"
+  },
+  "order_id": "5e68e00c6b5ffe327b088712",
+  "user_create_id": "5e676bd2c0a64507f665f232",
+  "name": "Nguyễn Tuyết ( CHO KHÁCH XEM HÀNG - KHÔNG LÀM RÁCH TEM NIÊM PHONG)",
+  "phone": "0989194887",
+  "provin": "Hà Nội",
+  "district": "Quận Long Biên",
+  "town": "Phường Bồ Đề",
+  "address": "Tổng công ty Quản lý bay Việt Nam-Số 6, ngõ 200, đường Nguyễn Sơn-Phường Bồ Đề-Quận Long Biên-TP Hà Nội",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "2",
+      "price": "490000"
+    }
+  ],
+  "note_ship": "ĐƠN NỘI THÀNH",
+  "note_delivery": "ĐƠN NỘI THÀNH GIAO TRONG GIỜ HÀNH CHÍNH NGÀY 12/3 , Gọi cho khách 30p trước khi giao hàng - hàng dễ vỡ xin nhẹ tay",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "980000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T15:18:49.326Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T14:56:28.364Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e69001fbcef5a258f45b3a3"
+  },
+  "order_id": "5e68deea236fbc0d51074432",
+  "user_create_id": "5e687029b052a21136080114",
+  "name": "Chu Thị Thu Hà",
+  "phone": "0907143614",
+  "provin": "Bình Phước",
+  "district": "Huyện Chơn Thành",
+  "town": "Thị Trấn Chơn Thành",
+  "address": null,
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": "Hàng dễ vỡ xin nhẹ tay . Gọi khách trước khi giao hàng",
+  "note_delivery": null,
+  "discount": "0",
+  "transport": "0",
+  "charge": "0",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T15:13:35.217Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T15:13:35.217Z"
+  }
+},{
+  "_id": {
+    "$oid": "5e69031fc453787d714d3cc3"
+  },
+  "order_id": "5e68e7d93d6d223d577262a2",
+  "user_create_id": "5e687029b052a21136080114",
+  "name": "Cô Nguyễn Thị  Lan",
+  "phone": "0976173135",
+  "provin": "Thái Nguyên",
+  "district": "Thành Phố Sông Công",
+  "town": "Phường Bách Quang",
+  "address": "Tổ Dân Phố Đồi",
+  "product": [
+    {
+      "product_id": "5e665a75965b0a0ff4399b46",
+      "amount": "3",
+      "price": "490000"
+    },
+    {
+      "product_id": "5e689f716a7d67233613da4c",
+      "amount": "1",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "0",
+  "transport": "0",
+  "charge": "0",
+  "total": "1470000",
+  "reason": "success",
+  "updated_at": {
+    "$date": "2020-03-11T15:26:23.738Z"
+  },
+  "created_at": {
+    "$date": "2020-03-11T15:26:23.738Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fda8b11eb2500003100497b"
+  },
+  "order_id": "5fda8210ddb729190d1ab334",
+  "user_create_id": "5fda84042eef2e49cccb17c8",
+  "date_success_order": {
+    "$date": "2020-12-16T22:32:48.880Z"
+  },
+  "name": "Huân",
+  "phone": "0856336305",
+  "provin": "Hn",
+  "district": "Nam Từ Liêm",
+  "town": "Mễ trì",
+  "address": "17",
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "4",
+      "price": "800000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "3200000",
+  "updated_at": {
+    "$date": "2020-12-16T22:32:49.256Z"
+  },
+  "created_at": {
+    "$date": "2020-12-16T22:32:49.256Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fda8b22eb2500003100497d"
+  },
+  "order_id": "5fda7ee0eb25000031004977",
+  "user_create_id": "5fda84042eef2e49cccb17c8",
+  "name": "Lê Thị Tú",
+  "phone": "0855510594",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "5fe97ff6ddb729190d1ab33e",
+      "amount": "2",
+      "price": "890000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1780000",
+  "updated_at": {
+    "$date": "2021-01-20T15:14:39.882Z"
+  },
+  "created_at": {
+    "$date": "2020-12-16T22:33:06.684Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fda8b2ceb2500003100497f"
+  },
+  "order_id": "5fda821ee96a5430e43c79d2",
+  "user_create_id": "5fda84042eef2e49cccb17c8",
+  "name": "Dương Nguyên Bảo",
+  "phone": "0888633630",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2020-12-16T22:33:16.512Z"
+  },
+  "created_at": {
+    "$date": "2020-12-16T22:33:16.512Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fda8b3deb25000031004981"
+  },
+  "order_id": "5fda8268865a7c443f059334",
+  "user_create_id": "5fda84042eef2e49cccb17c8",
+  "name": "Nguyễn Thị Hoài",
+  "phone": "0965312389",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2020-12-16T22:33:33.517Z"
+  },
+  "created_at": {
+    "$date": "2020-12-16T22:33:33.517Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fe97e0cf15736073b15b4a4"
+  },
+  "order_id": "5fda8caadba45a2ef53aef14",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "Nguyễn văn Quốc ( xem hàng khi nhận )",
+  "phone": "0396235143",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "5fda8c71865a7c443f059335",
+      "amount": "1",
+      "price": "900000"
+    },
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "1",
+      "price": "500000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1400000",
+  "updated_at": {
+    "$date": "2021-01-20T15:16:01.653Z"
+  },
+  "created_at": {
+    "$date": "2020-12-28T06:41:16.353Z"
+  }
+},{
+  "_id": {
+    "$oid": "600847cf865a7c443f059339"
+  },
+  "order_id": "6008479cddb729190d1ab34b",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "Phạm Văn Manh",
+  "phone": "0966027933",
+  "provin": "quảng Ninh",
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "1000",
+      "price": "10"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "22222",
+  "charge": "100000",
+  "total": "132222",
+  "updated_at": {
+    "$date": "2021-01-20T15:11:23.359Z"
+  },
+  "created_at": {
+    "$date": "2021-01-20T15:10:07.651Z"
+  }
+},{
+  "_id": {
+    "$oid": "60084b30581b55059e2aaf14"
+  },
+  "order_id": "600849f3e96a5430e43c79d5",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "Phạm Văn Manh",
+  "phone": "0966027933",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "5fda8c71865a7c443f059335",
+      "amount": "1",
+      "price": "900000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "900000",
+  "updated_at": {
+    "$date": "2021-01-20T15:24:32.220Z"
+  },
+  "created_at": {
+    "$date": "2021-01-20T15:24:32.220Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a328d7e58cc95ba6668963"
+  },
+  "order_id": "604ecfacb0fb1039cc7c8eb7",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "Nguyễn văn Quốc ( xem hàng khi nhận )",
+  "phone": "03962351545",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-18T02:39:19.618Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T02:39:19.618Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a3459365e90608a250af23"
+  },
+  "order_id": "604ecfb6b6c0ed224e0ac2d5",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "Nguyễn Văn Nam 2",
+  "phone": "0888633630",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "1",
+      "price": "890000"
+    },
+    {
+      "product_id": "5fda8c71865a7c443f059335",
+      "amount": "2",
+      "price": "900000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "500000",
+  "transport": "30000",
+  "charge": "10000",
+  "total": "2230000",
+  "updated_at": {
+    "$date": "2021-05-18T04:42:56.817Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T04:41:55.163Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a3c819f402e9176e5e2f73"
+  },
+  "order_id": "60a3c768139da43b8d26b594",
+  "user_create_id": "5fda84042eef2e49cccb17c8",
+  "date_success_order": {
+    "$date": "2021-05-18T13:58:49.607Z"
+  },
+  "name": "Nam",
+  "phone": "0976983086",
+  "provin": "HN",
+  "district": "HN",
+  "town": "HN",
+  "address": "15",
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "60a3c7f5858c1b36b067fa53",
+      "amount": "1",
+      "price": "0"
+    },
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "1",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "30000",
+  "charge": "",
+  "total": "680000",
+  "updated_at": {
+    "$date": "2021-05-18T13:58:49.638Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T13:58:49.638Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a56eafc5886c48a068a505"
+  },
+  "order_id": "60a56e91691a9644c8111d92",
+  "user_create_id": "60a57659691a9644c8111d93",
+  "name": "Nguyễn văn Quốc ( xem hàng khi nhận )",
+  "phone": "0396235154",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-19T20:44:21.717Z"
+  },
+  "created_at": {
+    "$date": "2021-05-19T20:01:51.715Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a57f9007d01f416b1dfc24"
+  },
+  "order_id": "60a47bee8600561c67020975",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "Vũ Thị Thúy",
+  "phone": "0987654321",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-19T21:13:52.450Z"
+  },
+  "created_at": {
+    "$date": "2021-05-19T21:13:52.450Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a5efc378bc973f93390d36"
+  },
+  "order_id": "60a5e8ad65e90608a250af24",
+  "user_create_id": "60a5e872dbd3080592191af3",
+  "name": "Lại Văn Luyện",
+  "phone": "0888633630",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "5fda7cf16f1e9582b5bfcb6f",
+      "amount": "",
+      "price": "0"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-20T05:12:35.938Z"
+  },
+  "created_at": {
+    "$date": "2021-05-20T05:12:35.938Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a8beea6c2cb45ef212453d"
+  },
+  "order_id": "60a6237c858c1b36b067fa57",
+  "user_create_id": "60a5e872dbd3080592191af3",
+  "name": "Nguyễn Trung Tiến",
+  "phone": "0954321389",
+  "provin": "hn",
+  "district": "hn",
+  "town": "hn",
+  "address": "hn",
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "1",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "650000",
+  "updated_at": {
+    "$date": "2021-05-22T08:21:35.958Z"
+  },
+  "created_at": {
+    "$date": "2021-05-22T08:20:58.318Z"
+  },
+  "date_success_order": {
+    "$date": "2021-05-22T08:21:33.883Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a900fae58cc95ba6668966"
+  },
+  "order_id": "60a8b6b365e90608a250af27",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "nga nguyễn",
+  "phone": "0962445783",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-22T13:02:50.539Z"
+  },
+  "created_at": {
+    "$date": "2021-05-22T13:02:50.539Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a9042ee58cc95ba6668968"
+  },
+  "order_id": "60a7dc6388359269db72a228",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "hương cao",
+  "phone": "0936530124",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-22T13:16:30.801Z"
+  },
+  "created_at": {
+    "$date": "2021-05-22T13:16:30.801Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a9058e3ebadb4ac24a3c44"
+  },
+  "order_id": "60a7dc9c3ebadb4ac24a3c42",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "dương Thị MInh Dương",
+  "phone": "0343343960",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-22T13:22:22.309Z"
+  },
+  "created_at": {
+    "$date": "2021-05-22T13:22:22.309Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a906096c2cb45ef212453f"
+  },
+  "order_id": "60a7dcf46c2cb45ef2124534",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "hương cao",
+  "phone": "0936530124",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-22T13:24:25.628Z"
+  },
+  "created_at": {
+    "$date": "2021-05-22T13:24:25.628Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a907f95c5a0f0c8857d525"
+  },
+  "order_id": "60a8632665e90608a250af26",
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "name": "hương",
+  "phone": "0392589866",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-22T13:32:41.508Z"
+  },
+  "created_at": {
+    "$date": "2021-05-22T13:32:41.508Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a9eb8d5569a64e8c1b9d44"
+  },
+  "order_id": "60a9e3df6c2cb45ef2124540",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "cao thị thảo",
+  "phone": "082780225",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-23T05:43:41.252Z"
+  },
+  "created_at": {
+    "$date": "2021-05-23T05:43:41.252Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a9ebf58600561c67020979"
+  },
+  "order_id": "60a9bff23ebadb4ac24a3c45",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "mỹ kim",
+  "phone": "0376560439",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-23T05:45:25.645Z"
+  },
+  "created_at": {
+    "$date": "2021-05-23T05:45:25.645Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a9ec99f402e9176e5e2f77"
+  },
+  "order_id": "60a92a2dd8f54e73c448b858",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "mùi võ",
+  "phone": "0366196086",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-23T05:48:09.120Z"
+  },
+  "created_at": {
+    "$date": "2021-05-23T05:48:09.120Z"
+  }
+},{
+  "_id": {
+    "$oid": "60ac84778600561c6702097e"
+  },
+  "order_id": "60ab8412dcb66750e0776243",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-05-25T05:00:39.082Z"
+  },
+  "name": "dương",
+  "phone": "0987654321",
+  "provin": "Hà Nội",
+  "district": "Thanh Xuân",
+  "town": "Phường Nhân Chính",
+  "address": "7 hoàng minh giám",
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "5",
+      "price": "650000"
+    }
+  ],
+  "note_ship": "chuyển trong ngày",
+  "note_delivery": "áda",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "3250000",
+  "updated_at": {
+    "$date": "2021-05-25T08:48:12.305Z"
+  },
+  "created_at": {
+    "$date": "2021-05-25T05:00:39.105Z"
+  }
+},{
+  "_id": {
+    "$oid": "60ac8542d8f54e73c448b85a"
+  },
+  "order_id": "60ab8424ebf33c618a1f1784",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-05-25T05:04:02.695Z"
+  },
+  "name": "dương2",
+  "phone": "0987654123",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "2",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1300000",
+  "updated_at": {
+    "$date": "2021-05-25T05:04:02.925Z"
+  },
+  "created_at": {
+    "$date": "2021-05-25T05:04:02.925Z"
+  }
+},{
+  "_id": {
+    "$oid": "60ac8554858c1b36b067fa5d"
+  },
+  "order_id": "60ab84348600561c6702097c",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-05-25T05:04:20.735Z"
+  },
+  "name": "dương 3",
+  "phone": "0987654456",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "4",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "2600000",
+  "updated_at": {
+    "$date": "2021-05-25T05:04:20.769Z"
+  },
+  "created_at": {
+    "$date": "2021-05-25T05:04:20.769Z"
+  }
+},{
+  "_id": {
+    "$oid": "60ac856588359269db72a22b"
+  },
+  "order_id": "60ac84f1858c1b36b067fa5b",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-05-25T05:04:37.045Z"
+  },
+  "name": "duong 4",
+  "phone": "0987678876",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "2",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1300000",
+  "updated_at": {
+    "$date": "2021-05-25T05:04:37.063Z"
+  },
+  "created_at": {
+    "$date": "2021-05-25T05:04:37.063Z"
+  }
+},{
+  "_id": {
+    "$oid": "60ac8585dbd3080592191af8"
+  },
+  "order_id": "60ac84fd5c5a0f0c8857d526",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-05-25T05:05:09.454Z"
+  },
+  "name": "dương 5",
+  "phone": "0987789986",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "3",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1950000",
+  "updated_at": {
+    "$date": "2021-05-25T05:05:09.491Z"
+  },
+  "created_at": {
+    "$date": "2021-05-25T05:05:09.491Z"
+  }
+},{
+  "_id": {
+    "$oid": "60ac8593d8f54e73c448b85c"
+  },
+  "order_id": "60ac850d139da43b8d26b598",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-05-25T05:05:23.938Z"
+  },
+  "name": "duong6",
+  "phone": "0987789456",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "4",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "2600000",
+  "updated_at": {
+    "$date": "2021-05-25T08:47:36.890Z"
+  },
+  "created_at": {
+    "$date": "2021-05-25T05:05:23.953Z"
+  }
+},{
+  "_id": {
+    "$oid": "60ac89b92f72f62382592e63"
+  },
+  "order_id": "60ac899aa5d4fe6f6470a7d6",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-05-25T05:23:04.972Z"
+  },
+  "name": "duong8",
+  "phone": "0987654322",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "1",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "650000",
+  "updated_at": {
+    "$date": "2021-05-25T05:23:05.058Z"
+  },
+  "created_at": {
+    "$date": "2021-05-25T05:23:05.058Z"
+  }
+},{
+  "_id": {
+    "$oid": "60af6f88d7834d29837356a3"
+  },
+  "order_id": "60af3e392eaf417396226802",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-05-27T10:08:08.086Z"
+  },
+  "name": "Nguyễn Doàn",
+  "phone": "0352011832",
+  "provin": "Quảng Bình",
+  "district": "Bố Trạch",
+  "town": "Xã Tây Trạch",
+  "address": "Thôn Cồn",
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "2",
+      "price": "650000"
+    },
+    {
+      "product_id": "60a3c7f5858c1b36b067fa53",
+      "amount": "2",
+      "price": "0"
+    }
+  ],
+  "note_ship": "CHƯA VẬN ĐƠN",
+  "note_delivery": "EM NGUYỆT GỬI CHO XEM HÀNG K BÓC TEM",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1300000",
+  "updated_at": {
+    "$date": "2021-05-27T10:08:08.151Z"
+  },
+  "created_at": {
+    "$date": "2021-05-27T10:08:08.151Z"
+  }
+},{
+  "_id": {
+    "$oid": "60af730987a1634f382b4573"
+  },
+  "order_id": "60af68417943611f6d05efc3",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-05-27T10:23:05.176Z"
+  },
+  "name": "TÙNG",
+  "phone": "0976547995",
+  "provin": "Hà Nội",
+  "district": "Hai Bà Trưng",
+  "town": "Phường Vĩnh Tuy",
+  "address": "29 tập thể rau quả ngách 8 ngõ 433 Kim Ngưu,",
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "4",
+      "price": "650000"
+    },
+    {
+      "product_id": "60a3c7f5858c1b36b067fa53",
+      "amount": "3",
+      "price": "0"
+    }
+  ],
+  "note_ship": "CHƯA VẬN ĐƠN",
+  "note_delivery": "EM NGUYỆT GỬI HÀNG CHO XEM HÀNG K BÓC TEM",
+  "discount": "650000",
+  "transport": "",
+  "charge": "",
+  "total": "1950000",
+  "updated_at": {
+    "$date": "2021-05-27T10:23:05.203Z"
+  },
+  "created_at": {
+    "$date": "2021-05-27T10:23:05.203Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b1c927b78f077412349cf6"
+  },
+  "order_id": "60b1b981d7834d29837356a4",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "Trần Thi",
+  "phone": "0373078518",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-29T04:55:03.645Z"
+  },
+  "created_at": {
+    "$date": "2021-05-29T04:55:03.645Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b3a2bfd7834d29837356a7"
+  },
+  "order_id": "60b2ef6ac1806a6dbc22e602",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "hoang tran",
+  "phone": "0962819967",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-30T14:35:43.311Z"
+  },
+  "created_at": {
+    "$date": "2021-05-30T14:35:43.311Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b456c4365b9934f64c2574"
+  },
+  "order_id": "60b42f0210017d6ad04e8862",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "Đô Thu Hiền",
+  "phone": "0976825486",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-31T03:23:48.663Z"
+  },
+  "created_at": {
+    "$date": "2021-05-31T03:23:48.663Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b49b69c1806a6dbc22e605"
+  },
+  "order_id": "60b48dd8c1806a6dbc22e603",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "Nguyễn Xuân",
+  "phone": "0328919680",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-05-31T08:16:41.447Z"
+  },
+  "created_at": {
+    "$date": "2021-05-31T08:16:41.447Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b59f36ce78097e003f2a34"
+  },
+  "order_id": "60b59e8c10017d6ad04e8863",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-06-01T02:45:10.214Z"
+  },
+  "name": "Nguyễn Doàn -",
+  "phone": "0352011832",
+  "provin": "Quảng Bình",
+  "district": "Bố Trạch",
+  "town": "Xã Tây Trạch",
+  "address": "Thôn Cồn",
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "2",
+      "price": "650000"
+    },
+    {
+      "product_id": "60a3c7f5858c1b36b067fa53",
+      "amount": "2",
+      "price": "0"
+    }
+  ],
+  "note_ship": "đã xác nhận đơn hàng",
+  "note_delivery": "đã chuyển hàng",
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "1300000",
+  "updated_at": {
+    "$date": "2021-06-01T02:45:10.232Z"
+  },
+  "created_at": {
+    "$date": "2021-06-01T02:45:10.232Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b5aad910017d6ad04e8865"
+  },
+  "order_id": "60b5154fce78097e003f2a32",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "nguyễn nâu",
+  "phone": "0847006989",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-06-01T03:34:49.395Z"
+  },
+  "created_at": {
+    "$date": "2021-06-01T03:34:49.395Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b5e15275f3591307125e35"
+  },
+  "order_id": "60b5d7f000bc294d603a4782",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "nguyệt hòa",
+  "phone": "0977500951",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-06-01T07:27:14.891Z"
+  },
+  "created_at": {
+    "$date": "2021-06-01T07:27:14.891Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b5e1aa604b621ca8546a34"
+  },
+  "order_id": "60a7dd8765e90608a250af25",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "thanh minh",
+  "phone": "0918577213",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-06-01T07:28:42.439Z"
+  },
+  "created_at": {
+    "$date": "2021-06-01T07:28:42.439Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b6fdd62f72f62382592e68"
+  },
+  "order_id": "60b5f08cd7834d29837356a8",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "Thuỷ",
+  "phone": "0349116321",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-06-02T03:41:10.392Z"
+  },
+  "created_at": {
+    "$date": "2021-06-02T03:41:10.392Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b6ffa7f883872ca409a283"
+  },
+  "order_id": "60b60733ba0860452a6e1c33",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "hà đinh",
+  "phone": "0388312493",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-06-02T03:48:55.378Z"
+  },
+  "created_at": {
+    "$date": "2021-06-02T03:48:55.378Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b73aecce78097e003f2a36"
+  },
+  "order_id": "60b7360c6a3e61120538be32",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "nguyễn soa",
+  "phone": "0776251510",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-06-02T08:01:48.138Z"
+  },
+  "created_at": {
+    "$date": "2021-06-02T08:01:48.138Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b8218e75f3591307125e37"
+  },
+  "order_id": "60b821442f72f62382592e69",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "Trần Lam 46 tuổi",
+  "phone": "0327763501",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "1",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "650000",
+  "updated_at": {
+    "$date": "2021-06-03T05:10:54.533Z"
+  },
+  "created_at": {
+    "$date": "2021-06-03T00:25:50.449Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b8566f2eaf417396226807"
+  },
+  "order_id": "60b8559f00bc294d603a4783",
+  "user_create_id": "60a8f85688359269db72a229",
+  "date_success_order": {
+    "$date": "2021-06-03T04:11:27.807Z"
+  },
+  "name": "dương",
+  "phone": "0987654321",
+  "provin": "Hồ Chí Minh",
+  "district": "Bình Chánh",
+  "town": "Xã An Phú Tây",
+  "address": "33",
+  "reason": "success",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "5",
+      "price": "650000"
+    },
+    {
+      "product_id": "60a3c7f5858c1b36b067fa53",
+      "amount": "2",
+      "price": "0"
+    },
+    {
+      "product_id": "60a3c7f5858c1b36b067fa53",
+      "amount": "2",
+      "price": "0"
+    }
+  ],
+  "note_ship": "đã chốt",
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "3250000",
+  "updated_at": {
+    "$date": "2021-06-03T04:16:37.339Z"
+  },
+  "created_at": {
+    "$date": "2021-06-03T04:11:27.860Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b865f27943611f6d05efc6"
+  },
+  "order_id": "60b83a16d1246732051ffcf3",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "Hồ Lý",
+  "phone": "0385588736",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-06-03T05:17:38.584Z"
+  },
+  "created_at": {
+    "$date": "2021-06-03T05:17:38.584Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b876f1d7834d29837356aa"
+  },
+  "order_id": "60b8739a6a3e61120538be33",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "Lê Xuân Lộc",
+  "phone": "0328919680",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-06-03T06:30:09.614Z"
+  },
+  "created_at": {
+    "$date": "2021-06-03T06:30:09.614Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b8a2137943611f6d05efc9"
+  },
+  "order_id": "60b87c9a2eaf417396226809",
+  "user_create_id": "60a8f85688359269db72a229",
+  "name": "Kim Ngọc",
+  "phone": "0917952530",
+  "provin": null,
+  "district": null,
+  "town": null,
+  "address": null,
+  "reason": "wait",
+  "product": [
+    {
+      "product_id": "608677af8600561c67020972",
+      "amount": "",
+      "price": "650000"
+    }
+  ],
+  "note_ship": null,
+  "note_delivery": null,
+  "discount": "",
+  "transport": "",
+  "charge": "",
+  "total": "",
+  "updated_at": {
+    "$date": "2021-06-03T09:34:11.368Z"
+  },
+  "created_at": {
+    "$date": "2021-06-03T09:34:11.368Z"
+  }
+}]

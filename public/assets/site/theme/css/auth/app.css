@@ -1,0 +1,297 @@
+body {
+  background-color: #eee;
+  color: #3c4858;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  padding: 0px;
+  background-color: white;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+}
+
+.navbar .navbar-brand {
+  background-color: #e5e5e5;
+  margin-right: 0px;
+  width: 80px;
+  min-width: 80px;
+}
+
+.navbar .navbar-menu {
+  width: calc(100% - 80px);
+}
+
+.navbar .navbar-item {
+  padding: 0px 8px;
+  font-size: 12px;
+  height: 100%;
+}
+
+.navbar .navbar-item .text {
+  padding: 2px 0px;
+}
+
+.navbar .user {
+  font-size: 14px;
+  height: 100%;
+  padding: 0px 10px;
+}
+
+.navbar > div {
+  height: 50px;
+}
+
+.sidebar-width {
+  width: 80px;
+  min-width: 80px;
+}
+
+#logo {
+  background-image: url(https://vtask.net/img/vtask-logo-app.png);
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  align-self: center;
+}
+
+.icon {
+  font-size: 20px;
+  height: 100%;
+  padding: 4px 20px;
+}
+
+.sidebar {
+  float: left;
+  font-size: 13px;
+}
+
+.sidebar .sidebar-style {
+  height: 100%;
+}
+
+.sidebar .first-sidemenu {
+  width: 80px;
+  min-width: 80px;
+  height: 100%;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0cb3ff), to(#0084D1));
+  background: linear-gradient(#0cb3ff, #0084D1);
+}
+
+.sidebar .second-sidemenu {
+  width: 200px;
+  min-width: 200px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.sidebar .second-sidemenu .slide-item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 7px;
+  font-size: 14px;
+  color: #191919;
+  border-bottom: 0;
+}
+
+.sidebar .sidebar-item {
+  width: 100%;
+  padding: 15px 0px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.sidebar .sidebar-item i {
+  font-size: 28px;
+}
+
+.sidebar .sidebar-item div {
+  margin-top: 5px;
+}
+
+.sidebar .tab-menu-content {
+  padding: 20px 20px 0px 20px;
+  box-sizing: border-box;
+}
+
+main {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  float: right;
+}
+
+.app-content {
+  height: calc(100vh - 50px);
+  box-sizing: border-box;
+}
+
+.app-content .section {
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  padding: 20px 0px 0px;
+}
+
+.app-content .main-body {
+  height: calc(100vh - 50px - 100px);
+  overflow: auto;
+}
+
+.app-content .card-header img {
+  width: 100%;
+  height: 220px;
+  margin: 0 auto;
+  max-height: 200px;
+}
+
+.app-content .card-body {
+  padding: 10px 15px;
+}
+
+.app-content .card-body .badge {
+  font-size: 100%;
+}
+
+.card .card-header {
+  background: none;
+}
+
+.card .card-title {
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #212229;
+}
+
+.card .card-title:only-child {
+  margin-bottom: 0px;
+}
+
+.table th {
+  color: #242338;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  border-bottom: 0px !important;
+}
+
+.table td {
+  word-wrap: break-word;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.history-comment .list-group-item {
+  margin-top: 10px;
+}
+
+.history-comment .list-group-item i {
+  font-size: 2em;
+  padding: 7px;
+  border: 1px solid #ddd;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.pointer,
+.navbar .navbar-item,
+.navbar .user,
+.icon,
+.sidebar .sidebar-item {
+  cursor: pointer;
+}
+
+.user-select,
+.navbar .user,
+.icon {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.box-sizing,
+.navbar .navbar-item,
+.navbar .navbar-item .text,
+.icon {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.co-green {
+  color: #269c71;
+}
+
+.co-default,
+.navbar .navbar-item .time-expire {
+  color: #868686;
+}
+
+.text-upcase {
+  text-transform: uppercase;
+}
+
+.text-size-14 {
+  font-size: 14px;
+}
+
+.hover-default,
+.navbar .user:hover,
+.icon:hover,
+.sidebar .sidebar-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.w-5 {
+  width: 50%;
+}
+

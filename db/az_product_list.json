@@ -1,0 +1,126 @@
+[{
+  "_id": {
+    "$oid": "5fda7cf16f1e9582b5bfcb6f"
+  },
+  "product_name": "Hadalabo",
+  "status": 1,
+  "updated_at": "12123",
+  "created_at": "234234"
+},{
+  "_id": {
+    "$oid": "5fda8c71865a7c443f059335"
+  },
+  "product_name": "Laroche posay",
+  "price": "900000",
+  "status": 1,
+  "updated_at": {
+    "$date": "2020-12-16T22:38:41.780Z"
+  },
+  "created_at": {
+    "$date": "2020-12-16T22:38:41.780Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fe97ff6ddb729190d1ab33e"
+  },
+  "product_name": "Slimvita",
+  "price": "890000",
+  "status": 1,
+  "updated_at": {
+    "$date": "2020-12-28T06:49:26.538Z"
+  },
+  "created_at": {
+    "$date": "2020-12-28T06:49:26.538Z"
+  }
+},{
+  "_id": {
+    "$oid": "600846d0b0fb1039cc7c8eb4"
+  },
+  "product_name": "Sản phẩm a",
+  "price": "300000",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-01-20T15:05:52.998Z"
+  },
+  "created_at": {
+    "$date": "2021-01-20T15:05:52.998Z"
+  }
+},{
+  "_id": {
+    "$oid": "608677af8600561c67020972"
+  },
+  "product_name": "Viên Sủi DEKAGU",
+  "price": "650000",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-04-26T08:19:59.385Z"
+  },
+  "created_at": {
+    "$date": "2021-04-26T08:19:59.385Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a3c7f5858c1b36b067fa53"
+  },
+  "product_name": "Gel Âm Đâọ",
+  "price": "0",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-18T13:58:13.890Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T13:58:13.890Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a56dfbb2eddb3d536c8ff4"
+  },
+  "product_name": "test",
+  "price": "900000",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-19T19:58:51.869Z"
+  },
+  "created_at": {
+    "$date": "2021-05-19T19:58:51.869Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a573227a75a700486c1553"
+  },
+  "product_name": "Tesst",
+  "price": "400000",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-19T20:20:50.909Z"
+  },
+  "created_at": {
+    "$date": "2021-05-19T20:20:50.909Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a7125ed8f54e73c448b855"
+  },
+  "product_name": "Mina",
+  "price": "900000",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-21T01:52:30.746Z"
+  },
+  "created_at": {
+    "$date": "2021-05-21T01:52:30.746Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b07582b78f077412349cf2"
+  },
+  "product_name": "Hộp viên sủi dekagu",
+  "price": "650000",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-28T04:45:54.255Z"
+  },
+  "created_at": {
+    "$date": "2021-05-28T04:45:54.255Z"
+  }
+}]

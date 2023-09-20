@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "5fda83ab6f1e9582b5bfcb72"
+  },
+  "company_mkt_id": "5fda70b46f1e9582b5bfcb6b",
+  "company_sale_id": "5fda84212eef2e49cccb17c9",
+  "status": 1,
+  "updated_at": "32423",
+  "created_at": "423432",
+  "product_id": "5fda7cf16f1e9582b5bfcb6f"
+},{
+  "_id": {
+    "$oid": "5fda8c71865a7c443f059337"
+  },
+  "company_mkt_id": "5fda70b46f1e9582b5bfcb6b",
+  "company_sale_id": "5fda84212eef2e49cccb17c9",
+  "product_id": "5fda8c71865a7c443f059335",
+  "status": 1,
+  "updated_at": {
+    "$date": "2020-12-16T22:38:41.784Z"
+  },
+  "created_at": {
+    "$date": "2020-12-16T22:38:41.784Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fe97ff6ddb729190d1ab340"
+  },
+  "company_mkt_id": "5fda70b46f1e9582b5bfcb6b",
+  "company_sale_id": "5fda84212eef2e49cccb17c9",
+  "product_id": "5fe97ff6ddb729190d1ab33e",
+  "status": 1,
+  "updated_at": {
+    "$date": "2020-12-28T06:49:26.540Z"
+  },
+  "created_at": {
+    "$date": "2020-12-28T06:49:26.540Z"
+  }
+},{
+  "_id": {
+    "$oid": "600846d1b0fb1039cc7c8eb6"
+  },
+  "company_mkt_id": "5fda70b46f1e9582b5bfcb6b",
+  "company_sale_id": "5fda84212eef2e49cccb17c9",
+  "product_id": "600846d0b0fb1039cc7c8eb4",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-01-20T15:05:53.005Z"
+  },
+  "created_at": {
+    "$date": "2021-01-20T15:05:53.005Z"
+  }
+},{
+  "_id": {
+    "$oid": "608677af8600561c67020974"
+  },
+  "company_mkt_id": "5fda70b46f1e9582b5bfcb6b",
+  "company_sale_id": "5fda84212eef2e49cccb17c9",
+  "product_id": "608677af8600561c67020972",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-04-26T08:19:59.391Z"
+  },
+  "created_at": {
+    "$date": "2021-04-26T08:19:59.391Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a3c7f5858c1b36b067fa55"
+  },
+  "company_mkt_id": "5fda70b46f1e9582b5bfcb6b",
+  "company_sale_id": "5fda84212eef2e49cccb17c9",
+  "product_id": "60a3c7f5858c1b36b067fa53",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-18T13:58:13.892Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T13:58:13.892Z"
+  }
+}]

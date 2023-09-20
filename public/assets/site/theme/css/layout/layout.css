@@ -1,0 +1,30 @@
+h4,
+.h4 {
+  font-size: 1.125rem;
+}
+
+.font-weight-semibold {
+  font-weight: 500;
+}
+
+.text-muted {
+  color: #8492a6 !important;
+  font-size: 13px;
+}
+
+.brround {
+  border-radius: 50%;
+}
+
+.h-9 {
+  height: 6rem;
+}
+
+.w-9 {
+  width: 6rem;
+}
+
+label {
+  font-weight: 700;
+}
+

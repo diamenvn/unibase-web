@@ -1,0 +1,1558 @@
+[{
+  "_id": {
+    "$oid": "5f1b1468cd1c9f3f990d6847"
+  },
+  "username": "admin",
+  "password": "$2y$10$M9Yng.YZ4dutKP2MhHOSt.lWBwdTxyOmHtqHRVujBlAZt8ULhdequ",
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "permission": "admin",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "name": "Nguyễn Văn Nam",
+  "email": "x321pm@gmail.com",
+  "phone": "0888633633",
+  "dateofbirth": "1999-06-09",
+  "status": 1,
+  "active": 1,
+  "access_token": "E3u7QyVAmcDidAYLkgujx0XPC4Va5Mkp78bX9AR0",
+  "time_expire_token": {
+    "$date": "2020-11-29T20:07:04.015Z"
+  },
+  "remember_token": "",
+  "updated_at": {
+    "$date": "2021-06-03T09:05:00.003Z"
+  },
+  "created_at": {
+    "$date": "2020-02-13T00:10:41Z"
+  },
+  "type_account": "mkt",
+  "is_shipper": 1,
+  "assign_order": true
+},{
+  "_id": {
+    "$oid": "5f33cfc2a7ba23276d297ddc"
+  },
+  "username": "npthuy",
+  "password": "$2y$10$.qOcKzM8XvuHnnPoyBjoQutgvxINMsoXcdZowza6AFqcRM3tMU4oq",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "admin",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Phương Thuỳ",
+  "phone": "0395560824",
+  "email": "phuongthuy95.ulsa@gmail.com",
+  "fingerprint_code": 18,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "2DJ2BZUSN2034xEaheKywVHlNjlqgLu707GMccGp",
+  "remember_token": "DOf7N8ACBGlfzpXhe85vHH9MXczEjmOCtSwU3AdL",
+  "dateofbirth": "1995-01-22",
+  "updated_at": {
+    "$date": "2020-11-28T04:42:10.913Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:17:22.900Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-11-28T05:42:10.911Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d0680cef0074a32b82c0"
+  },
+  "username": "ntnam",
+  "password": "$2y$10$jAwBJ.RMRzVyQ484xDm7PO7oTuj/0HOTeqAs0vh9u2TRm7CrSkiMe",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Thị Nam",
+  "phone": "0986061342",
+  "email": "nguyennamgbg.2807@gmail.com",
+  "fingerprint_code": 38,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "1gQKoTMNCCTvKujyDadB5xxu5mBXmIfR3Z6IzNmf",
+  "remember_token": "1GBRfRUxqHFJs3vTRPcSDKtC29k2LHvEPZLDUlqu",
+  "dateofbirth": "1994-07-27",
+  "updated_at": {
+    "$date": "2020-09-14T03:29:16.035Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:20:08.256Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-09-14T04:29:16.032Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d0b36ddc9762ad286670"
+  },
+  "username": "ntttrang",
+  "password": "$2y$10$9XtbDbLbiuDi2xH9ToHVAuAyNaoCHaF2tPUUQzx0iVBSzL6RDhvjC",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Thị Thuỳ Trang",
+  "phone": "0973164033",
+  "email": "trangthien983@gmail.com",
+  "fingerprint_code": 53,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "vtJ6YFy4Sd9pBqcWkq648wkT9Qglehh4q8SCyk4b",
+  "remember_token": "JCtIYzDBmFyNT8HOXWIvvqa5VyJswv2zIN5OE3ho",
+  "dateofbirth": "1998-12-20",
+  "updated_at": {
+    "$date": "2020-11-07T02:02:45.733Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:21:23.491Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-11-07T03:02:45.731Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d0d6a7ba23276d297ddf"
+  },
+  "username": "ntquynh",
+  "password": "$2y$10$/lLagkRZLjV7HbcEToPCPuPkW6Jb6l0lzW/mQMvhHMKoHqyzYiCmi",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Thu Quỳnh",
+  "phone": "0973736791",
+  "email": "nguyenthuquynh997@gmail.com",
+  "fingerprint_code": 26,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "bbQN4VhASKfxaKjOwrDE9wfcf9912N5h236iriEi",
+  "remember_token": "j3nRJKswLAVm3MdKQTWEx1PM28llrJL9d63bAIPn",
+  "dateofbirth": "1997-03-15",
+  "updated_at": {
+    "$date": "2020-11-03T04:15:28.459Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:21:58.504Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-11-03T05:15:28.457Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d120468b90432d533c5e"
+  },
+  "username": "nttthuy",
+  "password": "$2y$10$ne46HFRoxcEfy0FcEldwh.r9zcYYGjPkhxBh8UysHRPHlXvUC6cyC",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Thị Thu Thuỷ",
+  "phone": "0353942647",
+  "email": "thuthuyr810@gmail.com",
+  "fingerprint_code": 7,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "zw5UAy3Lax797gQ3b47hI7ZYy0JDvT3MA3p330fY",
+  "remember_token": "Til2ke2JQzYZ2LwfaElW1PH7p7746zr3QPjxrTlR",
+  "dateofbirth": "1996-10-07",
+  "updated_at": {
+    "$date": "2020-10-30T02:10:11.942Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:23:12.199Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-10-30T03:10:11.939Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d13c287e746ee811a912"
+  },
+  "username": "ndhanh",
+  "password": "$2y$10$R4cDi72rP3TkiU0ptFmhRuKiHOlFt7KFEpN9E0anlxuClmZuZb42W",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Đức Hạnh",
+  "phone": "0349543641",
+  "email": "thanhkhiethau68@gmail.com",
+  "fingerprint_code": 36,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "7MInxVNEsO5d2R26YQFxJbMSj6PUo7D7ZvqTfRCM",
+  "remember_token": "Ch4sUGkRl7JhA6id9Ow2DDXhokiKpzos6hCjd20Y",
+  "dateofbirth": "1991-12-29",
+  "updated_at": {
+    "$date": "2020-11-17T03:58:33.347Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:23:40.273Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-11-17T04:58:33.345Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d1710f915c043a635f4e"
+  },
+  "username": "ndhuy",
+  "password": "$2y$10$3upsvFhcLvYb/5n7WWaeu.v9ivFrWvfbGETcaJu.0/01Pk6UPByCW",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Đình Huy",
+  "phone": "0969968143",
+  "email": "tnhuy.alama@gmail.com",
+  "fingerprint_code": 79,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "bMiPgoAmtX6MzzNm5kVN4hjqopm7i1YupGbQd8hY",
+  "remember_token": "WysrFyzVnODCMkeFzQfuPwEFLMBqssWd7OlKoDfg",
+  "dateofbirth": "1996-08-30",
+  "updated_at": {
+    "$date": "2020-09-01T10:10:49.752Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:24:33.480Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-09-01T11:10:49.750Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d1aa468b90432d533c61"
+  },
+  "username": "lhson",
+  "password": "$2y$10$XQPjiDgWuNufXgFkrftz1uOjwbonXjsULva3bH8Tlfzi4bjI.kPmW",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Lê Hồng Sơn",
+  "phone": "0346199409",
+  "email": "lehongson2310@gmail.com",
+  "fingerprint_code": 23,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "ddab2B8AzchUN7AchChfVAyqWLM8bxk6j60oJ3mf",
+  "remember_token": "VQBx7tn7TZZvSuO6nTAtGMqbaJVDcTmi6Z7Ujd5o",
+  "updated_at": {
+    "$date": "2020-10-21T02:16:55.514Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:25:30.480Z"
+  },
+  "dateofbirth": "1996-10-22",
+  "time_expire_token": {
+    "$date": "2020-10-21T03:16:55.512Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d1ba287e746ee811a915"
+  },
+  "username": "nddat",
+  "password": "$2y$10$VSgkWV0vrJHZiyADtJFDEuOHQQ1YtojEg5Ygf00PEJ8BUVWlrLwxW",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Đình Đạt",
+  "phone": "0968819095",
+  "email": "Ngdinhdat95@gmail.com",
+  "fingerprint_code": 33,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "Q5Ao5Gdw3RMSAoC8afq9wu5k8pG6ICap53ZbKBHC",
+  "remember_token": "8qUi7Ekj7D8Ch4NYbfCWNLv0uVMn8BOGermMZ84e",
+  "updated_at": {
+    "$date": "2020-11-25T03:58:35.631Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:25:46.249Z"
+  },
+  "dateofbirth": "1995-05-03",
+  "time_expire_token": {
+    "$date": "2020-11-25T04:58:35.630Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d1d05a9677411312ad6e"
+  },
+  "username": "ntthuong",
+  "password": "$2y$10$2v1AbzKhBZ5.1ZfoCGxrc.utanniwQLZyRLh.1tQDXHnfP7PCCH2K",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Thị Thương",
+  "phone": "0974684502",
+  "email": "nguyenthuongtb281094@gmail.com",
+  "fingerprint_code": 29,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "XYF2kyKmZZL1GF3xiq6FfW2OmocZwuT8TPvuW9Dh",
+  "remember_token": "1OmiMntJgz2S0LYs7TmaqCJx9Ez4udOegB7elhhz",
+  "updated_at": {
+    "$date": "2020-11-26T03:44:15.557Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:26:08.824Z"
+  },
+  "dateofbirth": "1995-02-19",
+  "time_expire_token": {
+    "$date": "2020-11-26T04:44:15.556Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d1e2d9190647373e7980"
+  },
+  "username": "ndthuong",
+  "password": "$2y$10$BHQwYKVhhx.MdAQorHG0.eKguVWEPSn7pfhPsmq.gkgZn4oAXsyqm",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Duy Thương",
+  "phone": "0981560443",
+  "email": "thuongnd.alama@gmail.com",
+  "fingerprint_code": 21,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "W0VggRPtmNfse8oCZfJAKkEd5N3munWe8ccVCeNh",
+  "remember_token": "aTX8RUIRsoLB8RF1G7EzqFCTuga2sBGCDKs3xyIx",
+  "updated_at": {
+    "$date": "2020-11-17T03:58:46.988Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:26:26.068Z"
+  },
+  "dateofbirth": "1997-03-11",
+  "time_expire_token": {
+    "$date": "2020-11-17T04:58:46.986Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d1f10cef0074a32b82c3"
+  },
+  "username": "thdang",
+  "password": "$2y$10$dq2VT2gLROuh9u4Ieb/5muRr5UEcaRy89x2Nvszz8jIhxp7CS7rPS",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Tạ Hải Đăng",
+  "phone": "0967278717",
+  "email": "alamadang7520@gmail.com",
+  "fingerprint_code": 34,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "ZKSXNzAmycOi7x0QdqiSIFXZYREbiHkAjyRRHmGY",
+  "remember_token": "xIS8yyRvwZaMMPcGFGlIplXvFb8RJZ081t0NglI7",
+  "updated_at": {
+    "$date": "2020-11-25T03:55:52.657Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:26:41.324Z"
+  },
+  "dateofbirth": "1997-11-14",
+  "time_expire_token": {
+    "$date": "2020-11-25T04:55:52.653Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d204c972245ecb1c104e"
+  },
+  "username": "vtle",
+  "password": "$2y$10$B5TvZZNr0e81hjqhEgrcyePKL7uDOlGDMIwH5H00Z.NR.M9se1QiW",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Vũ Thị Lệ",
+  "phone": "0869935628",
+  "email": "levutm197@gmail.com",
+  "fingerprint_code": 27,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "HGUP8Az9YWIwvIUIkXlsWPuWCoOXdjf5EisJQ0Jp",
+  "remember_token": "W0efuhRjwwCn8LCIBwpMptorljqKYnDIZJ29xSFz",
+  "dateofbirth": "1998-07-18",
+  "updated_at": {
+    "$date": "2020-09-08T02:03:22.461Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:27:00.248Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-09-08T03:03:22.458Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d2150f915c043a635f51"
+  },
+  "username": "nvkhanh",
+  "password": "$2y$10$jG2bAXh2MVrQbUYyEeea6.sghxk4Am4ZALacMCJ3OALfb3prjiA2y",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Văn Khánh",
+  "phone": "869692610",
+  "email": "khanh.nv0610@gmail.com",
+  "fingerprint_code": 4,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "yJefEflLn6KjxrsSsjFQalscSeEMjxZgK6TvzEyD",
+  "remember_token": "wKmM8bUMOHMh8pOYBGSyq6zC3he6pICms0NoA6vR",
+  "updated_at": {
+    "$date": "2020-08-28T08:54:55.449Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:27:17.911Z"
+  },
+  "dateofbirth": "1991-10-05"
+},{
+  "_id": {
+    "$oid": "5f33d22e6ddc9762ad286673"
+  },
+  "username": "dthang",
+  "password": "$2y$10$XWATXyK5hltlDhpSJ/kBDObv2n.WoV4juuq.61KxYSKBI8R/rM5wW",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Đào Thị Hằng",
+  "phone": "0384112118",
+  "email": "ngochang764@gmail.com",
+  "fingerprint_code": 15,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "vvEJtRtUJVssi4q8uFdEmeNrLcu7IvohAvQTxj9A",
+  "remember_token": "dqVLvoVNpBmXvXmlce01bTxmQ9ihcI8PJ89aZfxp",
+  "updated_at": {
+    "$date": "2020-11-28T08:29:54.509Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:27:42.866Z"
+  },
+  "dateofbirth": "1998-12-04",
+  "time_expire_token": {
+    "$date": "2020-11-28T09:29:54.507Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d28d287e746ee811a918"
+  },
+  "username": "nvuoc",
+  "password": "$2y$10$XxoA0ifrbvdbM.sg4X0rb.LzERGZNaACZviF0PXuaaifopeDVKKd6",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Văn Ước",
+  "phone": "0369097494",
+  "email": "nguyenuoc972648@gmail.com",
+  "fingerprint_code": 37,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "J3je3Imc0DhjMT6o9bRWYJPxmawfBHeO09NsbpDi",
+  "remember_token": "HmnLKfRIErOsbjPFswDjRYO9zGC88c6UGB2PrieQ",
+  "dateofbirth": "1997-05-28",
+  "updated_at": {
+    "$date": "2020-09-15T07:37:34.714Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:29:17.817Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-09-15T08:37:34.712Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d2a05a9677411312ad71"
+  },
+  "username": "lvthanh",
+  "password": "$2y$10$5fdBd6N40Z1bmTntWnNGHun7vWTWDu.RSSU.XXyP0ycUjcaQN.rim",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Lê Văn Thành",
+  "phone": "0333548417",
+  "email": "lethanh10081998@gmail.com",
+  "fingerprint_code": 9,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "NEUVTfGh6YghhggFBW2RGXC7rrtfCpTB9vZUGmbl",
+  "remember_token": "QYM3cmk7grFEVfFzNBsjM4aVb2K1KqfanEAi9jFC",
+  "updated_at": {
+    "$date": "2020-10-03T10:24:42.279Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:29:36.293Z"
+  },
+  "dateofbirth": "1998-08-09",
+  "time_expire_token": {
+    "$date": "2020-10-03T11:24:42.278Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d2b3d9190647373e7983"
+  },
+  "username": "nvduy",
+  "password": "$2y$10$80o5r5dhqx9netMiRt7xt.ZgryqRvjHKO.JuBaHc2qlSAeQ2d44nm",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Văn Duy",
+  "phone": "0384091663",
+  "email": "nguyenduyalama@gmail.com",
+  "fingerprint_code": 22,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "ICrTiN8rybB8BvlBwYJwAnhhOeV36GMaVKppAC7d",
+  "remember_token": "I2MlvWC84ptuAClreAuMteBnuVikH3iPNz1dCBfX",
+  "dateofbirth": "1995-04-02",
+  "updated_at": {
+    "$date": "2020-11-28T04:57:30.688Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:29:55.437Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-11-28T05:57:30.684Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d361287e746ee811a91b"
+  },
+  "username": "nqhuy",
+  "password": "$2y$10$K.BQIJ2R6NuGXDw3.1Ons.gUXXjIIqJF2hGVAmNX8yO9jxCnXuQT.",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Quang Huy",
+  "phone": "0985012293",
+  "email": "quanghuy37na@gmail.com",
+  "fingerprint_code": 6,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "8yZfbmGUk5BRxBCvlmRa5H7Wubn23gge2X934MAO",
+  "remember_token": "wFEVkgyxxeLYKeo5mjFsFTdH6jUDa0f9Cnl2wgkZ",
+  "updated_at": {
+    "$date": "2020-09-01T09:17:14.016Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:32:49.270Z"
+  },
+  "dateofbirth": "1993-02-11",
+  "time_expire_token": {
+    "$date": "2020-09-01T10:17:14.015Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d3d60cef0074a32b82c9"
+  },
+  "username": "ttnan",
+  "password": "$2y$10$hrKHUt9T.5GuYZbP2Fve6eX..c0wdoV5YUIZUU8W9DK.uMwo73QDS",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Trần Thị Ngọc An",
+  "phone": "0972804239",
+  "email": "tranthingocan.017@gmail.com",
+  "fingerprint_code": 25,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "G6PZty46onEg7b1xBZF1ivyylEDJ5Wa27f9WVUXB",
+  "remember_token": "RbK4XTb4eIa7WfJL8mas5WzIwjKSxmTQ2SI3TlKQ",
+  "dateofbirth": "1996-04-21",
+  "updated_at": {
+    "$date": "2020-09-16T09:06:15.146Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:34:46.062Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-09-16T10:06:15.144Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d3e9c972245ecb1c1054"
+  },
+  "username": "nnlong",
+  "password": "$2y$10$bPRUaWE0GVYozeCIsZkP0.pIV/hIQxRUnRZwgF1oLZ.C5N.2qNd82",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Ngọc Long",
+  "phone": "0964996446",
+  "email": "long1.alama@gmail.com",
+  "fingerprint_code": 14,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "dmvCp2xJh0KAm5gyPEZ2KuZ4RgtHb7mHef6Eaffj",
+  "remember_token": "TadwKPjxvhOg3HskECCLEzlxrPLAa2LRfxC6thhS",
+  "updated_at": {
+    "$date": "2020-11-28T04:56:54.349Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:35:05.779Z"
+  },
+  "dateofbirth": "1996-03-30",
+  "time_expire_token": {
+    "$date": "2020-11-28T05:56:54.347Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d4366ddc9762ad286679"
+  },
+  "username": "pthong",
+  "password": "$2y$10$X3s7XLpAFjUAhpT2TNnoe.71lmc6T.Hdt7ilviC8gH.OWoVaZk2Rm",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Phan Thị Hồng",
+  "phone": "0965133231",
+  "email": "phanhong1902@gmail.com",
+  "fingerprint_code": 32,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "z4QK1GJgu8h0VYYnXTbvwjc1ExsUnx4KHIqxwQXi",
+  "remember_token": "a6Jk4oEAF00JMMiQxeJQYmIpC2xuaXN0nq2MIhIc",
+  "dateofbirth": "1997-02-18",
+  "updated_at": {
+    "$date": "2020-09-11T04:22:08.348Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:36:22.195Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-09-11T05:22:08.346Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d446a7ba23276d297de5"
+  },
+  "username": "hhnam",
+  "password": "$2y$10$wonVt9IzLct1hHSNb5lFEuDrU40I5ZIdjNfVtHNoL7FMKq6xdWhPq",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Hoàng Hải Nam",
+  "phone": "0398369365",
+  "email": "hoanghainam011096@gmail.com",
+  "fingerprint_code": 39,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "jUTW6yy0G2DXsVNcdGnS7bCjg2U1neNpw0HGPnu2",
+  "remember_token": "hgC7IqmARK1LM6lxMzhXWAOO991PFYowl9TZDwzZ",
+  "dateofbirth": "1996-09-29",
+  "updated_at": {
+    "$date": "2020-08-28T08:53:49.404Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:36:38.815Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d4774c13df24633db485"
+  },
+  "username": "ntan",
+  "password": "$2y$10$wiwflrbsCRnqTAa2.trY5.1CRupzKl6Amv1ByehS9uP.me7g34IyS",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Thành An",
+  "phone": "0396996940",
+  "email": "thanhannc2000@gmail.com",
+  "fingerprint_code": 12,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "ZVsO5jURO8GnxwnUH6vS0xDppe1dvu7SXFkxp0Zm",
+  "remember_token": "gTCAPf42W4UO2qIabsAV2gJNIXJjVDOQ2iVnGeE5",
+  "dateofbirth": "2000-12-01",
+  "updated_at": {
+    "$date": "2020-08-28T08:53:45.147Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:37:27.657Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d48d287e746ee811a91e"
+  },
+  "username": "ltha",
+  "password": "$2y$10$k5edbMae2XFiY.rbpzNV0.p35CMHGxVKmy.Wndls.ldZB1eJO/AN2",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Lê Thị Hà",
+  "phone": "‭077 4945793",
+  "email": "Leha091096@gmail.com",
+  "fingerprint_code": 30,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "6ObZCDXyLDUtTOR9tPBw6JAcTxXay4awnwE2XKSN",
+  "remember_token": "IUdQYeFFgFtORNDIqkZlB1mImCsOBB21y0iBdlWQ",
+  "dateofbirth": "1996-10-08",
+  "updated_at": {
+    "$date": "2020-08-28T08:53:32.986Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:37:49.171Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d4a85a9677411312ad77"
+  },
+  "username": "nhtung",
+  "password": "$2y$10$fZZ2JMxgVE43g0yqgoFx4.JzJgfShnMP5dEWJHfXycbqBIVFojeoe",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Huy Tùng",
+  "phone": "0372831780",
+  "email": "tunglaai2002@gmail.com",
+  "fingerprint_code": 35,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "AigxXUYBp6r7Wuhp1nXz99uh92ikj5E2etxuvOgi",
+  "remember_token": "IGAFOSzH8TT7SaY7ZJP5vzAvP4XcE0xgdOklZM1D",
+  "dateofbirth": "1997-01-06",
+  "updated_at": {
+    "$date": "2020-08-28T08:53:25.860Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:38:16.332Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d4c8d9190647373e7989"
+  },
+  "username": "ntlinh1",
+  "password": "$2y$10$tHqzniNiLopa7IKD2oA9/.WKF7vz.k21Tjo2D4RuXUBiByWJWB1Me",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Thị Linh",
+  "phone": "0967333031",
+  "email": "langtham185@gmail.com",
+  "fingerprint_code": 31,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "fEVgwIS2lzHJuOvinmGsTwYR9HbFY9EEuwhtVra8",
+  "remember_token": "RO8zMsU4Ocurwu0PMpKJS5KMOYWYfWntjqIcTLQs",
+  "updated_at": {
+    "$date": "2020-08-28T08:53:21.986Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:38:48.871Z"
+  },
+  "dateofbirth": "1998-12-04"
+},{
+  "_id": {
+    "$oid": "5f33d4e60cef0074a32b82cc"
+  },
+  "username": "vhnam",
+  "password": "$2y$10$siy94qtcwu3WKvWHJ50bvuuwQ27F4bkaGpAxDIAUTgORx/xd4OABC",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Vũ Hải Nam",
+  "phone": "0979848296",
+  "email": "vuhainam.qtkd@gmail.com",
+  "fingerprint_code": 1,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "zUa5WwXs1387fNHGEPvZiopwLHy8vRfTeajTrcrG",
+  "remember_token": "RMdHybqzb6nP0gpioN4r0rOpYZEU1XqM5lijpJS5",
+  "dateofbirth": "1997-06-28",
+  "updated_at": {
+    "$date": "2020-11-25T07:09:49.915Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:39:18.886Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-11-25T08:09:49.913Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d4fdc972245ecb1c1057"
+  },
+  "username": "pttu",
+  "password": "$2y$10$MI41p58rwC9nO66mnm4uTOTu367nt/62zJeDQBn2AERNk6T34HW.C",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Pham Thị Tứ",
+  "phone": "0353794101",
+  "email": "phamtu1301@gmail.com",
+  "fingerprint_code": 13,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "IodrZ8PQkiPlghEK1pE0rtggWY4KgXJa0msxsMtD",
+  "remember_token": "AFBEVv70d5E8nwTTkLqRxJwGmly8UKiWzQAfmsN7",
+  "updated_at": {
+    "$date": "2020-11-06T02:32:55.448Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:39:41.124Z"
+  },
+  "dateofbirth": "1997-01-11",
+  "time_expire_token": {
+    "$date": "2020-11-06T03:32:55.446Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f33d52e6ddc9762ad28667c"
+  },
+  "username": "dvhien",
+  "password": "$2y$10$PSbO7r0no/pDSlPEAaN6Iub7doMOiQX3UvqojYq7bO84IvpDmSuTC",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Đỗ Văn Hiển",
+  "phone": "0348866231",
+  "email": "hiensumo1701@gmail.com",
+  "fingerprint_code": 11,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "access_token": "CvXiNg9x6ojrERhIKMv3NcFd6aO22f7RuC5BYvGk",
+  "remember_token": "njXFN1Pd69wXiXMJuwhMhqV5u0s9TUghBNOKEtgF",
+  "dateofbirth": "1997-01-16",
+  "updated_at": {
+    "$date": "2020-10-28T07:41:45.663Z"
+  },
+  "created_at": {
+    "$date": "2020-08-12T11:40:30.590Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-10-28T08:41:45.661Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f366b6ec972245ecb1c105a"
+  },
+  "username": "ntlanh",
+  "password": "$2y$10$LsBa.q3HoIR56d3l6jMkyORRljV.KRfSkDkHvQMy.eW4DQKKYkix6",
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "permission": "user",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "name": "Nguyễn Thị Lan Anh",
+  "phone": "0899248905",
+  "email": "misscun070198@gmail.com",
+  "fingerprint_code": 88,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "access_token": "fo7CH0bYgyhRiGvzaMlduQTAznT9WRPPBAbqG5l1",
+  "remember_token": "th6CF1Kd1T3xlplwUY2Zgy0uFrqnl28nznvzfXu1",
+  "dateofbirth": "1998-01-06",
+  "updated_at": {
+    "$date": "2020-08-28T08:52:55Z"
+  },
+  "created_at": {
+    "$date": "2020-08-14T10:46:06.788Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f4384a95323ee68ff73d6b0"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Hoàng Quang Linh",
+  "phone": "0372846159",
+  "email": "hoangquanglinh@hvtc.edu.vn",
+  "fingerprint_code": 90,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "remember_token": "MrWtwaM63XKIBMGbYubXIMK1xzcvyh6995Xrro90",
+  "username": "hqlinh",
+  "password": "$2y$10$EC9h/OP82uPNOR.dONC3JuOhjBqyXR1xsnCtaSpmBad6P/eOueRL2",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "HbOD2k8BhwXEJDfhKZBgtdE8sPlj5By0t1mS2wdw",
+  "updated_at": {
+    "$date": "2020-11-26T10:22:11.465Z"
+  },
+  "created_at": {
+    "$date": "2020-08-24T09:13:13.278Z"
+  },
+  "dateofbirth": "1999-05-03",
+  "time_expire_token": {
+    "$date": "2020-11-26T11:22:11.463Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f4384d47d983a08d86c3b9b"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Lê Văn Việt",
+  "phone": "0396709910",
+  "email": "levanviet07031997@gmail.com",
+  "fingerprint_code": 89,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "remember_token": "mW8PCfd5Md2FZtFdbjfuPvkqJbdTCeLvPSkdXYKJ",
+  "username": "lvviet",
+  "password": "$2y$10$LZ5PmrThfJ7CL4r1Zf.0ROWpnMPUB1u8vsrQiq/EhoZjeqgZLHeiy",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "28Ww2N5TBCArm7MPiB90UswJJfYPvmXhgoh2JHTO",
+  "updated_at": {
+    "$date": "2020-09-15T07:35:01.094Z"
+  },
+  "created_at": {
+    "$date": "2020-08-24T09:13:56.176Z"
+  },
+  "dateofbirth": "1997-03-06"
+},{
+  "_id": {
+    "$oid": "5f462f107d983a08d86c3ba5"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Vũ Huy Tùng",
+  "phone": "0983395670",
+  "email": "vuhuytung5996@gmail.com",
+  "fingerprint_code": 92,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "remember_token": "pIlFyOlYmsMi4SUz4VZx2MlqvcwPy8dZ7OqPOQD6",
+  "dateofbirth": "1996-05-08",
+  "username": "vhtung",
+  "password": "$2y$10$ScGMg/Z2uAiXFNHA8F06WeMAOYf0/.3iT7dUjY.hU.FGyUTbXH0aC",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "vHnrkEV4Fa5ajPShW3Mvcfi08NN8LfUrWoSFwaX4",
+  "updated_at": {
+    "$date": "2020-11-11T04:42:57.072Z"
+  },
+  "created_at": {
+    "$date": "2020-08-26T09:44:48.243Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-11-11T05:42:57.070Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f49d275c22369614f025672"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Trần Xuân Chiến",
+  "phone": "0",
+  "email": "",
+  "fingerprint_code": null,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "remember_token": "zkbbVJlhw7mwNmtuSC39KuzqWb88tHEspZU9QdiE",
+  "username": "txchien",
+  "password": "$2y$10$8VqAW6eLAYuyKbMm2NeqyuyUY59vkAAk8rq4JRPQ6nKjVDDfRHBtG",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "c5M5BTMZgK83SbY7KajSknMGjsoXph6UdtKV3n78",
+  "updated_at": {
+    "$date": "2020-09-04T14:55:36.760Z"
+  },
+  "created_at": {
+    "$date": "2020-08-29T03:58:45.378Z"
+  },
+  "dateofbirth": "2020-09-04"
+},{
+  "_id": {
+    "$oid": "5f5c458bb3e7275200497173"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Nguyễn Hương Lan",
+  "phone": "0332732858",
+  "email": "huonglanbtv.vn@gmail.com",
+  "fingerprint_code": 108,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "remember_token": "E9yLgoEu2qVwDdWha37LQijkPn6f9XtpS8ch8m5R",
+  "dateofbirth": "1999-08-07",
+  "username": "nhlan",
+  "password": "$2y$10$ZFnU0Y0V74bXamG65J2AYOQJeQL6oLNxKq67jr0ODzg5.IRgWc1da",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "p36qPRFlr20CSMkHBADXrpuUcWQNqZWXQ3X21nHF",
+  "updated_at": {
+    "$date": "2020-11-11T02:40:50.342Z"
+  },
+  "created_at": {
+    "$date": "2020-09-12T03:50:35.712Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-11-11T03:40:50.338Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f71b1a6a57aa3518d799ef6"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Bùi Phương Anh",
+  "phone": "0359429212",
+  "email": "phuonganhbui543@gmail.com",
+  "fingerprint_code": 112,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "remember_token": "LwZSy5kLc1iq7XriB5TE9RTTy5oOrafIVkIc3mMT",
+  "dateofbirth": "1998-12-02",
+  "username": "bpanh",
+  "password": "$2y$10$gp1ozS1WPblJG.6gO.C0suKHtr9Gl3fCn9nnp9GLVhpRK79l40mxe",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "zn6GNlOwDCWDsm7nuJWKRSwIdv4qkGEMzJyu5lb4",
+  "updated_at": {
+    "$date": "2020-09-28T10:27:38.660Z"
+  },
+  "created_at": {
+    "$date": "2020-09-28T09:49:26.834Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f7ed4cac22369614f0272c0"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Đặng Công Hiệp",
+  "phone": "0988498955",
+  "email": "conghiep953@gmail.com",
+  "fingerprint_code": 113,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "remember_token": "dgdACLA6hQRgIxdJ6GNcUh3rKkHlFune6QTOLOP4",
+  "username": "dchiep",
+  "password": "$2y$10$wSMSaMo6QWx8N58ZOXxVHusi8i8BcsPmsNGYbiI1ssEwsQ3yDuAfi",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "JLiYUWlvQdHiq7XTaBrFYFm7ZA4mOokYwlKMR0Jj",
+  "updated_at": {
+    "$date": "2020-10-20T04:41:31.724Z"
+  },
+  "created_at": {
+    "$date": "2020-10-08T08:58:50.173Z"
+  },
+  "dateofbirth": "1991-09-23",
+  "time_expire_token": {
+    "$date": "2020-10-20T05:41:31.722Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f882618c22369614f0272e7"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Vũ Thị Linh Trang",
+  "phone": "0338380803",
+  "email": "tranglv.vu@gmail.com",
+  "fingerprint_code": 114,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "remember_token": "B9FuduJsbjynBTYeQCtC0ZHe0GTnTZNZr5kjorGL",
+  "dateofbirth": "1998-10-21",
+  "username": "vtltrang",
+  "password": "$2y$10$kmlRg7nCoB2EOxRG6sw5H.3JNQtODT6Q85iAcqTynn2oozgT3vste",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "lW0dxlhdWlk2ygtG1YxnwCLgWfaMEwle5OqKl6Ty",
+  "updated_at": {
+    "$date": "2020-11-05T02:03:29.213Z"
+  },
+  "created_at": {
+    "$date": "2020-10-15T10:36:08.677Z"
+  },
+  "time_expire_token": {
+    "$date": "2020-11-05T03:03:29.210Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f8abe6615ff1b3633598706"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Triệu Thị Ngọc Liễu",
+  "phone": "0346029244",
+  "email": "ttnl.tgs@gmail.com",
+  "fingerprint_code": 119,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "remember_token": "929nkZPrjet3qZgeeypNFOUAatCJyOynStPRTO83",
+  "dateofbirth": "1997-07-31",
+  "username": "ttnlieu",
+  "password": "$2y$10$MQ79/OVLLSbFKqGoQLOsC.QumdMv.Ji4BviLBG8Z1lltfyFs9ItvG",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "ONtwpZry87DBAlGaZVHQCCoGqECMqehShtuco7y0",
+  "updated_at": {
+    "$date": "2020-10-19T02:35:27.927Z"
+  },
+  "created_at": {
+    "$date": "2020-10-17T09:50:30.750Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f8abeb4ec328c797757f1a4"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Đăng Đức Hoàng",
+  "phone": "0336179575",
+  "email": "flasklee@gmail.com",
+  "fingerprint_code": 118,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "remember_token": "IYLYA2mafyRYlSnpyPXEN8GTdQYNmM5ZrNgD2kzM",
+  "dateofbirth": "1999-09-29",
+  "username": "ddhoang",
+  "password": "$2y$10$CAM6BCTxY8tsCApl6nHfyOtgtOby4NoQPorKtMN4L4KoMowpZFpyK",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "vPAS3K2VGoMJ7hUVyItzSYcqIjxBH1npH9qk7m8M",
+  "updated_at": {
+    "$date": "2020-10-19T02:35:14.823Z"
+  },
+  "created_at": {
+    "$date": "2020-10-17T09:51:48.211Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f8fbe000f5fbd03cd515975"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Nguyễn Thị Hương",
+  "phone": "0981002639",
+  "email": "okaori.nt2019@gmail.com",
+  "fingerprint_code": null,
+  "gender": 0,
+  "status": 1,
+  "active": 1,
+  "remember_token": "dsEUsIuCvMcfUAj9V0RaagD28mTudenLLhWQV1IW",
+  "dateofbirth": "1992-08-15",
+  "username": "nthuong",
+  "password": "$2y$10$4DJE4LZ7iE3CLxJaA1bMDeAHo4gM4Nde6P4IAlNXmttv2Wp8Rgdju",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "Y5T6mWCcvMLu3wk2AvP9BQg35sDrnPyT8tsPs1uO",
+  "updated_at": {
+    "$date": "2020-10-21T04:50:08.179Z"
+  },
+  "created_at": {
+    "$date": "2020-10-21T04:50:08.179Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f9a76d9f8ae1c19d3118e20"
+  },
+  "avatar": "https://vtask.net/avatar/avatar_default.png",
+  "name": "Bùi Minh Thuận",
+  "phone": "0563223975",
+  "email": "bthun0911@gmail.com",
+  "fingerprint_code": 126,
+  "gender": 1,
+  "status": 1,
+  "active": 1,
+  "remember_token": "9yy6lgvTHL3EPKDXeEeHDaYHxNqw7hT9FLb9sjsC",
+  "dateofbirth": "2000-11-01",
+  "username": "bmthuan",
+  "password": "$2y$10$4kLPMnnpee/c9/OPpf.O/.NpPn2sOt7a71FnnywSrcuM8PhJa2bvi",
+  "company_id": "5f23aedf1a0e918fd5f0e92f",
+  "permission": "user",
+  "access_token": "nmlFZtJeW71GUd0URoZVxke9jIKTn2sFRWISMucE",
+  "updated_at": {
+    "$date": "2020-10-30T01:59:19.348Z"
+  },
+  "created_at": {
+    "$date": "2020-10-29T08:01:29.601Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fda84042eef2e49cccb17c8"
+  },
+  "username": "zm.sale.duong",
+  "password": "$2y$10$TXdtIVUqJGiU.6LIQWvUH.Ta.G7Deomq8Ayj/wciSvrfEbAfxV162",
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "permission": "user",
+  "company_id": "5fda84212eef2e49cccb17c9",
+  "name": "Nguyễn Thị Thùy Dương",
+  "email": "x321pm@gmail.com",
+  "phone": "0888633630",
+  "dateofbirth": "1999-06-09",
+  "status": 1,
+  "active": 1,
+  "access_token": "E3u7QyVAmcDidAYLkgujx0XPC4Va5Mkp78bX9AR0",
+  "time_expire_token": {
+    "$date": "2020-11-29T20:07:04.015Z"
+  },
+  "remember_token": "",
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-02-13T00:10:41Z"
+  },
+  "type_account": "sale",
+  "is_shipper": 0
+},{
+  "_id": {
+    "$oid": "60a3c34b139da43b8d26b593"
+  },
+  "password": "$2y$10$EPpXBjB5JqO4TOJ4DqRvBOrWZzIGjkKPlahAuZqHpSnGv1Cz2DiNO",
+  "username": "lequyduong",
+  "name": "Lê Quý Dương",
+  "phone": "0977408268",
+  "email": "quyduong52@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "mkt",
+  "permission": "admin",
+  "status": 1,
+  "is_shipper": 0,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-05-24T09:39:41.548Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T13:38:19.012Z"
+  },
+  "active": 1
+},{
+  "_id": {
+    "$oid": "60a47b555569a64e8c1b9d42"
+  },
+  "password": "$2y$10$ilkMPF/4k7jTm4L9GRkF/.XzEprY.XYheRHHWk1BnYfypExay98vi",
+  "username": "vuthithuy",
+  "name": "Vũ Thị Thúy",
+  "phone": "0984720825",
+  "email": "vtt3103@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "mkt",
+  "permission": "user",
+  "status": 1,
+  "is_shipper": 0,
+  "avatar": "https://azplus.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-05-19T02:43:33.694Z"
+  },
+  "created_at": {
+    "$date": "2021-05-19T02:43:33.694Z"
+  },
+  "active": 1
+},{
+  "_id": {
+    "$oid": "60a5c7146c2cb45ef2124533"
+  },
+  "password": "$2y$10$O/Wff3EyB15AwKRzlJR4xusuKFnmz0VTbYl6S/RNMn9Ks1nOXkN9e",
+  "username": "nguyenthituyet",
+  "name": "nguyễn thị tuyết",
+  "phone": "0354227845",
+  "email": "nguyentuyetcherry@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "mkt",
+  "permission": "admin",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-05-20T02:19:00.171Z"
+  },
+  "created_at": {
+    "$date": "2021-05-20T02:19:00.171Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a5de42d8f54e73c448b853"
+  },
+  "password": "$2y$10$QQd.c6pHpeEoQogLR1BIWeffclJsi.MZ95hG0BVA4uBQJenGCjKDG",
+  "username": "Thuydth",
+  "name": "Dương Thị Hồng Thúy",
+  "phone": "0945056320",
+  "email": "duonghongthuy.th@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "sale",
+  "permission": "admin",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-05-20T03:57:54.885Z"
+  },
+  "created_at": {
+    "$date": "2021-05-20T03:57:54.885Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a874f06c2cb45ef2124535"
+  },
+  "password": "$2y$10$H3bfysN14siXA0jz9ANGoOduLFFPW1uKOBBMaUKpjzlPL4csJCVjW",
+  "username": "tranvanquyen",
+  "name": "Trần Văn Quyến",
+  "phone": "0354321000",
+  "email": "Anhdat.tran.14@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "sale",
+  "permission": "user",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-05-22T03:05:20.602Z"
+  },
+  "created_at": {
+    "$date": "2021-05-22T03:05:20.602Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a8f85688359269db72a229"
+  },
+  "password": "$2y$10$Fl2KeaCCYpOIScWHafvjs.9O8hiG9zIQtlh0Ky/Z5SRQ4eARsAlXC",
+  "username": "ninhthinguyet",
+  "name": "Ninh Thị Nguyệt",
+  "phone": "0369726731",
+  "email": "ninhthinguyet199x@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "sale",
+  "permission": "user",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-05-22T12:25:58.908Z"
+  },
+  "created_at": {
+    "$date": "2021-05-22T12:25:58.908Z"
+  }
+},{
+  "_id": {
+    "$oid": "60aa1d4ca5d4fe6f6470a7d3"
+  },
+  "password": "$2y$10$vMrzFPXSKK55GObB/OiwlOhH2rItluWee3125LhLfb6oSaPzlMjAK",
+  "username": "phamthihuong",
+  "name": "Phạm Thị Hương",
+  "phone": "0363839939",
+  "email": "maihuong.dlnn@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "mkt",
+  "permission": "admin",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-06-01T02:57:45.153Z"
+  },
+  "created_at": {
+    "$date": "2021-05-23T09:15:56.262Z"
+  }
+},{
+  "_id": {
+    "$oid": "60ab83d6858c1b36b067fa5a"
+  },
+  "password": "$2y$10$ga5h.KxdxfbDVhZ2V3kQWelErDAb5vFDxAWeNIA09TmaMnRQts7Yq",
+  "username": "lequyduong1",
+  "name": "Lê Quý Dương 1",
+  "phone": "0941785535",
+  "email": "quyduong52@hps.edu.vn",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "bill",
+  "permission": "user",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-05-24T10:45:42.816Z"
+  },
+  "created_at": {
+    "$date": "2021-05-24T10:45:42.816Z"
+  }
+},{
+  "_id": {
+    "$oid": "60af3da27943611f6d05efc2"
+  },
+  "password": "$2y$10$q.nYL16x4W2/98eVxXb.KOz/Wl.N7SmaE/xUcCRztOcTqr9OmyRya",
+  "username": "vuthithuong",
+  "name": "Vũ Thị Thương",
+  "phone": "0355746811",
+  "email": "thuongptit14@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "mkt",
+  "permission": "user",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-05-31T05:03:14.368Z"
+  },
+  "created_at": {
+    "$date": "2021-05-27T06:35:14.004Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b1b8932f72f62382592e65"
+  },
+  "password": "$2y$10$iFfpnfLMOxgSz6TJLhSs8efjldMVv074v5phWCdHpg/mu7YuoVccG",
+  "username": "phamtientiep",
+  "name": "Phạm Tiến Tiệp",
+  "phone": "0328032646",
+  "email": "phamtiephs1997@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "mkt",
+  "permission": "user",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-05-31T05:03:09.445Z"
+  },
+  "created_at": {
+    "$date": "2021-05-29T03:44:19.495Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b1b8f92eaf417396226803"
+  },
+  "password": "$2y$10$HPQOjn691bZNBTGca.zVUO0H4gbTq/fXrJDChBfsN2SX4spyfrUaG",
+  "username": "lexuanloc",
+  "name": "Lê Xuân Lộc",
+  "phone": "0985530154",
+  "email": "lexuanloc19101994@gmailcom",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "mkt",
+  "permission": "user",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-05-31T05:02:58.362Z"
+  },
+  "created_at": {
+    "$date": "2021-05-29T03:46:01.679Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b83864dbadf30ede34cbc4"
+  },
+  "password": "$2y$10$V7j4JstJg53EvYieSgUQVusE0U2sndmyGmyBFT0eXOaJFwAV87mse",
+  "username": "tranvandieu",
+  "name": "Trần Văn Điều",
+  "phone": "0399231281",
+  "email": "dieutran120499@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "mkt",
+  "permission": "user",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-06-03T02:03:16.927Z"
+  },
+  "created_at": {
+    "$date": "2021-06-03T02:03:16.927Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b89bce7943611f6d05efc7"
+  },
+  "password": "$2y$10$jNzORoPrqePEAwjrxMeY8er4b2/Sbukv7ofgjrQsc7sX09ZpbE5ze",
+  "username": "truongcongthanhlong",
+  "name": "Trương Công Thành Long",
+  "phone": "0329033846",
+  "email": "tctlong2121998@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "sale",
+  "permission": "user",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-06-03T09:07:26.079Z"
+  },
+  "created_at": {
+    "$date": "2021-06-03T09:07:26.079Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b89c7075f3591307125e39"
+  },
+  "password": "$2y$10$.xExenf.BlVfEMBx7l0m1OoyH/jY.EKD2IbT5bO3GtrBdjXIDszMm",
+  "username": "dinhthithutrang",
+  "name": "Đinh Thị Thu Trang",
+  "phone": "0961358855",
+  "email": "dinhtrang293@gmai.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "bill",
+  "permission": "user",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-06-03T09:10:08.125Z"
+  },
+  "created_at": {
+    "$date": "2021-06-03T09:10:08.125Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b89ccc00bc294d603a4784"
+  },
+  "password": "$2y$10$99/aW2nqaIYGJ1iuT57nEuEa.hb4fh3f3R2SLrtKPgD5gzARDrcQe",
+  "username": "tranthihuyentrang",
+  "name": "Trần Thị Huyền Trang",
+  "phone": "0346275678",
+  "email": "tranthihuyentrang2061997@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "sale",
+  "permission": "user",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-06-03T09:11:40.176Z"
+  },
+  "created_at": {
+    "$date": "2021-06-03T09:11:40.176Z"
+  }
+},{
+  "_id": {
+    "$oid": "60b89d51f883872ca409a286"
+  },
+  "password": "$2y$10$bTHmLly3UHvEdHUkqIGjWuvlRSYHyBy2.QkG1ZJqGaD81TlRFRZJC",
+  "username": "nguyenchauloan",
+  "name": "Nguyễn Châu Loan",
+  "phone": "0944030710",
+  "email": "chauloannguyenthi166@gmail.com",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "type_account": "sale",
+  "permission": "admin",
+  "active": 1,
+  "status": 1,
+  "avatar": "https://banhang.myteam.com.vn/assets/site/theme/images/logo.png",
+  "updated_at": {
+    "$date": "2021-06-03T09:13:53.706Z"
+  },
+  "created_at": {
+    "$date": "2021-06-03T09:13:53.706Z"
+  }
+}]

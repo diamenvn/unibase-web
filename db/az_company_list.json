@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "5fda70b46f1e9582b5bfcb6b"
+  },
+  "company_name": "Phoneix",
+  "status": 1,
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "company_type": "mkt",
+  "divideOrder": 1
+},{
+  "_id": {
+    "$oid": "5fda84212eef2e49cccb17c9"
+  },
+  "company_name": "Zoma",
+  "status": 1,
+  "updated_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "created_at": {
+    "$date": "2020-11-29T19:07:04.019Z"
+  },
+  "company_type": "sale",
+  "divideOrder": 1
+}]

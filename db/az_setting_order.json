@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "60c30262a5910f66dc7167d5"
+  },
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "filter_confirm_care": "60a412bfdac6f9ac351966ee",
+  "time_renew_order": "00:00",
+  "created_at": {
+    "$date": "2021-06-06T21:38:43.899Z"
+  },
+  "updated_at": {
+    "$date": "2021-06-06T21:38:43.899Z"
+  }
+}]

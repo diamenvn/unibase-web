@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "5fda81a6ea96111c5a12df82"
+  },
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "title": "Nhóm của Nam",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-18T13:38:19.014Z"
+  },
+  "created_at": {
+    "$date": "2020-12-16T21:52:38.585Z"
+  },
+  "leaders": [
+    "5f1b1468cd1c9f3f990d6847"
+  ],
+  "members": [
+    "5f1b1468cd1c9f3f990d6847",
+    "5fda828c71a2c607c57b96a3",
+    "5f1b1468cd1c9f3f990d6847",
+    "5fda828c71a2c607c57b96a3",
+    "5f1b1468cd1c9f3f990d6847",
+    "5f1b1468cd1c9f3f990d6847",
+    "5f1b1468cd1c9f3f990d6847",
+    "60a3c34b139da43b8d26b593"
+  ]
+},{
+  "_id": {
+    "$oid": "5ff2da1b15d9b77e00338413"
+  },
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "title": "Test",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-18T13:38:19.016Z"
+  },
+  "created_at": {
+    "$date": "2021-01-04T09:04:27.534Z"
+  },
+  "leaders": [
+    "5f1b1468cd1c9f3f990d6847"
+  ],
+  "members": [
+    "5f1b1468cd1c9f3f990d6847",
+    "5fda828c71a2c607c57b96a3",
+    "60a3c34b139da43b8d26b593"
+  ]
+},{
+  "_id": {
+    "$oid": "60a3c402ebf33c618a1f1783"
+  },
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "company_id": "5fda70b46f1e9582b5bfcb6b",
+  "title": "NGỌC NGÂN",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-18T13:41:22.828Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T13:41:22.828Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a3c9eda5d4fe6f6470a7d2"
+  },
+  "user_create_id": "5fda84042eef2e49cccb17c8",
+  "company_id": "5fda84212eef2e49cccb17c9",
+  "title": "Test",
+  "status": 1,
+  "updated_at": {
+    "$date": "2021-05-18T14:06:37.981Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T14:06:37.981Z"
+  }
+}]

@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "60a3cb0c5c5a0f0c8857d522"
+  },
+  "name": "token dekagu",
+  "product_id": "608677af8600561c67020972",
+  "status": 1,
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "updated_at": {
+    "$date": "2021-05-18T14:11:24.812Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T14:11:24.812Z"
+  }
+},{
+  "_id": {
+    "$oid": "60a3cb51139da43b8d26b595"
+  },
+  "name": "token gel âm đạo",
+  "product_id": "60a3c7f5858c1b36b067fa53",
+  "status": 1,
+  "user_create_id": "5f1b1468cd1c9f3f990d6847",
+  "updated_at": {
+    "$date": "2021-05-18T14:12:33.294Z"
+  },
+  "created_at": {
+    "$date": "2021-05-18T14:12:33.294Z"
+  }
+}]

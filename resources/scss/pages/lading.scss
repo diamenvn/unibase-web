@@ -1,0 +1,21 @@
+.lading {
+    .base-table--filter {
+        border-top: 1px solid #ddd;
+    }
+
+    .filter-item {
+        min-height: 190px;
+        max-height: 190px;
+    }
+    .th-typeview-address {
+        min-width: 330px;
+    }
+    .td-typeview-address {
+        max-width: 380px;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    tr td {
+        
+    }
+}

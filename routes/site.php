@@ -29,4 +29,11 @@ Route::middleware('auth.site')->group(function () {
     Route::get('/setting/add-product', 'SiteSettingController@addProduct')->name('setting.addProduct');
     Route::get('/setting/import/api', 'SiteSettingController@importFromAPI')->name('setting.import.api');
 });
+
+
+/// Product
+Route::middleware('auth.site')->prefix('product')->group(function () {
+    Route::get('/create', 'SiteProductController@create')->name('product.create');
+    Route::get('/list', 'SiteProductController@list')->name('product.list');
+});
 ?>

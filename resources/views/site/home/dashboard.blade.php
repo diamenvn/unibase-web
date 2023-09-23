@@ -215,7 +215,7 @@
         <div class="col-xl-4">
           <div class="card card--custom">
             <div class="card-header flex-between">
-              <h4 class="card-title float-left">Nguồn số hôm nay</h4>
+              <h4 class="card-title float-left">Nguồn dữ liệu</h4>
               <button class="btn btn-outline-primary float-right fs-15">Xem tất cả</button>
             </div>
             <div class="card-body">

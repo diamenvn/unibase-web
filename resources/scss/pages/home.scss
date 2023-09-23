@@ -22,8 +22,9 @@ body {
   background-color: white;
   box-shadow: $box-shadow;
   justify-content: flex-start;
+  z-index: 999;
   .navbar-brand {
-    background-color: #e5e5e5;
+    background-color: #fff;
     margin-right: 0px;
     width: $first-menu-width;
     min-width: $first-menu-width;
@@ -92,12 +93,12 @@ body {
 }
 
 #logo {
-  background-image: url('/assets/site/theme/images/logo.png');
-  background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
-  background-size: cover;
-  align-self: center;
+  // background-image: url('/assets/site/theme/images/logo.png');
+  // background-repeat: no-repeat;
+  // width: 60px;
+  // height: 60px;
+  // background-size: cover;
+  // align-self: center;
 }
 
 .icon {

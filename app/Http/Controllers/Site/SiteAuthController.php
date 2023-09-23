@@ -17,7 +17,6 @@ class SiteAuthController extends Controller
 
     public function login()
     {
-        // dd(\Hash::make("namnam"));
         if (Auth::check()){
             return redirect()->route('site.home.dashboard');
         }else{

@@ -5,180 +5,7 @@
 <div class="app-content">
   <div class="section">
     <div class="main-body flex flex-column">
-      <!--<div class="search-filter fs-14">-->
-      <!--  <div class="row">-->
-      <!--    <div class="col-md-12">-->
-      <!--      <div class="filter-area flex">-->
-      <!--        <div class="filter-item w-25">-->
-      <!--          <div class="title text-center">-->
-      <!--            <i class="fal fa-calendar"></i>-->
-      <!--            <span class="text">Thời gian</span>-->
-      <!--          </div>-->
-      <!--          <div class="item-search item-search-time mix-scrollbar">-->
-      <!--            <ul class="content-item-filter item-filter-radio">-->
-      <!--              <li>-->
-      <!--                <input checked id="r1" name="filter_date" ng-control="options" checked value="created_at" type="radio" class="ng-untouched ng-pristine ng-valid">-->
-      <!--                <label class="label-radio" for="r1">-->
-      <!--                  <span>Tạo đơn</span></label>-->
-      <!--              </li>-->
-      <!--              <li>-->
-      <!--                <input id="r2" name="filter_date" ng-control="options" type="radio" value="date_reciver" class="ng-untouched ng-pristine ng-valid">-->
-      <!--                <label class="label-radio" for="r2">-->
-      <!--                  <span>Nhận đơn</span></label>-->
-      <!--              </li>-->
-      <!--              <li>-->
-      <!--                <input id="r3" name="filter_date" ng-control="options" type="radio" value="date_send" class="ng-untouched ng-pristine ng-valid">-->
-      <!--                <label class="label-radio" for="r3">-->
-      <!--                  <span>Chuyển hàng</span></label>-->
-      <!--              </li>-->
-      <!--              <li>-->
-      <!--                <input id="r4" name="filter_date" ng-control="options" type="radio" value="date_accountant" class="ng-untouched ng-pristine ng-valid">-->
-      <!--                <label class="label-radio" for="r4">-->
-      <!--                  <span>Chuyển kế toán</span></label>-->
-      <!--              </li>-->
-      <!--            </ul>-->
-      <!--            <div class="search-time">-->
-      <!--              <div class="input-group mb-2">-->
-      <!--                  <input id="timeDateRange1" readonly timepicker="true" autocomplete="new-password" autocorrect="off" autocapitalize="none" spellcheck="false" class="form-control fs-14" name="time_start" placeholder="Thời gian bắt đầu" type="search">-->
-      <!--                  <div class="input-group-append pointer btn-click-remove-time-start-js">-->
-      <!--                    <div class="input-group-text fs-14"><i class="fal fa-times bold"></i></div>-->
-      <!--                  </div>-->
-      <!--                </div>-->
-      <!--            </div>-->
-      <!--            <div class="search-time mt-2">-->
-      <!--              <div class="input-group mb-2">-->
-      <!--                <input id="timeDateRange" readonly timepicker="true" autocomplete="nope" autocorrect="off" autocapitalize="none" spellcheck="false" class="form-control fs-14" name="time_end" placeholder="Thời gian kết thúc" type="search">-->
-      <!--                  <div class="input-group-append pointer btn-click-remove-time-end-js">-->
-      <!--                    <div class="input-group-text fs-14"><i class="fal fa-times bold"></i></div>-->
-      <!--                  </div>-->
-      <!--                </div>-->
-      <!--            </div>-->
-
-      <!--          </div>-->
-      <!--        </div>-->
-      <!--        <div class="filter-item w-30">-->
-      <!--          <div class="title text-center">-->
-      <!--            <i class="fal fa-book mr-1"></i>-->
-      <!--            <span class="text">Tình trạng đơn hàng</span>-->
-      <!--          </div>-->
-      <!--          <div class="item-search item-search-time mix-scrollbar">-->
-      <!--            <ul class="content-item-filter item-filter-radio">-->
-      <!--              @foreach($actions as $key => $action)-->
-      <!--              @if ($action->type == "filter_status")-->
-      <!--              <li class="checkbox_acount">-->
-      <!--                <input class="filter-filter_status-js" type="checkbox" value="{{$action->_id}}" id="{{$action->_id}}" name="filter_status">-->
-      <!--                <label class="label-checkbox" for="{{$action->_id}}">{{$action->text}}</label>-->
-      <!--              </li>-->
-      <!--              @endif-->
-      <!--              @endforeach-->
-      <!--            </ul>-->
-      <!--          </div>-->
-      <!--        </div>-->
-      <!--        <div class="filter-item w-15">-->
-      <!--          <div class="title text-center">-->
-      <!--            <i class="fal fa-truck mr-1" style="transform: scaleX(-1);"></i>-->
-      <!--            <span class="text">Vận chuyển</span>-->
-      <!--          </div>-->
-      <!--          <div class="item-search item-search-ship mix-scrollbar">-->
-      <!--            <ul class="content-item-filter item-filter-radio">-->
-      <!--              @foreach($actions as $key => $action)-->
-      <!--              @if ($action->type == "filter_ship")-->
-      <!--              <li class="checkbox_acount">-->
-      <!--                <input class="filter-filter_ship-js" type="checkbox" value="{{$action->_id}}" id="{{$action->_id}}" name="filter_ship">-->
-      <!--                <label class="label-checkbox" for="{{$action->_id}}">{{$action->text}}</label>-->
-      <!--              </li>-->
-      <!--              @endif-->
-      <!--              @endforeach-->
-      <!--            </ul>-->
-      <!--          </div>-->
-      <!--        </div>-->
-      <!--        <div class="filter-item w-15">-->
-      <!--          <div class="title text-center">-->
-      <!--            <i class="fal fa-file-check mr-1"></i>-->
-      <!--            <span class="text">Vận đơn & Kế toán</span>-->
-      <!--          </div>-->
-      <!--          <div class="item-search item-search-ship mix-scrollbar">-->
-      <!--            <ul class="content-item-filter item-filter-radio">-->
-      <!--              @foreach($actions as $key => $action)-->
-      <!--              @if ($action->type == "filter_confirm")-->
-      <!--              <li class="checkbox_acount">-->
-      <!--                <input class="filter-filter_status-js" type="checkbox" value="{{$action->_id}}" id="{{$action->_id}}" name="filter_status">-->
-      <!--                <label class="label-checkbox" for="{{$action->_id}}">{{$action->text}}</label>-->
-      <!--              </li>-->
-      <!--              @endif-->
-      <!--              @endforeach-->
-      <!--            </ul>-->
-      <!--          </div>-->
-      <!--          <div class="title text-center">-->
-      <!--            <i class="fal fa-user mr-1"></i>-->
-      <!--            <span class="text">Lọc nhân viên tạo</span>-->
-      <!--          </div>-->
-      <!--          <div class="item-search item-search-time h-40 mix-scrollbar">-->
-      <!--            <ul class="content-item-filter item-filter-radio m-0">-->
-      <!--              <li class="checkbox_acount w-100 p-0">-->
-      <!--                <select name="user_id" class="input-control h-30 filter-user_id-js" id="">-->
-      <!--                  <option selected value="-1">Tất cả</option>-->
-      <!--                  @foreach($userMKT as $customer)-->
-      <!--                  <option value="{{$customer->_id}}">{{$customer->username}}</option>-->
-      <!--                  @endforeach-->
-      <!--                </select>-->
-      <!--              </li>-->
-      <!--            </ul>-->
-      <!--          </div>-->
-      <!--        </div>-->
-      <!--        <div class="filter-item w-15">-->
-      <!--          <div class="title text-center">-->
-      <!--            <i class="fal fa-filter mr-1"></i>-->
-      <!--            <span class="text">Trạng thái đơn</span>-->
-      <!--          </div>-->
-      <!--          <div class="item-search item-search-ship mix-scrollbar">-->
-      <!--            <ul class="content-item-filter item-filter-radio">-->
-      <!--              @if ($user->type_account == "mkt")-->
-      <!--              <li class="checkbox_acount">-->
-      <!--                <input class="filter-user-reciver-js" type="checkbox" value="-1" id="user_reciver-1" name="user_reciver_id">-->
-      <!--                <label class="label-checkbox" for="user_reciver-1">Số chưa được chia</label>-->
-      <!--              </li>-->
-      <!--              @endif-->
-      <!--              <li class="checkbox_acount">-->
-      <!--                <input class="filter-reason-js" type="checkbox" value="-1" id="reason-1" name="reason[]">-->
-      <!--                <label class="label-checkbox" for="reason-1">Đơn hàng mới</label>-->
-      <!--              </li>-->
-      <!--              <li class="checkbox_acount">-->
-      <!--                <input class="filter-reason-js" type="checkbox" value="success" id="reasonsuccess" name="reason[]">-->
-      <!--                <label class="label-checkbox" for="reasonsuccess">Đơn đã chốt</label>-->
-      <!--              </li>-->
-      <!--              <li class="checkbox_acount">-->
-      <!--                <input class="filter-reason-js" type="checkbox" value="wait" id="reasonwait" name="reason[]">-->
-      <!--                <label class="label-checkbox" for="reasonwait">Chưa chốt được</label>-->
-      <!--              </li>-->
-      <!--              <li class="checkbox_acount">-->
-      <!--                <input class="filter-reason-js" type="checkbox" value="cancel" id="reasoncancel" name="reason[]">-->
-      <!--                <label class="label-checkbox" for="reasoncancel">Đơn huỷ</label>-->
-      <!--              </li>-->
-      <!--            </ul>-->
-      <!--          </div>-->
-      <!--          <div class="title text-center">-->
-      <!--            <i class="fal fa-user mr-1"></i>-->
-      <!--            <span class="text">Lọc nhân viên nhận</span>-->
-      <!--          </div>-->
-      <!--          <div class="item-search item-search-time h-40 mix-scrollbar">-->
-      <!--            <ul class="content-item-filter item-filter-radio m-0">-->
-      <!--              <li class="checkbox_acount w-100 p-0">-->
-      <!--                <select name="user_reciver_id" class="input-control h-30 filter-user_reciver_id-js" id="">-->
-      <!--                  <option selected value="-1">Tất cả</option>-->
-      <!--                  @foreach($userSale as $customer)-->
-      <!--                  <option value="{{$customer->_id}}">{{$customer->username}}</option>-->
-      <!--                  @endforeach-->
-      <!--                </select>-->
-      <!--              </li>-->
-      <!--            </ul>-->
-      <!--          </div>-->
-      <!--        </div>-->
-      <!--      </div>-->
-      <!--    </div>-->
-      <!--  </div>-->
-
-      <!--</div>-->
+      <!-- @include('site.order.filter') -->
       <div class="source-filter source-filter--layout">
         <ul class="list-source nav nav-tabs border-none">
           <li class="list-source--item list-source--item-js active">
@@ -210,7 +37,9 @@
                 </div>
                 <div class="panel-heading-left d-flex align-items-center form-group m-0 search h-100">
                   <form class="input-group" onsubmit="return false">
-                    <input type="search" name="search" class="form-control fs-14 view-large inp-find-item-order-js" placeholder="Tìm số điện thoại, tên khách hàng" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <input type="search" name="search" class="form-control fs-14 view-large inp-find-item-order-js"
+                      placeholder="Tìm số điện thoại, tên khách hàng" aria-label="Recipient's username"
+                      aria-describedby="basic-addon2">
                     <div class="input-group-append">
                       <input class="btn btn-primary fs-14 btn-click-find-order-js" type="submit" value="Tìm kiếm" />
                     </div>
@@ -219,19 +48,24 @@
                 @if (($user->permission == "admin" && $user->type_account == "sale") || ($user->assign_order == true))
                 <div class="panel-heading-left d-flex align-items-center form-group m-0 search h-100">
                   <div class="input-group">
-                    <input type="text" readonly class="pointer outline-none form-control fs-14 inp-data-user-reciver-js" placeholder="Chọn người nhận đơn" id="inp-data-user-reciver-js">
+                    <input type="text" readonly class="pointer outline-none form-control fs-14 inp-data-user-reciver-js"
+                      placeholder="Chọn người nhận đơn" id="inp-data-user-reciver-js">
                     <div class="input-group-append">
-                      <button class="btn btn-primary fs-14 btn-data-user-reciver-js" style="border-top-right-radius: .25rem; border-bottom-right-radius: .25rem" type="button">Gán số</button>
+                      <button class="btn btn-primary fs-14 btn-data-user-reciver-js"
+                        style="border-top-right-radius: .25rem; border-bottom-right-radius: .25rem" type="button">Gán
+                        số</button>
                     </div>
                     <div class="assign-order-js assign-order--layout position-absolute d-none bg-white form-group">
                       <div class="row p-2">
                         <div class="col-12">
-                          <input type="text" class="form-control fs-14 inp-find-user-js" placeholder="Nhập tên, tài khoản tìm">
+                          <input type="text" class="form-control fs-14 inp-find-user-js"
+                            placeholder="Nhập tên, tài khoản tìm">
                         </div>
                       </div>
                       <ul class="list">
                         @foreach($info as $customer)
-                        <li data-selected="false" class="d-flex justify-content-between list-item-js" data-uid="{{$customer->_id}}">
+                        <li data-selected="false" class="d-flex justify-content-between list-item-js"
+                          data-uid="{{$customer->_id}}">
                           <span class="name">{{$customer->username}}</span>
                           <span class="icon-check co-green"><i class="fal fa-check"></i></span>
                         </li>
@@ -244,10 +78,12 @@
               </div>
               <div class="flex-right">
                 @if ($user->permission == "admin")
-                <div class="btn btn-danger fs-13 btn-click-remove-js pointer"><i class="fal fa-trash-alt mr-1"></i>Xoá đơn</div>
+                <div class="btn btn-danger fs-13 btn-click-remove-js pointer"><i class="fal fa-trash-alt mr-1"></i>Xoá
+                  đơn</div>
                 @endif
                 @if ($user->type_account == "mkt")
-                <div class="btn btn-info fs-13 pointer"> <a href="{{route('site.order.create')}}"> <i class="fal fa-plus mr-1"></i>Tạo đơn mới</a> </div>
+                <div class="btn btn-info fs-13 pointer"> <a href="{{route('site.order.create')}}"> <i
+                      class="fal fa-plus mr-1"></i>Tạo đơn mới</a> </div>
                 @endif
               </div>
             </div>
@@ -272,40 +108,52 @@
                       </div>
                     </th>
                     <th data-index="0" class="th-typeview-name">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tên khách hàng</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Tên khách hàng</span></div>
                     </th>
                     <th data-index="1" class="th-typeview-phones">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số điện thoại</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Số điện thoại</span></div>
                     </th>
                     <th data-index="3" class="th-typeview-ngay_lead_chuyen_sale">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Ngày sale nhận đơn</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Ngày sale nhận đơn</span></div>
                     </th>
                     <th data-index="4" class="th-typeview-sale">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Nhân sự phụ trách</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Nhân sự phụ trách</span></div>
                     </th>
                     <th data-index="5" class="th-typeview-san_pham_quan_tam">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Sản phẩm quan tâm</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Sản phẩm quan tâm</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">MKT tạo đơn</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">MKT tạo đơn</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Nguồn</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Nguồn</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Trạng thái</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Trạng thái</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tình trạng khách hàng</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Tình trạng khách hàng</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Ghi chú</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Ghi chú</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Ngày tạo đơn</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Ngày tạo đơn</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Chi tiết</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
+                          style="">Chi tiết</span></div>
                     </th>
                   </tr>
                 </thead>
@@ -320,7 +168,8 @@
                 <div class="paginate--block float-right col-6 text-left">
                   <span>
                     Số bản ghi / trang
-                    <select class="ml-2" style="height: 30px; width: 50px" name="count_page" id="count_page" class="mx-1">
+                    <select class="ml-2" style="height: 30px; width: 50px" name="count_page" id="count_page"
+                      class="mx-1">
                       <option value="10">10</option>
                       <option value="20">20</option>
                       <option value="50">50</option>
@@ -343,13 +192,13 @@
 
 <script>
   const api = {
-    getOrderList: function(callback) {
+    getOrderList: function (callback) {
       lib.send.get('{{route("api.order.getAllListOrder")}}', callback, window.location.search);
     }
   }
 
   const activity = {
-    showDataListOrder: function(res) {
+    showDataListOrder: function (res) {
       if (res.success) {
         element.table().html('');
         if (!!res.data.result.data.length) {
@@ -366,14 +215,14 @@
       activity.setTotalPage(res.data.result);
       activity.setPaginate(res.data.pagination);
     },
-    getData: function() {
+    getData: function () {
       loading.order.show('.base-table-content');
       api.getOrderList(activity.showDataListOrder);
     },
-    setForm: function() {
+    setForm: function () {
       const params = new URLSearchParams(window.location.search);
       let paramObj = {};
-  
+
       if (!!!window.location.search.includes('type_confirm_text') && !!!window.location.search.includes('search')) {
         $('[name="filter_date"]').val(['created_at']);
         lib.updateParams('filter_date_by', 'created_at');
@@ -418,10 +267,10 @@
         }
       }
     },
-    setPaginate: function(data) {
+    setPaginate: function (data) {
       element.paginate().html(data);
     },
-    setTotalPage: function(data) {
+    setTotalPage: function (data) {
       $('#all_record').html(data.total);
       $('#count_page').val(data.per_page);
 
@@ -429,7 +278,7 @@
   }
 
   const html = {
-    renderList: function(res, item) {
+    renderList: function (res, item) {
       userReciver = userCreated = filterStatus = '';
       if (item.reciver) {
         userReciver = '<span class="d-inline-block mb-1 user--reciver mr-2">' + item.reciver.name + '<i class="fas fa-star ml-1 fs-12 text-warning"></i></span>';
@@ -483,9 +332,9 @@
 
       loop = false;
       if (item.activity.length > 0) {
-        item.activity.forEach(function(value) {
-          if (typeof(value.origin_note) == 'string') {
-            if(loop){ return; }
+        item.activity.forEach(function (value) {
+          if (typeof (value.origin_note) == 'string') {
+            if (loop) { return; }
             note = value.origin_note;
             loop = true;
           }
@@ -540,13 +389,13 @@
         </tr>`;
       return dataHtml;
     },
-    emptyData: function() {
+    emptyData: function () {
       return '<td class="text-center p-3 bold fs-18" colspan="13">Không có dữ liệu khách hàng nào</td>';
     }
   }
-  $(function() {
+  $(function () {
 
-    $('.filter-reason-js').click(function() {
+    $('.filter-reason-js').click(function () {
       self = $(this);
       lib.removeParams('page');
       if (self.is(":checked")) {
@@ -557,7 +406,7 @@
       activity.getData();
     });
 
-    $('.filter-user-reciver-js').click(function() {
+    $('.filter-user-reciver-js').click(function () {
       self = $(this);
       lib.removeParams('page');
       if (self.is(":checked")) {
@@ -569,7 +418,7 @@
     });
 
 
-    $('.filter-filter_status-js').click(function() {
+    $('.filter-filter_status-js').click(function () {
       self = $(this);
       lib.removeParams('page');
       if (self.is(":checked")) {
@@ -581,7 +430,7 @@
     });
 
 
-    $('.filter-filter_ship-js').click(function() {
+    $('.filter-filter_ship-js').click(function () {
       self = $(this);
       lib.removeParams('page');
       if (self.is(":checked")) {
@@ -592,20 +441,20 @@
       activity.getData();
     });
 
-    $('#count_page').change(function() {
+    $('#count_page').change(function () {
       lib.removeParams('page');
       lib.updateParams('limit', $(this).val());
       activity.getData();
     });
 
-    $('.inp-data-user-reciver-js').click(function() {
+    $('.inp-data-user-reciver-js').click(function () {
       self = $(this);
       list = self.closest('.form-group').find('.assign-order-js');
       list.removeClass('d-none');
       list.find('.inp-find-user-js').focus();
     });
 
-    $('.filter-user_id-js').change(function() {
+    $('.filter-user_id-js').change(function () {
       val = $(this).val();
       lib.removeParams('page');
       if (val == "-1") {
@@ -616,7 +465,7 @@
       activity.getData();
     });
 
-    $('.filter-user_reciver_id-js').change(function() {
+    $('.filter-user_reciver_id-js').change(function () {
       val = $(this).val();
       lib.removeParams('page');
       if (val == "-1") {
@@ -628,7 +477,7 @@
     });
 
 
-    $(document).on('click', '.pagination a', function(event) {
+    $(document).on('click', '.pagination a', function (event) {
       event.preventDefault();
 
       $('.pagination li').removeClass('active');
@@ -641,7 +490,7 @@
       activity.getData();
     });
 
-    $(document).on('click', '.list-source--item-js', function(event) {
+    $(document).on('click', '.list-source--item-js', function (event) {
       event.preventDefault();
       lib.removeParams('page');
       $('.list-source--item').removeClass('active');
@@ -653,7 +502,7 @@
       activity.getData();
     });
 
-    $(document).on('click', '.list-item-js', function() {
+    $(document).on('click', '.list-item-js', function () {
 
       select = $(this).attr('data-selected');
       inpReciver = $('.inp-data-user-reciver-js');
@@ -669,7 +518,7 @@
       $('.inp-find-user-js').focus();
     });
 
-    $(document).on('click', '.btn-data-user-reciver-js', function() {
+    $(document).on('click', '.btn-data-user-reciver-js', function () {
       list = $('.list-item-js');
       var order = $('#table-body-data tr');
       let checkReciver = false;
@@ -677,7 +526,7 @@
       var dataReciver = [];
       dataOrder = [];
 
-      $.each(order, function(index, value) {
+      $.each(order, function (index, value) {
         item = $(value);
         if (item.attr('data-selected') == "true") {
           dataOrder.push(item.attr('data-id'));
@@ -689,7 +538,7 @@
         return;
       }
 
-      $.each(list, function(index, value) {
+      $.each(list, function (index, value) {
         item = $(value);
         if (item.attr('data-selected') == "true") {
           dataReciver = item.attr('data-uid');
@@ -704,7 +553,7 @@
         'user_reciver_id': dataReciver,
         'order_id': dataOrder
       }
-      lib.send.post('{{route("api.order.assign.save")}}', function(res) {
+      lib.send.post('{{route("api.order.assign.save")}}', function (res) {
         if (res.success) {
           Notify.show.success(res.msg);
           activity.getData();
@@ -717,7 +566,7 @@
       }, params);
     });
 
-    $(document).on('click', '#table-body-data tr', function() {
+    $(document).on('click', '#table-body-data tr', function () {
       self = $(this);
       inp = self.find('.stt-order-js');
       select = self.attr('data-selected');
@@ -730,10 +579,10 @@
       }
     });
 
-    $(document).on('click', '.base-table-item--checkbox', function() {
+    $(document).on('click', '.base-table-item--checkbox', function () {
       $(this).closest('tr').trigger('click');
     });
-    $(document).on('click', '.stt-order-all-js', function() {
+    $(document).on('click', '.stt-order-all-js', function () {
       self = $(this);
       inp = $('.stt-order-js');
       select = self.is(":checked");
@@ -749,11 +598,11 @@
       }
     });
 
-    $(document).on('keyup', '.inp-find-user-js', function() {
+    $(document).on('keyup', '.inp-find-user-js', function () {
       searchData($(this));
     });
 
-    $(document).on('click', '[name="filter_date"]', function() {
+    $(document).on('click', '[name="filter_date"]', function () {
       lib.removeParams('page');
       val = $('[name="filter_date"]:checked').val();
       if (val == "created_at" || val == "date_reciver") {
@@ -768,11 +617,11 @@
       activity.getData();
     });
 
-    $(document).on('dblclick', '.base-table--data tbody tr', function() {
+    $(document).on('dblclick', '.base-table--data tbody tr', function () {
       window.location.href = $(this).find('.detail-js').attr('href');
     });
 
-    $(document).on('click', '.btn-click-find-order-js', function() {
+    $(document).on('click', '.btn-click-find-order-js', function () {
       inp = $('.inp-find-item-order-js').val();
       if (!!!inp) {
         lib.removeParams('search');
@@ -787,7 +636,7 @@
       activity.getData();
     });
 
-    $(document).on('keyup', '.inp-find-item-order-js', function(){
+    $(document).on('keyup', '.inp-find-item-order-js', function () {
       val = $(this).val();
       if (!!!val) {
         lib.removeParams('search');
@@ -796,25 +645,25 @@
       }
     });
 
-    $('.btn-click-remove-time-start-js').click(function(){
+    $('.btn-click-remove-time-start-js').click(function () {
       $('input[name="time_start"]').val('');
       lib.removeParams('time_start');
       activity.getData();
     });
 
-    $('.btn-click-remove-time-end-js').click(function(){
+    $('.btn-click-remove-time-end-js').click(function () {
       $('input[name="time_end"]').val('');
       lib.removeParams('time_end');
       activity.getData();
     });
 
-    $(document).on('click', '.btn-click-remove-js', function() {
+    $(document).on('click', '.btn-click-remove-js', function () {
       list = $('.list-item-js');
       var order = $('#table-body-data tr');
       checkOrder = false;
       dataOrder = [];
 
-      $.each(order, function(index, value) {
+      $.each(order, function (index, value) {
         item = $(value);
         if (item.attr('data-selected') == "true") {
           dataOrder.push(item.attr('data-id'));
@@ -829,8 +678,8 @@
         _id: dataOrder
       };
 
-      Notify.show.confirm(function() {
-        lib.send.post('{{route("api.order.removeOrder")}}', function(res) {
+      Notify.show.confirm(function () {
+        lib.send.post('{{route("api.order.removeOrder")}}', function (res) {
           if (res.success) {
             Notify.show.success(res.msg);
             activity.getData();
@@ -841,7 +690,7 @@
       });
     });
 
-    window.onclick = function(event) {
+    window.onclick = function (event) {
       if ($(event.target).hasClass('inp-data-user-reciver-js') || !!$(event.target).parents('.assign-order-js').html()) return;
       $('.assign-order-js').addClass('d-none');
     }
@@ -852,7 +701,7 @@
     $('[timepicker="true"]').daterangepicker({
       singleDatePicker: true,
       autoUpdateInput: false
-    }, function(start, end, label) {
+    }, function (start, end, label) {
       name = $(this)[0].element[0].name;
       time = start.format('Y-MM-DD');
       $('[name="' + name + '"]').val(time);

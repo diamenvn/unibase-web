@@ -19,3 +19,4 @@ yarn-error.log
 /composer.lock
 /public/css/app.css
 /public/js/app.js
+/vendor

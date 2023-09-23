@@ -21,7 +21,9 @@ class SiteProductController extends Controller
       ->load('product')
       ->load('company')
       ->load('source');
+    $form['store'] = route("api.product.store");
+    $form['method'] = "post";
 
-    return view('site.product.create')->with('info', $info);
+    return view('site.product.create')->with('info', $info)->with('form', $form);
   }
 }

@@ -60,9 +60,12 @@ Route::middleware('auth.api')->group(function () {
     Route::post('/setting/import/api/edit/{id}', 'ApiSettingController@editImportFromAPI')->name('setting.import.edit');
     Route::post('/setting/import/api/remove/{id}', 'ApiSettingController@removeImportFromAPI')->name('setting.import.remove');
 
-    
-    
-    
+
+});
+
+//Product
+Route::middleware('auth.api')->prefix('product')->group(function () {
+    Route::get('/store', 'ApiProductController@store')->name('product.store');
 });
 
 Route::get('/token/order/create', 'ApiTokenController@create')->name('token.order.create.save');

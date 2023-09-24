@@ -34,7 +34,7 @@ Route::middleware('auth.site')->group(function () {
 /// Product
 Route::middleware('auth.site')->prefix('product')->group(function () {
     Route::get('/create', 'SiteProductController@create')->name('product.create');
-    Route::get('/{id}', 'SiteProductController@detail')->name('product.detail');
+    Route::get('/detail/{id}', 'SiteProductController@detail')->name('product.detail');
     Route::get('/list', 'SiteProductController@list')->name('product.list');
 });
 ?>

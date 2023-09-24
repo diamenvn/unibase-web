@@ -42,4 +42,14 @@ class SiteProductController extends Controller
 
     return view('site.product.create')->with('info', $info)->with('form', $form)->with('data', $data);
   }
+
+  public function list()
+  {
+    $data['sources'] = [];
+    $data['info'] = $this->customer->info()
+      ->load('product')
+      ->load('company')
+      ->load('source');
+    return view('site.product.list', $data);
+  }
 }

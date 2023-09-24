@@ -20,13 +20,13 @@ class CatalogService
         return $this->product->find($id);
     }
 
-    public function getListProductByCompanyId($id)
+    public function paginateListProductByUserID($userId)
     {
         $query = $this->product;
-        $query = $query->where('company_id', $id);
+        $query = $query->where('created_by', $userId);
         $query = $query->where('status', 1);
         $query = $query->orderBy('_id', 'DESC');
-        return $query->get()->load('product');
+        return $query->paginate();
     }
 
     public function hiddenProductById($id)

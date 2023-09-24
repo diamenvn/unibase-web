@@ -91,7 +91,8 @@
                     </div>
                     <div class="menu-open__body fs-15">
                       <ul>
-                        <li><a href="{{route('site.product.create')}}"><i class="fal fa-list"></i> Tạo sản phẩm</a></li>
+                        <li><a href="{{route('site.product.create')}}"><i class="fal fa-list"></i> Tạo sản phẩm mới</a></li>
+                        <li><a href="{{route('site.product.create')}}"><i class="fal fa-list"></i> Import từ excel</a></li>
                         <li><a href="{{route('site.product.list')}}"><i class="fal fa-list"></i> Danh sách sản phẩm</a>
                         </li>
                       </ul>

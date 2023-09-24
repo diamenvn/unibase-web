@@ -68,6 +68,7 @@ Route::middleware('auth.api')->group(function () {
 //Product
 Route::middleware('auth.api')->prefix('product')->group(function () {
     Route::post('/store', 'ApiProductController@store')->name('product.store');
+    Route::get('/get-list-product', 'ApiProductController@getListProduct')->name('product.getListProduct');
 });
 
 Route::get('/token/order/create', 'ApiTokenController@create')->name('token.order.create.save');

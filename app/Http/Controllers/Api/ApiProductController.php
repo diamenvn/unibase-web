@@ -22,10 +22,23 @@ class ApiProductController extends Controller
         $this->response['data'] = [];
     }
 
+    public function getListProduct(Request $request)
+    {
+        $user = $this->customer->info();
+        $res = $this->catalogService->paginateListProductByUserID($user->_id);
+        if ($res) {
+            $this->response['msg'] = "Lấy sản phẩm thành công!";
+            $this->response['success'] = true;
+            $this->response['data'] = $res;
+        }
+        return response()->json($this->response, 200);
+    }
+
     public function store(SaveAddProductRequest $request)
     {
-        $customer = $this->customer->info();
+        $user = $this->customer->info();
         $request = $request->only($this->exceptedQuery());
+        $request['created_by'] = $user->_id;
         $res = $this->catalogService->createProduct($request);
 
         if ($res) {

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Services\PageService;
 use App\Http\Requests\LoginRequest;
-use Illuminate\Support\Facades\Hash;
+
 class SiteAuthController extends Controller
 {
     private $pageService;
@@ -17,7 +17,6 @@ class SiteAuthController extends Controller
 
     public function login()
     {
-        dd(Hash::make("namnam"));
         if (Auth::check()){
             return redirect()->route('site.home.dashboard');
         }else{

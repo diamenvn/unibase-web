@@ -15,7 +15,7 @@
 @section('custom_js')
 <script>
     var images = @json($data[$model] ?? []);
-    var path = @json(storage_path('app'));
+    var path = @json(storage_path('app/'));
     FilePond.create(
         document.querySelector('input[type="file"]'),
         {

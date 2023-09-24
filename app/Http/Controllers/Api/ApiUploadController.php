@@ -40,7 +40,7 @@ class ApiUploadController extends Controller
 
     private function processUpload($file)
     {
-        $folder = "/images/" . date('d') . "/" . date('m') . "/" . date("Y");
+        $folder = "/";
         $path = Storage::disk('local')->put($folder, $file, 'public');
         return $path;
     }

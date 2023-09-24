@@ -61,11 +61,13 @@ Route::middleware('auth.api')->group(function () {
     Route::post('/setting/import/api/remove/{id}', 'ApiSettingController@removeImportFromAPI')->name('setting.import.remove');
 
 
+    //upload
+    Route::post('/upload', 'ApiUploadController@upload')->name('upload');
 });
 
 //Product
 Route::middleware('auth.api')->prefix('product')->group(function () {
-    Route::get('/store', 'ApiProductController@store')->name('product.store');
+    Route::post('/store', 'ApiProductController@store')->name('product.store');
 });
 
 Route::get('/token/order/create', 'ApiTokenController@create')->name('token.order.create.save');

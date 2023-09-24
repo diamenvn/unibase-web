@@ -2463,3 +2463,7 @@ main {
   border-top: 1px solid #ddd;
 }
 
+body .filepond--root {
+  margin-bottom: 0px;
+}
+

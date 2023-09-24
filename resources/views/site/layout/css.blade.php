@@ -4,3 +4,7 @@
 <link rel="stylesheet" href="{{asset('assets/site/theme/css/layout/font-awesome.css')}}">
 <link rel="stylesheet" href="{{asset('assets/site/theme/css/layout/timepicker.css')}}">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+<!-- FILEPOND -->
+<link rel="stylesheet" href="{{asset('assets/vendor/filepond/filepond.css')}}">

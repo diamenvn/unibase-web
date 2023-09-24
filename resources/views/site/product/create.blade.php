@@ -17,34 +17,34 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                @include('site.uikit.input.text', ['label' => "Tên sản phẩm", 'name' => "product_name", 'require' => true])
+                                @include('site.uikit.input.text', ['label' => "Tên sản phẩm", 'model' => "product_name", 'require' => true])
                             </div>
                             <div class="col-12">
-                                @include('site.uikit.upload.image', ['label' => "Ảnh sản phẩm", 'name' => "product_images"])
+                                @include('site.uikit.upload.image', ['label' => "Ảnh sản phẩm", 'model' => "product_images", 'require' => true])
                             </div>
                             <div class="col-6">
-                                @include('site.uikit.input.text', ['label' => "Chất liệu", 'name' => "product_material"])
+                                @include('site.uikit.input.text', ['label' => "Chất liệu", 'model' => "product_material"])
                             </div>
                             <div class="col-6">
-                                @include('site.uikit.input.text', ['label' => "Màu sắc", 'name' => "product_color"])
+                                @include('site.uikit.input.text', ['label' => "Màu sắc", 'model' => "product_color"])
                             </div>
                             <div class="col-6">
-                                @include('site.uikit.input.text', ['label' => "Kích thước", 'name' => "product_size"])
+                                @include('site.uikit.input.text', ['label' => "Kích thước", 'model' => "product_size"])
                             </div>
                             <div class="col-6">
-                                @include('site.uikit.input.text', ['label' => "Tổng khối lượng", 'name' => "product_weight"])
+                                @include('site.uikit.input.text', ['label' => "Tổng khối lượng", 'model' => "product_weight"])
                             </div>
                             <div class="col-6">
-                                @include('site.uikit.input.currency', ['label' => "Giá sản phẩm", 'name' => "product_cost"])
+                                @include('site.uikit.input.currency', ['label' => "Giá sản phẩm", 'model' => "product_cost", 'require' => true])
                             </div>
                             <div class="col-6">
-                                @include('site.uikit.input.currency', ['label' => "Giá ship", 'name' => "product_ship_price"])
+                                @include('site.uikit.input.currency', ['label' => "Giá ship", 'model' => "product_ship_price"])
                             </div>
                             <div class="col-6">
-                                @include('site.uikit.input.currency', ['label' => "Phí xử lý đơn", 'name' => "product_process_price"])
+                                @include('site.uikit.input.currency', ['label' => "Phí xử lý đơn", 'model' => "product_process_price"])
                             </div>
                             <div class="col-6">
-                                @include('site.uikit.input.text', ['label' => "Mã SKU", 'name' => "product_sku_name"])
+                                @include('site.uikit.input.text', ['label' => "Mã SKU", 'model' => "product_sku_name"])
                             </div>
                         </div>
                     </div>
@@ -54,16 +54,16 @@
                     <div class="order-detail__body">
                         <div class="row">
                             <div class="col-12">
-                                @include('site.uikit.input.number', ['label' => "Tổng số lượng đơn", 'name' => "total_all_order"])
+                                @include('site.uikit.input.number', ['label' => "Tổng số lượng đơn", 'model' => "total_all_order"])
                             </div>
                             <div class="col-12">
-                                @include('site.uikit.input.number', ['label' => "Số lượng đã xử lý", 'name' => "total_order_proccessed"])
+                                @include('site.uikit.input.number', ['label' => "Số lượng đã xử lý", 'model' => "total_order_proccessed"])
                             </div>
                             <div class="col-12">
-                                @include('site.uikit.input.number', ['label' => "Số lượng đơn chờ xử lý", 'name' => "total_order_wait_process"])
+                                @include('site.uikit.input.number', ['label' => "Số lượng đơn chờ xử lý", 'model' => "total_order_wait_process"])
                             </div>
                             <div class="col-12">
-                                @include('site.uikit.input.number', ['label' => "Số lượng đơn đang xử lý", 'name' => "total_order_proccessing"])
+                                @include('site.uikit.input.number', ['label' => "Số lượng đơn đang xử lý", 'model' => "total_order_proccessing"])
                             </div>
                         </div>
                     </div>

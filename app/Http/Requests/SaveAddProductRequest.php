@@ -28,7 +28,7 @@ class SaveAddProductRequest extends FormRequest
     {
         return [
             'product_name' => 'required',
-            'price' => 'required'
+            'product_cost' => 'required'
         ];
     }
 
@@ -36,7 +36,7 @@ class SaveAddProductRequest extends FormRequest
     {
         return [
             'product_name.required' => 'Tên sản phẩm không được để trống',
-            'price.required' => 'Giá sản phẩm không được để trống'
+            'product_cost.required' => 'Giá sản phẩm không được để trống'
         ];
     }
 

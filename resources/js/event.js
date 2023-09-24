@@ -30,7 +30,7 @@ $(function () {
 
         $.each(form.find('[required]'), function (_, formItem) {
             jqueryFormItem = $(formItem)
-            if (!!!jqueryFormItem.val()) {
+            if ((jqueryFormItem.is("input") && !jqueryFormItem.val()) || (jqueryFormItem.find('input').length > 0 && !jqueryFormItem.find('input[type="hidden"]').val())) {
                 jqueryFormItem.addClass('invalid');
                 hasContinue = false;
             } else {
@@ -48,9 +48,14 @@ $(function () {
             Notiflix.Loading.Remove();
             if (res.success) {
                 Notify.show.success(res.msg);
-                setTimeout(function () {
-                    window.location.reload();
-                }, 1000);
+                console.log(res.data);
+                if (typeof res.data.redirect_url == "string" && res.data.redirect_url) {
+                    window.location.href = res.data.redirect_url
+                }else{
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 1000);
+                }
             } else {
                 Notify.show.error(res.msg);
             }

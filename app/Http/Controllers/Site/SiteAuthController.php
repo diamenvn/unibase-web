@@ -18,7 +18,7 @@ class SiteAuthController extends Controller
     public function login()
     {
         if (Auth::check()){
-            return redirect()->route('site.home.dashboard');
+            return redirect()->route('site.home.welcome');
         }else{
             return view('site.auth.login');
         }
@@ -38,7 +38,7 @@ class SiteAuthController extends Controller
                 return view('site.auth.login')->with('error', $res['msg']);
             }
 
-            return redirect()->route('site.home.dashboard');
+            return redirect()->route('site.home.welcome');
         }else{
             $res['success'] = 0;
             $res['msg'] = 'Tài khoản hoặc mật khẩu không chính xác';

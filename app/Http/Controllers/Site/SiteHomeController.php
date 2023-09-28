@@ -7,21 +7,37 @@ use App\Services\CustomerService;
 use App\Services\OrderActivityService;
 use App\Services\OrderListService;
 use App\Services\SettingService;
+use App\Services\RequestService;
 use Illuminate\Support\Facades\Hash;
+use App\Helpers\Location;
 
 class SiteHomeController extends Controller
 {
-  public function __construct(CustomerService $customer, OrderActivityService $orderActivity, OrderListService $orderList, SettingService $setting)
+  public function __construct(
+    CustomerService $customer,
+    OrderActivityService $orderActivity,
+    OrderListService $orderList,
+    SettingService $setting,
+    RequestService $requestService
+  )
   {
     $this->customer = $customer;
     $this->activity = $orderActivity;
     $this->order = $orderList;
     $this->setting = $setting;
+    $this->requestService = $requestService;
   }
 
   public function home()
   {
     return redirect()->route('auth.login');
+  }
+
+  public function welcome()
+  {
+    $location = $this->getLocationByIP();
+    return view('site.welcome.index')
+    ->with('location', $location);
   }
   
 
@@ -67,5 +83,14 @@ class SiteHomeController extends Controller
       $companys = $this->setting->getCompanyConnectFromSale($customer->company_id)->pluck('company_mkt_id')->toArray();
     }
     return $this->order->getByCompanyId($companys, 10 /* limit */);
+  }
+
+  public function getLocationByIP()
+  {
+    $ip = Location::getClientIP();
+    $token = config("ipinfo.token");
+    $uri = "ipinfo.io/" . $ip . "?token=" . $token;
+    $sendRequest = $this->requestService->send($uri);
+    return $sendRequest;
   }
 }

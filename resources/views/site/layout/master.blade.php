@@ -99,7 +99,7 @@
                     </div>
                   </div>
                 </li>
-                <li>
+                <!-- <li>
                   <a class="sidebar-item {{strpos(Route::current()->getName(), 'site.order') !== false ? 'active' : ''}}"
                     href="{{route('site.order.list')}}">
                     <span><i class="fal fa-money-bill-alt"></i></span>
@@ -117,7 +117,7 @@
                       </ul>
                     </div>
                   </div>
-                </li>
+                </li> -->
                 <li>
                   <a class="sidebar-item {{strpos(Route::current()->getName(), 'site.order') !== false ? 'active' : ''}}"
                     href="{{route('site.order.list')}}">

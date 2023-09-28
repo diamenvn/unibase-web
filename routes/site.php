@@ -2,6 +2,7 @@
 Route::middleware('auth.site')->group(function () {
     Route::get('/logout', 'SiteAuthController@logout')->name('auth.logout');
 
+    Route::get('/welcome', 'SiteHomeController@welcome')->name('home.welcome');
     Route::get('/dashboard', 'SiteHomeController@dashboard')->name('home.dashboard');
     //orders
     Route::get('/orders/list-all', 'SiteOrderController@list')->name('order.list');

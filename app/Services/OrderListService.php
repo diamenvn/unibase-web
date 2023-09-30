@@ -6,18 +6,20 @@ use App\Model\Mongo\CompanyProductModel;
 use App\Model\Mongo\CompanySourceModel;
 use App\Model\Mongo\ListProductModel;
 use App\Model\Mongo\OrderListModel;
+use App\Model\Mongo\LabelListModel;
 use Exception;
 use Carbon\Carbon;
 
 class OrderListService
 {
 
-    public function __construct(OrderListModel $orderListModel, CompanyProductModel $product, CompanySourceModel $source, ListProductModel $listProduct)
+    public function __construct(OrderListModel $orderListModel, CompanyProductModel $product, CompanySourceModel $source, ListProductModel $listProduct, LabelListModel $labelListModel)
     {
         $this->result = $orderListModel;
         $this->listProduct = $listProduct;
         $this->product = $product;
         $this->source = $source;
+        $this->labelListModel = $labelListModel;
     }
 
     public function search($data)
@@ -416,6 +418,16 @@ class OrderListService
         }else{
             $query = $query->where('company_id', $id);
         }
+        return $query->get();
+    }
+
+    // LABEL
+
+    public function getListLabelByCompanyId($companyId)
+    {
+        $query = $this->labelListModel;
+        $query = $query->where('company_id', $companyId);
+        $query = $query->orderBy('created_at', 'DESC');
         return $query->get();
     }
 }

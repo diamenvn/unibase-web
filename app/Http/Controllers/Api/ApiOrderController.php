@@ -22,7 +22,15 @@ use XSSCleaner;
 
 class ApiOrderController extends Controller
 {
-  public function __construct(OrderListService $orderList, OrderCareService $orderCareService, CustomerService $customer, OrderActivityService $activity, OrderShipService $ship, ListProvinService $provin, SettingService $setting)
+  public function __construct(
+    OrderListService $orderList, 
+    OrderCareService $orderCareService, 
+    CustomerService $customer, 
+    OrderActivityService $activity, 
+    OrderShipService $ship, 
+    ListProvinService $provin, 
+    SettingService $setting
+  )
   {
     $this->order = $orderList;
     $this->orderCareService = $orderCareService;
@@ -35,6 +43,18 @@ class ApiOrderController extends Controller
     $this->response['success'] = false;
     $this->response['data'] = [];
     $this->timeNow = Carbon::now();
+  }
+
+  public function getListLabel(Request $request)
+  {
+    $customer = $this->customer->info();
+    $columns = $this->order->getListLabelByCompanyId($customer->company_id);
+    if ($columns) {
+      $this->response['success'] = true;
+      $this->response['msg'] = 'Lấy dữ liệu thành công';
+      $this->response['data'] = view('site.order.components.grid-column-header')->with('columns', $columns)->render();
+    }
+    return response()->json($this->response, 200);
   }
 
   public function getAllListOrder(Request $request)

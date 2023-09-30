@@ -1,7 +1,7 @@
 <div class="welcome__block__notify row my-2">
     <div class="col-12">
         <div class="title fw-200">
-            <span>Good morning, Nguyễn Văn Nam</span>
+            <span>Good morning, {{$user->name}}</span>
         </div>
     </div>
     <div class="col-12">

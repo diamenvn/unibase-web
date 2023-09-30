@@ -1,8 +1,15 @@
+:root {
+  --text-color-desc: rgba(255, 255, 255, 0.6);
+  --text-color-desc-2: rgba(255, 255, 255, 0.77);
+  --sidebar-bg: #12649a;
+}
+
 $primary-color: #556ee6;
-$sidebar-width: 80px;
-$first-menu-width: 80px;
-$navbar-height: 50px;
-$box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+$sidebar-width: 255px;
+$first-menu-width: 45px;
+$second-menu-width: 210px;
+$navbar-height: 70px;
+$box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.1);
 $green: #269c71;
 $fz-primary: 13px;
 $text-color-primary: #3c4858;

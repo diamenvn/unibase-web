@@ -10,6 +10,7 @@ Route::middleware('auth.api')->group(function () {
     Route::post('/order/detail/save/{id}', 'ApiOrderController@saveDetail')->name('order.detail.save');
     Route::post('/order/create', 'ApiOrderController@saveOrder')->name('order.create.save');
     Route::post('/order/assign', 'ApiOrderController@saveAssign')->name('order.assign.save');
+    Route::get('/order/get-list-label', 'ApiOrderController@getListLabel')->name('order.getListLabel');
 
     Route::post('/order/removeOrder', 'ApiOrderController@removeOrder')->name('order.removeOrder');
     Route::post('/order/searchPhone', 'ApiOrderController@searchPhone')->name('order.searchPhone');

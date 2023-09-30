@@ -33,7 +33,7 @@
                                             <i class="fal fa-bell"></i>
                                         </div>
                                         <div class="icon user flex-center position-relative">
-                                            <i class="fal fa-user fs-18"></i> <span class="ml-2">Nguyễn Văn Nam</span>
+                                            <i class="fal fa-user fs-18"></i> <span class="ml-2">{{$user->name}}</span>
                                             <div class="list-item-user position-absolute">
                                                 <ul class="m-0">
                                                     <li><a class="d-block" href="{{route('site.user.create')}}"><i class="fal fa-user mr-2"></i>Thông tin cá nhân</a></li>
@@ -54,8 +54,7 @@
                                 <div class="d-flex justify-content-center">
                                     <div class="welcome__block__search">
                                         <i class="welcome__block__search__icon fal fa-search"></i>
-                                        <input type="text" class="welcome__block__search__input"
-                                            placeholder="Tìm kiếm ứng dụng">
+                                        <input type="text" class="welcome__block__search__input" placeholder="Tìm kiếm ứng dụng">
                                     </div>
                                 </div>
                             </div>

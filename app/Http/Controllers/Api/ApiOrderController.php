@@ -59,14 +59,16 @@ class ApiOrderController extends Controller
 
   public function getAllListOrder(Request $request)
   {
+    
     $customer = $this->customer->info()->load('settingOrder');
     $request = $this->acceptRequest($request);
     $request = $this->defaultRequest($request);
 
     $request = App::filterByPermissionCustomer($customer, $request);
-
+    $request['label_ids'] = $this->order->getListLabelByCompanyId($customer->company_id)->pluck('_id')->toArray();
+    $isPaginate = (isset($request['paginate']) && $request['paginate']);
     $lists = $this->order->search($request)
-      ->select('name', 'phone', 'date_reciver', 'product_id', 'source_id', 'user_reciver_id','user_create_id', 'proccessing', 'reason', 'created_at', 'filter_status')
+      ->select('name', 'phone', 'date_reciver', 'product_id', 'source_id', 'user_reciver_id','user_create_id', 'proccessing', 'reason', 'created_at', 'filter_status', 'label_id')
       ->with('product')
       ->with('source')
       ->with('reciver')
@@ -84,13 +86,24 @@ class ApiOrderController extends Controller
             }
           }
         },
-      ])->paginate($request['limit'])->setPath('');
+      ]);
+    
+    if ($isPaginate) {
+      $lists = $lists->paginate($request['limit'])->setPath('');
+    } else {
+      $lists = $lists->get();
+      $renderLists = array();
 
-    $lists = $this->hideNumberPhone($lists);
-
+      foreach ($lists as $key => $order) {
+        array_push($renderLists, array(
+          'label_id' => $order->label_id, 
+          'html' => view('site.order.components.grid-body-item')->with('order', $order)->render())
+        );
+      }
+    }
     $results = array(
-      'result'       => $lists,
-      'pagination' => (string) $lists->links()
+      'result'       => $isPaginate ? $lists : $renderLists,
+      'pagination' => (isset($request['paginate']) && $request['paginate']) ? (string) $lists->links() : false
     );
     if ($lists) {
       $this->response['success'] = true;
@@ -597,6 +610,7 @@ class ApiOrderController extends Controller
       'type_confirm_text',
       'filter_date_by',
       'limit',
+      'paginate',
       ''
     );
   }

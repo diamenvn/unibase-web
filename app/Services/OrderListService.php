@@ -175,6 +175,14 @@ class OrderListService
             $query = $query->orderBy('_id', 'DESC');
         }
 
+        if (isset($data['label_ids'])) {
+            if(is_array($data['label_ids'])){
+                $query = $query->whereIn('label_id', $data['label_ids']);
+            }else{
+                $query = $query->where('label_id', $data['label_ids']);
+            }  
+        }
+
         return $query;
     }
 

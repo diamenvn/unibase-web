@@ -1,5 +1,5 @@
 @foreach($columns as $index => $column)
-<div class="col order-list__columns">
+<div data-column-id="{{$column->_id}}" class="col order-list__columns">
     <div class="order-list__head">
         <div class="d-flex align-items-center my-1">
             <div class="flex-1">
@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-    <div class="order-list__body">
+    <div data-element="body" class="order-list__body">
 
     </div>
 </div>

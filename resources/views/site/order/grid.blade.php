@@ -63,16 +63,14 @@
     const activity = {
         showDataListOrder: function (res) {
             if (res.success) {
-                // element.table().html('');
-                if (!!res.data.result.data.length) {
-                    res.data.result.data.forEach(item => {
-                        // resHtml = html.renderList(res.data, item);
-                        // element.table().append(resHtml);
+                if (!!res.data.result.length) {
+                    res.data.result.forEach(item => {
+                        resHtml = html.renderList(item);
+                        element.column(`[data-column-id="${item.label_id}"]`).find(`[data-element="body"]`).append(resHtml);
                     });
                 } else {
-                    element.table().html(html.emptyData());
+                    element.column(`[data-column-id="${item.label_id}"]`).find(`[data-element="body"]`).html(html.emptyData());
                 }
-
             }
             Notiflix.Block.Remove('.base-table-content');
             activity.setTotalPage(res.data.result);
@@ -86,7 +84,6 @@
                 } else {
                     element.table().html(html.emptyData());
                 }
-
             }
         },
         getData: function () {
@@ -104,11 +101,6 @@
                 $('[name="filter_date"]').val(['created_at']);
                 lib.updateParams('filter_date_by', 'created_at');
             }
-
-            // if (!!!window.location.search.includes('reason') && !!!window.location.search.includes('user_reciver_id') && !!!window.location.search.includes('search')) {
-            //   lib.updateParams('reason[]', '-1');
-            //   $('#reason-1').prop('checked', true);
-            // }
 
             for (var key of params.keys()) {
                 value = params.get(key);
@@ -155,116 +147,8 @@
     }
 
     const html = {
-        renderList: function (res, item) {
-            userReciver = userCreated = filterStatus = '';
-            if (item.reciver) {
-                userReciver = '<span class="d-inline-block mb-1 user--reciver mr-2">' + item.reciver.name + '<i class="fas fa-star ml-1 fs-12 text-warning"></i></span>';
-            }
-            if (item.customer_create_order) {
-                userCreated = '<span class="d-inline-block mb-1 user--reciver mr-2">' + item.customer_create_order.name + '</span>';
-            }
-            date = source = note = '';
-            var detail = '{{ route("site.order.detail", ":id") }}';
-            detail = detail.replace(':id', item._id);
-
-            reason = {
-                'wait': "<span class='alert-warning reason-style'>Chưa chốt được</span>",
-                'success': "<span class='alert-success reason-style'>Đơn đã chốt</span>",
-                'cancel': "<span class='alert-danger reason-style'>Đơn huỷ</span>",
-                'undefined': "<span class='alert-primary reason-style'>Đơn hàng mới</span>"
-            }
-
-            if (item.proccessing) {
-                dataHtml = `<tr data-id="` + item._id + `" class="table-proccessing">`
-            } else {
-                dataHtml = `<tr data-id="` + item._id + `">`
-            }
-
-            if (item.source) {
-                source = item.source.source_name;
-            }
-
-            phoneExist = phoneExistItem = '';
-            if (item.order.length > 1) {
-                item.order.forEach(order => {
-                    if (order._id !== item._id) {
-                        phoneExistItem += `<li><i class="fas fa-user mr-2"></i>` + order.name + `</li>`;
-                    }
-                });
-                phoneExist = `<span class="position-relative item-phone-exist d-inline-block mb-1 user--reciver px-2 ml-2">
-                    ` + parseInt(item.order.length - 1) + `
-                    <i class="fas fa-chevron-down ml-1 fs-12"></i>
-                    <div class="list-phone-exist fs-13 position-absolute bg-white">
-                      <span class="title mb-2">Số trùng với ` + parseInt(item.order.length - 1) + ` khách hàng</span>
-                      <ul class="m-0">` + phoneExistItem + `</ul>
-                    </div>
-                  </span>`;
-            }
-            if (item.date_reciver !== undefined) {
-                date = item.date_reciver;
-            }
-            if (!!item.filter_status) {
-                filterStatus = item.filter_status.text;
-            }
-
-            loop = false;
-            if (item.activity.length > 0) {
-                item.activity.forEach(function (value) {
-                    if (typeof (value.origin_note) == 'string') {
-                        if (loop) { return; }
-                        note = value.origin_note;
-                        loop = true;
-                    }
-                });
-            }
-
-
-            dataHtml += `
-            <td class="td-first">
-              <li class="checkbox_acount list-item-order">
-                <input class="d-none stt-order-js" type="checkbox" id="` + item._id + `">
-                <label class="label-checkbox base-table-item--checkbox" for="` + item._id + `"></label>
-              </li>
-            </td>
-            <td class="cell-hover-border td-typeview-name view-medium white-space-normal">
-                <div class="base_field_name"><a class="detail-js" href="` + detail + `" title="` + item.name + `" class="a_overflow_hidden">` + item.name + `</a></div>
-            </td>
-            <td class="cell-hover-border td-typeview-phones ">
-                <div class="base_field_phones"><span>` + item.phone + phoneExist + `</div>
-            </td>
-            <td class="cell-hover-border td-typeview-ngay_lead_chuyen_sale ">
-                ` + date + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale ">
-                ` + userReciver + `
-            </td>
-            <td class="cell-hover-border td-typeview-san_pham_quan_tam ">
-                <div class="js-value-container fix_width">` + item.product.product_name + `</div>
-            </td>
-            <td class="cell-hover-border td-typeview-value ">
-              <div class="js-value-container fix_width">` + userCreated + `</div>
-            </td>
-            <td class="cell-hover-border td-typeview-value ">
-              <div class="js-value-container fix_width">` + source + `</div>
-            </td>
-            <td class="td-number">
-              <span>` + reason[item.reason] + `</span>
-            </td>
-            <td class="td-number">
-              <span>` + filterStatus + `</span>
-            </td>
-            <td class="td-number">
-              <span>` + note + `</span>
-            </td>
-            <td class="td-number">
-              <span>` + item.created_at + `</span>
-            </td>
-            <td class="td-number text-center">
-              <span><a href="` + detail + `"><i class="fal fa-edit"></i></a></span>
-            </td>
-            
-        </tr>`;
-            return dataHtml;
+        renderList: function (item) {
+            return item.html;
         },
         emptyData: function () {
             return '<td class="text-center p-3 bold fs-18" colspan="13">Không có dữ liệu khách hàng nào</td>';

@@ -52,7 +52,7 @@ class SiteOrderController extends Controller
     $companyConnect = $this->loadListCompanyConnect($customer);
 
     $actions = $this->action->get(['status' => 1]);
-    return view('site.order.list')
+    return view('site.order.grid')
       ->with('info', $userSale)
       ->with('userSale', $userSale)
       ->with('userMKT', $userMKT)

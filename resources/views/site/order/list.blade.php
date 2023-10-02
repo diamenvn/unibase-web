@@ -1,11 +1,29 @@
-@extends('site.layout.master')
+@extends('site.layout.master', ['useTopHeader' => 'light'])
 @section('title', 'Danh sách đơn hàng')
+@section('page-title', 'B2B - Quản trị đơn hàng')
+
+@section('page-navigate')
+<li class="active">
+  <a href=""><span>Danh sách</span></a>
+</li>
+<li>
+  <a href=""><span>Báo cáo nhanh</span></a>
+</li>
+<li>
+  <a href=""><span>Chỉnh sửa cột</span></a>
+</li>
+<li>
+  <a href=""><span>Nhiệm vụ</span></a>
+</li>
+<li>
+  <a href=""><span>Nhiệm vụ</span></a>
+</li>
+@endsection
 
 @section('content')
 <div class="app-content">
   <div class="section">
     <div class="main-body flex flex-column">
-      <!-- @include('site.order.filter') -->
       <div class="source-filter source-filter--layout">
         <ul class="list-source nav nav-tabs border-none">
           <li class="list-source--item list-source--item-js active">
@@ -37,9 +55,7 @@
                 </div>
                 <div class="panel-heading-left d-flex align-items-center form-group m-0 search h-100">
                   <form class="input-group" onsubmit="return false">
-                    <input type="search" name="search" class="form-control fs-14 view-large inp-find-item-order-js"
-                      placeholder="Tìm số điện thoại, tên khách hàng" aria-label="Recipient's username"
-                      aria-describedby="basic-addon2">
+                    <input type="search" name="search" class="form-control fs-14 view-large inp-find-item-order-js" placeholder="Tìm số điện thoại, tên khách hàng" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                       <input class="btn btn-primary fs-14 btn-click-find-order-js" type="submit" value="Tìm kiếm" />
                     </div>
@@ -48,24 +64,20 @@
                 @if (($user->permission == "admin" && $user->type_account == "sale") || ($user->assign_order == true))
                 <div class="panel-heading-left d-flex align-items-center form-group m-0 search h-100">
                   <div class="input-group">
-                    <input type="text" readonly class="pointer outline-none form-control fs-14 inp-data-user-reciver-js"
-                      placeholder="Chọn người nhận đơn" id="inp-data-user-reciver-js">
+                    <input type="text" readonly class="pointer outline-none form-control fs-14 inp-data-user-reciver-js" placeholder="Chọn người nhận đơn" id="inp-data-user-reciver-js">
                     <div class="input-group-append">
-                      <button class="btn btn-primary fs-14 btn-data-user-reciver-js"
-                        style="border-top-right-radius: .25rem; border-bottom-right-radius: .25rem" type="button">Gán
+                      <button class="btn btn-primary fs-14 btn-data-user-reciver-js" style="border-top-right-radius: .25rem; border-bottom-right-radius: .25rem" type="button">Gán
                         số</button>
                     </div>
                     <div class="assign-order-js assign-order--layout position-absolute d-none bg-white form-group">
                       <div class="row p-2">
                         <div class="col-12">
-                          <input type="text" class="form-control fs-14 inp-find-user-js"
-                            placeholder="Nhập tên, tài khoản tìm">
+                          <input type="text" class="form-control fs-14 inp-find-user-js" placeholder="Nhập tên, tài khoản tìm">
                         </div>
                       </div>
                       <ul class="list">
                         @foreach($info as $customer)
-                        <li data-selected="false" class="d-flex justify-content-between list-item-js"
-                          data-uid="{{$customer->_id}}">
+                        <li data-selected="false" class="d-flex justify-content-between list-item-js" data-uid="{{$customer->_id}}">
                           <span class="name">{{$customer->username}}</span>
                           <span class="icon-check co-green"><i class="fal fa-check"></i></span>
                         </li>
@@ -82,8 +94,7 @@
                   đơn</div>
                 @endif
                 @if ($user->type_account == "mkt")
-                <div class="btn btn-info fs-13 pointer"> <a href="{{route('site.order.create')}}"> <i
-                      class="fal fa-plus mr-1"></i>Tạo đơn mới</a> </div>
+                <div class="btn btn-info fs-13 pointer"> <a href="{{route('site.order.create')}}"> <i class="fal fa-plus mr-1"></i>Tạo đơn mới</a> </div>
                 @endif
               </div>
             </div>
@@ -108,52 +119,40 @@
                       </div>
                     </th>
                     <th data-index="0" class="th-typeview-name">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Tên khách hàng</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tên khách hàng</span></div>
                     </th>
                     <th data-index="1" class="th-typeview-phones">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Số điện thoại</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số điện thoại</span></div>
                     </th>
                     <th data-index="3" class="th-typeview-ngay_lead_chuyen_sale">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Ngày sale nhận đơn</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Ngày sale nhận đơn</span></div>
                     </th>
                     <th data-index="4" class="th-typeview-sale">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Nhân sự phụ trách</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Nhân sự phụ trách</span></div>
                     </th>
                     <th data-index="5" class="th-typeview-san_pham_quan_tam">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Sản phẩm quan tâm</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Sản phẩm quan tâm</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">MKT tạo đơn</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">MKT tạo đơn</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Nguồn</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Nguồn</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Trạng thái</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Trạng thái</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Tình trạng khách hàng</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tình trạng khách hàng</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Ghi chú</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Ghi chú</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Ngày tạo đơn</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Ngày tạo đơn</span></div>
                     </th>
                     <th data-index="0" class="th-typeview-value">
-                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width"
-                          style="">Chi tiết</span></div>
+                      <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Chi tiết</span></div>
                     </th>
                   </tr>
                 </thead>
@@ -168,8 +167,7 @@
                 <div class="paginate--block float-right col-6 text-left">
                   <span>
                     Số bản ghi / trang
-                    <select class="ml-2" style="height: 30px; width: 50px" name="count_page" id="count_page"
-                      class="mx-1">
+                    <select class="ml-2" style="height: 30px; width: 50px" name="count_page" id="count_page" class="mx-1">
                       <option value="10">10</option>
                       <option value="20">20</option>
                       <option value="50">50</option>
@@ -194,6 +192,9 @@
   const api = {
     getOrderList: function (callback) {
       lib.send.get('{{route("api.order.getAllListOrder")}}', callback, window.location.search);
+    },
+    getLabelList: function (callback) {
+      lib.send.get('{{route("api.order.getListLabel")}}', callback, window.location.search);
     }
   }
 
@@ -217,7 +218,9 @@
     },
     getData: function () {
       loading.order.show('.base-table-content');
-      api.getOrderList(activity.showDataListOrder);
+      api.getLabelList(function () {
+        api.getOrderList(activity.showDataListOrder);
+      });
     },
     setForm: function () {
       const params = new URLSearchParams(window.location.search);

@@ -6,18 +6,20 @@ use App\Model\Mongo\CompanyProductModel;
 use App\Model\Mongo\CompanySourceModel;
 use App\Model\Mongo\ListProductModel;
 use App\Model\Mongo\OrderListModel;
+use App\Model\Mongo\LabelListModel;
 use Exception;
 use Carbon\Carbon;
 
 class OrderListService
 {
 
-    public function __construct(OrderListModel $orderListModel, CompanyProductModel $product, CompanySourceModel $source, ListProductModel $listProduct)
+    public function __construct(OrderListModel $orderListModel, CompanyProductModel $product, CompanySourceModel $source, ListProductModel $listProduct, LabelListModel $labelListModel)
     {
         $this->result = $orderListModel;
         $this->listProduct = $listProduct;
         $this->product = $product;
         $this->source = $source;
+        $this->labelListModel = $labelListModel;
     }
 
     public function search($data)
@@ -171,6 +173,14 @@ class OrderListService
             $query = $query->orderBy($data['sortBy'], isset($data['sortOrder']) ? $data['sortOrder'] : 'DESC');
         } else {
             $query = $query->orderBy('_id', 'DESC');
+        }
+
+        if (isset($data['label_ids'])) {
+            if(is_array($data['label_ids'])){
+                $query = $query->whereIn('label_id', $data['label_ids']);
+            }else{
+                $query = $query->where('label_id', $data['label_ids']);
+            }  
         }
 
         return $query;
@@ -416,6 +426,16 @@ class OrderListService
         }else{
             $query = $query->where('company_id', $id);
         }
+        return $query->get();
+    }
+
+    // LABEL
+
+    public function getListLabelByCompanyId($companyId)
+    {
+        $query = $this->labelListModel;
+        $query = $query->where('company_id', $companyId);
+        $query = $query->orderBy('created_at', 'DESC');
         return $query->get();
     }
 }

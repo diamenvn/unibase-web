@@ -1,8 +1,7 @@
 @extends('site.layout.master', ['useTopHeader' => 'light'])
-@section('title', 'Danh sách sản phẩm')
+@section('title', 'Danh sách đơn hàng')
 @section('page-title', 'B2B - Quản trị đơn hàng')
-
-@section('page-navigate')
+@section('navigate')
 <li class="active">
     <a href=""><span>Danh sách</span></a>
 </li>
@@ -20,129 +19,26 @@
 </li>
 @endsection
 
+@section('header-right')
+<div class="d-flex align-items-center">
+    <div class="btn-group mx-2" role="group">
+        <button type="button" class="btn btn-success fs-13"><i class="fal fa-th-large"></i></button>
+        <button type="button" class="btn btn-outline-success fs-13"><i class="fal fa-bars"></i></button>
+    </div>
+    <div class="btn btn-success fs-13 pointer mx-2"> <a href="{{route('site.order.create')}}">Tạo đơn mới</a> </div>
+</div>
+@endsection
+
+
 @section('content')
 <div class="app-content">
-    <div class="section p-0 flex-1">
+    <div class="section p-0">
         <div class="main-body flex flex-column">
-            <div class="source-filter source-filter--layout">
-                <ul class="list-source nav nav-tabs border-none">
-                    <li class="list-source--item list-source--item-js active">
-                        <a href="#">
-                            <i class="fal fa-list-ol"></i>
-                            <strong>Tất cả</strong>
-                        </a>
-                    </li>
-                </ul>
-            </div>
             <div class="row flex-1">
                 <div class="col-12 h-100">
-                    <div class="base-table-content base-table-layout flex flex-column">
-                        <div class="base-table--filter d-flex justify-content-between">
-                            <div class="flex-left d-flex">
-                                <div class="panel-heading-left panel-heading-title" id="panel-heading-title">
-                                    <h6 class="panel-title mb-1">
-                                        <strong>Danh sách sản phẩm</strong>
-                                    </h6>
-                                    (Tìm thấy : <span id="all_record">0</span> sản phẩm)
-                                </div>
-                                <div class="panel-heading-left d-flex align-items-center form-group m-0 search h-100">
-                                    <form class="input-group" onsubmit="return false">
-                                        <input type="search" name="search" class="form-control fs-14 view-large inp-find-item-order-js" placeholder="Tìm tên sản phẩm, mã sku">
-                                        <div class="input-group-append">
-                                            <input class="btn btn-primary fs-14 btn-click-find-order-js" type="submit" value="Tìm kiếm" />
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="flex-right">
-                                @if ($user->permission == "admin")
-                                <div class="btn btn-danger fs-13 btn-click-remove-js pointer"><i class="fal fa-trash-alt mr-1"></i>Xoá
-                                    sản phẩm</div>
-                                @endif
-                                @if ($user->type_account == "mkt")
-                                <div class="btn btn-info fs-13 pointer"> <a href="{{route('site.product.create')}}"> <i class="fal fa-plus mr-1"></i>Tạo sản phẩm</a> </div>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="base-table--data flex-1 overflow-auto">
-                            <table id="headerTable" class="table-filter w-100">
-                                <thead>
-                                    <tr class="text-center merge">
-                                        <th></th>
-                                        <th colspan="8">Thông tin sản phẩm</th>
-                                        <th colspan="4">Tình trạng sản phẩm</th>
-                                    </tr>
-                                    <tr class="sub-header">
-                                        <th>
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;">
-                                                <li class="checkbox_acount list-item-order">
-                                                    <input class="d-none stt-order-all-js" type="checkbox" id="stt-list-order-all">
-                                                    <label class="label-checkbox base-table-item--checkbox" for="stt-list-order-all"></label>
-                                                </li>
-                                            </div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-name">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tên sản phẩm</span></div>
-                                        </th>
-                                        <th data-index="1" class="th-typeview-phones">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Ảnh sản phẩm</span></div>
-                                        </th>
-                                        <th data-index="3" class="th-typeview-ngay_lead_chuyen_sale">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Chất liệu</span></div>
-                                        </th>
-                                        <th data-index="4" class="th-typeview-sale">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Màu sắc</span></div>
-                                        </th>
-                                        <th data-index="5" class="th-typeview-san_pham_quan_tam">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Kích thước</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tổng khối lượng</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Giá sản phẩm</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Mã SKU</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tổng số lượng đơn</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số đơn đã xử lý</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số đơn chờ xử lý</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số đơn đang xử lý</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Chi tiết</span></div>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody id="table-body-data">
-
-                                </tbody>
-
-                            </table>
-                        </div>
-                        <div class="base-table--paginate">
-                            <div class="flex flex-around bg-white paginate">
-                                <div class="paginate--block float-right col-6 text-left">
-                                    <span>
-                                        Số bản ghi / trang
-                                        <select class="ml-2" style="height: 30px; width: 50px" name="count_page" id="count_page" class="mx-1">
-                                            <option value="10">10</option>
-                                            <option value="20">20</option>
-                                            <option value="50">50</option>
-                                            <option value="100">100</option>
-                                            <option value="200">200</option>
-                                        </select>
-                                </div>
-                                <div id="paginate" class="paginate--block float-right col-6 text-right"></div>
-                            </div>
+                    <div class="order-list__grid overflow-auto w-100 h-100">
+                        <div class="container-fluid p-0 h-100">
+                            <div id="table-body-data" class="order-list__columns__cotainer m-0 row flex-nowrap base-table-content"></div>
                         </div>
                     </div>
                 </div>
@@ -156,32 +52,46 @@
 
 <script>
     const api = {
-        getList: function (callback) {
-            lib.send.get('{{route("api.product.getListProduct")}}', callback, window.location.search);
+        getOrderList: function (callback) {
+            lib.send.get('{{route("api.order.getAllListOrder")}}', callback, window.location.search);
+        },
+        getLabelList: function (callback) {
+            lib.send.get('{{route("api.order.getListLabel")}}', callback, window.location.search);
         }
     }
 
     const activity = {
-        showData: function (res) {
+        showDataListOrder: function (res) {
+            if (res.success) {
+                if (!!res.data.result.length) {
+                    res.data.result.forEach(item => {
+                        resHtml = html.renderList(item);
+                        element.column(`[data-column-id="${item.label_id}"]`).find(`[data-element="body"]`).append(resHtml);
+                    });
+                } else {
+                    element.column(`[data-column-id="${item.label_id}"]`).find(`[data-element="body"]`).html(html.emptyData());
+                }
+            }
+            Notiflix.Block.Remove('.base-table-content');
+            activity.setTotalPage(res.data.result);
+            activity.setPaginate(res.data.pagination);
+        },
+        showDataListLabel: function (res) {
             if (res.success) {
                 element.table().html('');
-                if (!!res.data.data.length) {
-                    res.data.data.forEach(item => {
-                        resHtml = html.renderList(res.data, item);
-                        element.table().append(resHtml);
-                    });
+                if (!!res.data) {
+                    element.table().html(res.data);
                 } else {
                     element.table().html(html.emptyData());
                 }
-
             }
-            Notiflix.Block.Remove('.base-table-content');
-            activity.setTotalPage(res.data);
-            activity.setPaginate(res.data.pagination);
         },
         getData: function () {
             loading.order.show('.base-table-content');
-            api.getList(activity.showData);
+            api.getLabelList(function (response) {
+                activity.showDataListLabel(response);
+                api.getOrderList(activity.showDataListOrder);
+            });
         },
         setForm: function () {
             const params = new URLSearchParams(window.location.search);
@@ -191,11 +101,6 @@
                 $('[name="filter_date"]').val(['created_at']);
                 lib.updateParams('filter_date_by', 'created_at');
             }
-
-            // if (!!!window.location.search.includes('reason') && !!!window.location.search.includes('user_reciver_id') && !!!window.location.search.includes('search')) {
-            //   lib.updateParams('reason[]', '-1');
-            //   $('#reason-1').prop('checked', true);
-            // }
 
             for (var key of params.keys()) {
                 value = params.get(key);
@@ -242,59 +147,8 @@
     }
 
     const html = {
-        renderList: function (res, item) {
-            var detail = '{{ route("site.product.detail", ":id") }}';
-            detail = detail.replace(':id', item._id);
-
-            dataHtml = `<tr data-id="` + item._id + `">`;
-            dataHtml += `
-            <td class="td-first">
-              <li class="checkbox_acount list-item-order">
-                <input class="d-none stt-order-js" type="checkbox" id="` + item._id + `">
-                <label class="label-checkbox base-table-item--checkbox" for="` + item._id + `"></label>
-              </li>
-            </td>
-            <td class="cell-hover-border td-typeview-name view-medium white-space-normal">
-                <div class="base_field_name"><a class="detail-js" href="` + detail + `" title="` + item.product_name + `" class="a_overflow_hidden">` + item.product_name + `</a></div>
-            </td>
-            <td class="cell-hover-border td-typeview-phones ">
-                <div class="base_field_phones"><span>` + item.product_name + `</div>
-            </td>
-            <td class="cell-hover-border">
-                ` + item.product_material + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.product_color + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.product_size + `
-            </td>
-            <td class="cell-hover-border td-typeview-san_pham_quan_tam ">
-                <div class="js-value-container fix_width">` + item.product_weight + `</div>
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.product_cost + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.product_sku_name + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.total_all_order + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.total_order_proccessed + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.total_order_wait_process + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.total_order_proccessing + `
-            </td>
-            <td class="td-number text-center">
-              <span><a href="` + detail + `"><i class="fal fa-edit"></i></a></span>
-            </td>
-        </tr>`;
-            return dataHtml;
+        renderList: function (item) {
+            return item.html;
         },
         emptyData: function () {
             return '<td class="text-center p-3 bold fs-18" colspan="13">Không có dữ liệu khách hàng nào</td>';

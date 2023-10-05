@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Model\Mongo;
-use App\Model\Mongo\CustomerModel;
+use App\Model\Mongo\UserModel;
 use Jenssegers\Mongodb\Eloquent\Model as EloquentModel;
 
 class OrderActivityModel extends EloquentModel
@@ -27,7 +27,7 @@ class OrderActivityModel extends EloquentModel
 
     public function customer()
     {
-        return $this->belongsTo(CustomerModel::class, 'user_create_id');
+        return $this->belongsTo(UserModel::class, 'user_create_id');
     }
 
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Services\CustomerService;
+use App\Services\UserService;
 use App\Services\ListProvinService;
 use App\Services\OrderActivityService;
 use App\Services\OrderListService;
@@ -17,11 +17,11 @@ use Excel;
 
 class ApiExportController extends Controller
 {
-    public function __construct(OrderListService $orderList, CustomerService $customer, OrderActivityService $activity, OrderShipService $ship, ListProvinService $provin, SettingService $setting)
+    public function __construct(OrderListService $orderList, UserService $user, OrderActivityService $activity, OrderShipService $ship, ListProvinService $provin, SettingService $setting)
     {
         $this->order = $orderList;
         $this->activity = $activity;
-        $this->customer = $customer;
+        $this->user = $user;
         $this->ship = $ship;
         $this->provin = $provin;
         $this->setting = $setting;
@@ -36,7 +36,7 @@ class ApiExportController extends Controller
         return Excel::download(new LadingExport(
             $this->ship,
             $this->order,
-            $this->customer,
+            $this->user,
             $request
         ), 'Du_lieu_van_don.xlsx');
     }
@@ -45,7 +45,7 @@ class ApiExportController extends Controller
     {
         return Excel::download(new OrderExport(
             $this->order,
-            $this->customer,
+            $this->user,
             $request
         ), 'Du_lieu_don_hang.xlsx');
     }

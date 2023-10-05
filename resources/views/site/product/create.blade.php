@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="app-content">
-    <div class="section">
+    <div class="section p-0">
         <div class="main-body flex flex-column">
             <form action="{{$form['store'] ?? ''}}" method="{{$form['method'] ?? 'POST'}}" class="row row--custom h-100 overflow-auto" id="form-product">
                 <div class="order-detail--item col-md-8 col-12 h-100 col--custom">

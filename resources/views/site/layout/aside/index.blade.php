@@ -10,24 +10,24 @@
                     </a>
                 </li>
                 <li>
-                    <a class="sidebar-item" href="{{route('site.product.list')}}">
+                    <a class="sidebar-item" href="{{route('site.product.lists')}}">
                         <span><i class="fal fa-tag"></i></span>
                     </a>
                 </li>
                 <li>
-                    <a class="sidebar-item" href="{{route('site.order.list')}}">
+                    <a class="sidebar-item" href="{{route('site.order.lists')}}">
                         <span><i class="fal fa-shopping-bag"></i></span>
                     </a>
                 </li>
             </ul>
             <ul>
                 <li>
-                    <a class="sidebar-item" href="{{route('site.order.list')}}">
+                    <a class="sidebar-item" href="{{route('site.user.lists')}}">
                         <span><i class="fal fa-user"></i></span>
                     </a>
                 </li>
                 <li>
-                    <a class="sidebar-item" href="{{route('site.order.list')}}">
+                    <a class="sidebar-item" href="{{route('site.order.lists')}}">
                         <span><i class="fal fa-ellipsis-h fs-25"></i></span>
                     </a>
                 </li>

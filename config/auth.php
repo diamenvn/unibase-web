@@ -71,7 +71,7 @@ return [
 
         'zm_user_account' => [
             'driver' => 'eloquent',
-            'model' => App\Model\Mongo\CustomerModel::class,
+            'model' => App\Model\Mongo\UserModel::class,
         ],
     ],
 

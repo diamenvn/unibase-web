@@ -2,7 +2,7 @@
 
 namespace App\Model\Mongo;
 
-use App\Model\Mongo\CustomerModel;
+use App\Model\Mongo\UserModel;
 use App\Model\Mongo\OrderListModel;
 use Jenssegers\Mongodb\Eloquent\Model as EloquentModel;
 
@@ -28,7 +28,7 @@ class OrderShipModel extends EloquentModel
 
     public function customer()
     {
-        return $this->belongsTo(CustomerModel::class, 'user_create_id');
+        return $this->belongsTo(UserModel::class, 'user_create_id');
     }
 
     public function activity()

@@ -18,11 +18,11 @@
                     </div>
                     <div class="profile__info">
                         <div class="profile__info__name mx-1 fs-12 co-default">
-                            {{$user->name}}
+                            {{$order->customerCreateOrder->name}}
                         </div>
                     </div>
                 </a>
-                <span class="fs-10"><i class="fal fa-clock mx-2"></i>22/10/2023</span>
+                <span class="fs-10"><i class="fal fa-clock mx-2"></i>{{$order->created_at->format('d/m/Y')}}</span>
             </div>
         </div>
     </a>

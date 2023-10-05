@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Socialite;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use App\Model\Mysql\CustomerModel;
+use App\Model\Mysql\UserModel;
 
 class AuthController extends Controller
 {
@@ -29,7 +29,7 @@ class AuthController extends Controller
     {
         $auth_user = Socialite::driver('facebook')->user();
         // dd($auth_user);
-        $user = CustomerModel::updateOrCreate(
+        $user = UserModel::updateOrCreate(
             [
               'email' => $auth_user->email
             ],

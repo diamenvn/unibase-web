@@ -4,7 +4,7 @@ namespace App\Model\MySql;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class CustomerModel extends Authenticatable
+class UserModel extends Authenticatable
 {
     // use Authenticatable;
 

@@ -136,6 +136,10 @@ li {
   list-style-type: none;
 }
 
+.list-style-auto li {
+  list-style-type: auto !important;
+}
+
 .bold {
   font-weight: 600;
 }
@@ -172,8 +176,16 @@ li {
   background: #269c71;
 }
 
+.bg-transparent {
+  background: transparent;
+}
+
 .text-upcase {
   text-transform: uppercase;
+}
+
+.text-tranform-none {
+  text-transform: none !important;
 }
 
 .text-size-14 {
@@ -183,6 +195,12 @@ li {
 .py-15px {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.break-horizontal {
+  height: 1px;
+  width: 100%;
+  background: #f6f6f6;
 }
 
 i {
@@ -301,7 +319,7 @@ i {
   }
 }
 
-$fs: 10, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 25, 30, 35;
+$fs: 10, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 25, 30, 35, 36;
 $width: 10, 15, 20, 25, 30, 33, 35, 40, 50, 75, 100;
 $height: 30, 40;
 $fw: 200, 300, 400, 500, 600, 700, 900;

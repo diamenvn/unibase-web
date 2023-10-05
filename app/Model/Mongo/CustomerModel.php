@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Model\Mongo;
-use App\Model\Mongo\OrderActivityModel;
+use App\Model\Mongo\CustomerActivityModel;
 use App\Model\Mongo\SettingConnectModel;
 use App\Model\Mongo\CompanyProductModel;
 use App\Model\Mongo\CompanySourceModel;
@@ -14,7 +14,7 @@ class CustomerModel extends Authenticatable
 {
     use HasApiTokens, Notifiable;
     protected $connection = 'mongodb';
-    protected $collection = 'az_user_account';
+    protected $collection = 'az_customer_list';
     protected $primaryKey = '_id';
 
     /**
@@ -33,7 +33,7 @@ class CustomerModel extends Authenticatable
 
     public function activity()
     {
-        return $this->hasMany(OrderActivityModel::class, 'user_create_id')->orderBy('_id', 'DESC');
+        return $this->hasMany(CustomerActivityModel::class, 'customer_id')->orderBy('_id', 'DESC');
     }
 
     public function companySale()
@@ -48,7 +48,7 @@ class CustomerModel extends Authenticatable
 
     public function customer()
     {
-        return $this->hasMany(CustomerModel::class, 'company_id', 'company_id')->orderBy('_id', 'DESC');
+        return $this->hasMany(UserModel::class, 'company_id', 'company_id')->orderBy('_id', 'DESC');
     }
 
     public function product()
@@ -80,4 +80,6 @@ class CustomerModel extends Authenticatable
     {
         return $this->hasOne(SettingOrderModel::class, 'company_id', 'company_id');
     }
+
+    
 }

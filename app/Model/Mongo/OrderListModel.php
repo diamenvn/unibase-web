@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Model\Mongo;
-use App\Model\Mongo\CustomerModel;
+use App\Model\Mongo\UserModel;
 use App\Model\Mongo\ListProductModel;
 use App\Model\Mongo\ListSourceModel;
 use App\Model\Mongo\CompanyListModel;
@@ -38,17 +38,17 @@ class OrderListModel extends EloquentModel
 
     public function customer()
     {
-        return $this->belongsTo(CustomerModel::class, 'user_create_id');
+        return $this->belongsTo(UserModel::class, 'user_create_id');
     }
 
     public function reciver()
     {
-        return $this->belongsTo(CustomerModel::class, 'user_reciver_id');
+        return $this->belongsTo(UserModel::class, 'user_reciver_id');
     }
 
     public function care()
     {
-        return $this->belongsTo(CustomerModel::class, 'user_care_id');
+        return $this->belongsTo(UserModel::class, 'user_care_id');
     }
 
     public function order()
@@ -58,7 +58,7 @@ class OrderListModel extends EloquentModel
 
     public function customerCreateOrder()
     {
-        return $this->belongsTo(CustomerModel::class, 'user_create_id');
+        return $this->belongsTo(UserModel::class, 'user_create_id');
     }
 
     public function product()
@@ -88,7 +88,7 @@ class OrderListModel extends EloquentModel
 
     public function companyCustomer()
     {
-        return $this->hasMany(CustomerModel::class, 'company_id', 'company_id')->where('status', 1);
+        return $this->hasMany(UserModel::class, 'company_id', 'company_id')->where('status', 1);
     }
 
     public function company()

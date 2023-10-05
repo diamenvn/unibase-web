@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Services\CustomerService;
+use App\Services\UserService;
 use App\Services\ListProvinService;
 use App\Services\OrderActivityService;
 use App\Services\OrderListService;
@@ -16,12 +16,12 @@ use Carbon\Carbon;
 
 class ApiLadingController extends Controller
 {
-  public function __construct(OrderListService $orderList, OrderCareService $orderCareService, CustomerService $customer, OrderActivityService $activity, OrderShipService $ship, ListProvinService $provin, SettingService $setting)
+  public function __construct(OrderListService $orderList, OrderCareService $orderCareService, UserService $user, OrderActivityService $activity, OrderShipService $ship, ListProvinService $provin, SettingService $setting)
   {
     $this->order = $orderList;
     $this->orderCareService = $orderCareService;
     $this->activity = $activity;
-    $this->customer = $customer;
+    $this->user = $user;
     $this->ship = $ship;
     $this->provin = $provin;
     $this->setting = $setting;
@@ -33,7 +33,7 @@ class ApiLadingController extends Controller
 
   public function getAllListLading(Request $request)
   {
-    $customer = $this->customer->info();
+    $user = $this->user->info();
     $request = $this->acceptRequest($request);
     $request = $this->defaultRequest($request);
     $request = $this->filterByPermissionCustomer($request);
@@ -43,7 +43,7 @@ class ApiLadingController extends Controller
 
     $data = collect();
 
-    $userCreateId = $customer->load('customer')->customer;
+    $userCreateId = $user->load('customer')->customer;
 
     if ($userCreateId) {
       $request['user_create_id'] = $userCreateId->pluck('_id')->toArray();
@@ -117,7 +117,7 @@ class ApiLadingController extends Controller
 
   public function getAllListLadingCare(Request $request)
   {
-    $customer = $this->customer->info();
+    $user = $this->user->info();
     $request = $this->acceptRequest($request);
     $request = $this->defaultRequest($request);
     $request = $this->filterByPermissionCustomer($request);
@@ -127,7 +127,7 @@ class ApiLadingController extends Controller
 
     $data = collect();
 
-    $userCreateId = $customer->load('customer')->customer;
+    $userCreateId = $user->load('customer')->customer;
 
     if ($userCreateId) {
       $request['user_create_id'] = $userCreateId->pluck('_id')->toArray();
@@ -203,7 +203,7 @@ class ApiLadingController extends Controller
     $request = $request->only('form', 'order_id');
     $orderId = $request['order_id'];
     $data = [];
-    $customer = $this->customer->info()->load('settingOrder');
+    $user = $this->user->info()->load('settingOrder');
 
     foreach ($request['form'] as $value) {
       $data[$value['name']] = $value['value'];
@@ -219,7 +219,7 @@ class ApiLadingController extends Controller
           }
         }
 
-        if (isset($customer->settingOrder->filter_confirm_care) && $customer->settingOrder->filter_confirm_care == $value['value']) {
+        if (isset($user->settingOrder->filter_confirm_care) && $user->settingOrder->filter_confirm_care == $value['value']) {
           foreach ($orderId as $key => $value) {
             $order = $this->order->firstById($value)->load('orderCare')->toArray();
             if (isset($order['order_care']) && !empty($order['order_care'])) continue;
@@ -249,7 +249,7 @@ class ApiLadingController extends Controller
     $request = $request->only('form', 'order_id');
     $orderId = $request['order_id'];
     $data = [];
-    $customer = $this->customer->info()->load('settingOrder');
+    $user = $this->user->info()->load('settingOrder');
 
     foreach ($request['form'] as $value) {
       $data[$value['name']] = $value['value'];
@@ -276,7 +276,7 @@ class ApiLadingController extends Controller
 
   public function createActivityLog($orderId, $text)
   {
-    $user = $this->customer->info();
+    $user = $this->user->info();
 
 
     $log['note'] = 'Tài khoản vận đơn ' . $user->username . ' đã cập nhật trạng thái.';
@@ -293,11 +293,11 @@ class ApiLadingController extends Controller
   }
 
 
-  public function getMembersGroupByCustomer($customer)
+  public function getMembersGroupByCustomer($user)
   {
-    // $group = $this->setting->findGroupByCustomerId($customer->_id)->pluck('members');
+    // $group = $this->setting->findGroupByCustomerId($user->_id)->pluck('members');
     $group = collect();
-    $group->push(array($customer->_id));
+    $group->push(array($user->_id));
     $groups = $this->arrayMerge($group->toArray());
     return $groups;
   }
@@ -313,36 +313,36 @@ class ApiLadingController extends Controller
 
   public function filterByPermissionCustomer($request)
   {
-    $customer = $this->customer->info();
-    $company = $customer->load('company')->company;
+    $user = $this->user->info();
+    $company = $user->load('company')->company;
     if ($company->company_type == "mkt" || ($company->company_type == "sale" && ($company->divideOrder == 1 || empty($company->divideOrder)))) {
-      $request = $this->filterByDivideOrder($customer, $request);
+      $request = $this->filterByDivideOrder($user, $request);
       $request['divideOrder'] = 1;
     } else {
-      $request = $this->filterByAutoGetOrder($customer, $request);
+      $request = $this->filterByAutoGetOrder($user, $request);
       $request['divideOrder'] = 0;
     }
 
     return $request;
   }
 
-  public function filterByDivideOrder($customer, $request)
+  public function filterByDivideOrder($user, $request)
   {
-    if ($this->customer->isAdminMkt()) {
-      $request['company_id'] = $customer->company_id;
-    } elseif ($this->customer->isAdminSale() || $this->customer->isVandon()) {
-      $connect = $customer->load('companySale')->companySale;
+    if ($this->user->isAdminMkt()) {
+      $request['company_id'] = $user->company_id;
+    } elseif ($this->user->isAdminSale() || $this->user->isVandon()) {
+      $connect = $user->load('companySale')->companySale;
       $request['product_id'] = $connect->pluck('product_id')->toArray();
       $request['company_id'] = $connect->pluck('company_mkt_id')->toArray();
-    } elseif ($this->customer->isMkt()) {
-      $filter = $this->getMembersGroupByCustomer($customer);
+    } elseif ($this->user->isMkt()) {
+      $filter = $this->getMembersGroupByCustomer($user);
       $request['user_create_id'] = $filter;
-    } elseif ($this->customer->isSale()) {
-      $filter = $this->getMembersGroupByCustomer($customer);
+    } elseif ($this->user->isSale()) {
+      $filter = $this->getMembersGroupByCustomer($user);
       $request['user_reciver_id'] = $filter;
     }
 
-    if ($this->customer->isSale()) {
+    if ($this->user->isSale()) {
       if (!empty($request['user_id'])) {
         $request['user_reciver_id'] = $request['user_id'];
       }
@@ -355,26 +355,26 @@ class ApiLadingController extends Controller
     return $request;
   }
 
-  public function filterByAutoGetOrder($customer, $request)
+  public function filterByAutoGetOrder($user, $request)
   {
-    if ($this->customer->isAdminMkt()) {
-      $request['company_id'] = $customer->company_id;
-    } elseif ($this->customer->isAdminSale() || $this->customer->isVandon()) {
-      $connect = $customer->load('companySale')->companySale;
+    if ($this->user->isAdminMkt()) {
+      $request['company_id'] = $user->company_id;
+    } elseif ($this->user->isAdminSale() || $this->user->isVandon()) {
+      $connect = $user->load('companySale')->companySale;
       $request['product_id'] = $connect->pluck('product_id')->toArray();
       $request['company_id'] = $connect->pluck('company_mkt_id')->toArray();
-    } elseif ($this->customer->isMkt()) {
-      $filter = $this->getMembersGroupByCustomer($customer);
+    } elseif ($this->user->isMkt()) {
+      $filter = $this->getMembersGroupByCustomer($user);
       $request['user_create_id'] = $filter;
-    } elseif ($this->customer->isSale()) {
-      $connect = $customer->load('companySale')->companySale;
+    } elseif ($this->user->isSale()) {
+      $connect = $user->load('companySale')->companySale;
       $request['product_id'] = $connect->pluck('product_id')->toArray();
       $request['company_id'] = $connect->pluck('company_mkt_id')->toArray();
       $request['date_reciver'] = null;
-      $request['user_reciver_id'] = $customer->_id;
+      $request['user_reciver_id'] = $user->_id;
     }
 
-    if ($this->customer->isSale()) {
+    if ($this->user->isSale()) {
       if (!empty($request['user_id'])) {
         $request['user_reciver_id'] = $request['user_id'];
       }
@@ -390,7 +390,7 @@ class ApiLadingController extends Controller
   public function defaultRequest($request)
   {
     $request['limit'] = !empty($request['limit']) ? (int) $request['limit'] : 20;
-    if ($this->customer->isVandon() && $this->customer->isUser()) {
+    if ($this->user->isVandon() && $this->user->isUser()) {
       $request['reason'] = "success";
     }
 

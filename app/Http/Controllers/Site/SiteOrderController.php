@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Site;
 use App\Helpers\App;
 use App\Http\Controllers\Controller;
 use App\Services\ActionActivityService;
-use App\Services\CustomerService;
+use App\Services\UserService;
 use App\Services\OrderActivityService;
 use App\Services\OrderCareService;
 use App\Services\OrderListService;
@@ -14,9 +14,9 @@ use Carbon\Carbon;
 
 class SiteOrderController extends Controller
 {
-  public function __construct(CustomerService $customer, OrderListService $order, OrderCareService $orderCareService, OrderActivityService $activity, ActionActivityService $action, SettingService $setting)
+  public function __construct(UserService $user, OrderListService $order, OrderCareService $orderCareService, OrderActivityService $activity, ActionActivityService $action, SettingService $setting)
   {
-    $this->customer = $customer;
+    $this->user = $user;
     $this->order = $order;
     $this->orderCareService = $orderCareService;
     $this->activity = $activity;
@@ -27,29 +27,29 @@ class SiteOrderController extends Controller
 
   public function list()
   {
-    $customer = $this->customer->info()->load('customer')->load('company');
+    $user = $this->user->info()->load('customer')->load('company');
 
     
-    if ($customer->company->company_type == "all") {
-      $userSale = $this->customer->getSaleByCompanyId($customer->company_id);
-      $userMKT = $this->customer->getMktByCompanyId($customer->company_id);
-      $sources = $this->order->getListSourceByCompanyId($customer->company_id)->load('source');
+    if ($user->company->company_type == "all") {
+      $userSale = $this->user->getSaleByCompanyId($user->company_id);
+      $userMKT = $this->user->getMktByCompanyId($user->company_id);
+      $sources = $this->order->getListSourceByCompanyId($user->company_id)->load('source');
 
     } else {
 
-      if ($this->customer->isMkt()) {
-        $sources = $this->order->getListSourceByCompanyId($customer->company_id)->load('source');
-        $companyId = $customer->load('companyMkt')->companyMkt->pluck('company_sale_id')->toArray();
-        $userSale = $this->customer->getByCompanyId($companyId);
+      if ($this->user->isMkt()) {
+        $sources = $this->order->getListSourceByCompanyId($user->company_id)->load('source');
+        $companyId = $user->load('companyMkt')->companyMkt->pluck('company_sale_id')->toArray();
+        $userSale = $this->user->getByCompanyId($companyId);
       } else {
-        $companyId = $customer->load('companySale')->companySale->pluck('company_mkt_id')->toArray();
+        $companyId = $user->load('companySale')->companySale->pluck('company_mkt_id')->toArray();
         $sources = $this->order->getListSourceByCompanyId($companyId)->load('source');
-        $userSale = $this->customer->getByCompanyId($customer->company_id);
+        $userSale = $this->user->getByCompanyId($user->company_id);
       }
-      $userMKT = $this->customer->getByCompanyId($customer->company_id);
+      $userMKT = $this->user->getByCompanyId($user->company_id);
     }
 
-    $companyConnect = $this->loadListCompanyConnect($customer);
+    $companyConnect = $this->loadListCompanyConnect($user);
 
     $actions = $this->action->get(['status' => 1]);
     return view('site.order.grid')
@@ -63,26 +63,26 @@ class SiteOrderController extends Controller
 
   public function lading()
   {
-    $customer = $this->customer->info()->load('customer');
-    if (!$this->customer->isAdmin() && !$this->customer->isVandon()) {
+    $user = $this->user->info()->load('customer');
+    if (!$this->user->isAdmin() && !$this->user->isVandon()) {
       return abort(404);
     }
-    if ($this->customer->isMkt()) {
-      $sources = $this->order->getListSourceByCompanyId($customer->company_id)->load('source');
-      $companyIdConnect = $customer->load('companyMkt')->companyMkt->pluck('company_sale_id')->toArray();
-      $userCompany = $this->customer->getByCompanyId($companyIdConnect);
+    if ($this->user->isMkt()) {
+      $sources = $this->order->getListSourceByCompanyId($user->company_id)->load('source');
+      $companyIdConnect = $user->load('companyMkt')->companyMkt->pluck('company_sale_id')->toArray();
+      $userCompany = $this->user->getByCompanyId($companyIdConnect);
     } else {
-      $companyId = $customer->load('companySale')->companySale->pluck('company_mkt_id')->toArray();
+      $companyId = $user->load('companySale')->companySale->pluck('company_mkt_id')->toArray();
       $sources = $this->order->getListSourceByCompanyId($companyId)->load('source');
-      $userCompany = $this->customer->getByCompanyId($customer->company_id);
+      $userCompany = $this->user->getByCompanyId($user->company_id);
     }
 
 
-    $companyConnect = $this->loadListCompanyConnect($customer);
+    $companyConnect = $this->loadListCompanyConnect($user);
 
     $actions = $this->action->get(['status' => 1]);
     return view('site.order.ship')
-      ->with('info', $customer)
+      ->with('info', $user)
       ->with('userCompany', $userCompany)
       ->with('companyConnect', $companyConnect)
       ->with('actions', $actions)
@@ -91,26 +91,26 @@ class SiteOrderController extends Controller
 
   public function care()
   {
-    $customer = $this->customer->info()->load('customer');
-    if (!$this->customer->isAdmin() && !$this->customer->isVandon()) {
+    $user = $this->user->info()->load('customer');
+    if (!$this->user->isAdmin() && !$this->user->isVandon()) {
       return abort(404);
     }
-    if ($this->customer->isMkt()) {
-      $sources = $this->order->getListSourceByCompanyId($customer->company_id)->load('source');
-      $companyIdConnect = $customer->load('companyMkt')->companyMkt->pluck('company_sale_id')->toArray();
-      $userCompany = $this->customer->getByCompanyId($companyIdConnect);
+    if ($this->user->isMkt()) {
+      $sources = $this->order->getListSourceByCompanyId($user->company_id)->load('source');
+      $companyIdConnect = $user->load('companyMkt')->companyMkt->pluck('company_sale_id')->toArray();
+      $userCompany = $this->user->getByCompanyId($companyIdConnect);
     } else {
-      $companyId = $customer->load('companySale')->companySale->pluck('company_mkt_id')->toArray();
+      $companyId = $user->load('companySale')->companySale->pluck('company_mkt_id')->toArray();
       $sources = $this->order->getListSourceByCompanyId($companyId)->load('source');
-      $userCompany = $this->customer->getByCompanyId($customer->company_id);
+      $userCompany = $this->user->getByCompanyId($user->company_id);
     }
 
 
-    $companyConnect = $this->loadListCompanyConnect($customer);
+    $companyConnect = $this->loadListCompanyConnect($user);
 
     $actions = $this->action->get(['status' => 1]);
     return view('site.lading.ship_care')
-      ->with('info', $customer)
+      ->with('info', $user)
       ->with('userCompany', $userCompany)
       ->with('companyConnect', $companyConnect)
       ->with('actions', $actions)
@@ -119,7 +119,9 @@ class SiteOrderController extends Controller
 
   public function detail($id)
   {
-    $customer = $this->customer->info();
+    $user = $this->user->info();
+
+    $steps = $this->order->getListLabelByCompanyId($user->company_id)->load('order');
     $order = $this->order->firstById($id) ?? $this->orderCareService->firstById($id);
     if (empty($order)) {
       return abort(404);
@@ -133,8 +135,8 @@ class SiteOrderController extends Controller
       return abort(404);
     }
 
-    if ($this->customer->isCare() || $this->customer->isUserSale()) {
-      $this->updateOrder($customer, $order);
+    if ($this->user->isCare() || $this->user->isUserSale()) {
+      $this->updateOrder($user, $order);
     }
 
     
@@ -155,12 +157,13 @@ class SiteOrderController extends Controller
     return view('site.order.detail')
       ->with('actions', $actions)
       ->with('urlBack', $urlBack)
+      ->with('steps', $steps)
       ->with('order', $order);
   }
 
   public function create()
   {
-    $info = $this->customer->info()
+    $info = $this->user->info()
       ->load('product')
       ->load('company')
       ->load('source');
@@ -170,14 +173,14 @@ class SiteOrderController extends Controller
 
   public function myList()
   {
-    $customer = $this->customer->info();
-    if ($this->customer->isMkt()) {
-      $productId = $this->order->getListProductByCompanyId($customer->company_id)
+    $user = $this->user->info();
+    if ($this->user->isMkt()) {
+      $productId = $this->order->getListProductByCompanyId($user->company_id)
         ->load('product')
         ->pluck('product_id')
         ->toArray();
     } else {
-      $productId = $customer->load('companySale')->companySale
+      $productId = $user->load('companySale')->companySale
         ->pluck('product_id')
         ->toArray();
     }
@@ -191,29 +194,29 @@ class SiteOrderController extends Controller
 
   public function customerCare()
   {
-    $customer = $this->customer->info()->load('customer')->load('company');
+    $user = $this->user->info()->load('customer')->load('company');
 
     
-    if ($customer->company->company_type == "all") {
-      $userSale = $this->customer->getSaleByCompanyId($customer->company_id);
-      $userMKT = $this->customer->getMktByCompanyId($customer->company_id);
-      $sources = $this->order->getListSourceByCompanyId($customer->company_id)->load('source');
+    if ($user->company->company_type == "all") {
+      $userSale = $this->user->getSaleByCompanyId($user->company_id);
+      $userMKT = $this->user->getMktByCompanyId($user->company_id);
+      $sources = $this->order->getListSourceByCompanyId($user->company_id)->load('source');
 
     } else {
 
-      if ($this->customer->isMkt()) {
-        $sources = $this->order->getListSourceByCompanyId($customer->company_id)->load('source');
-        $companyId = $customer->load('companyMkt')->companyMkt->pluck('company_sale_id')->toArray();
-        $userSale = $this->customer->getByCompanyId($companyId);
+      if ($this->user->isMkt()) {
+        $sources = $this->order->getListSourceByCompanyId($user->company_id)->load('source');
+        $companyId = $user->load('companyMkt')->companyMkt->pluck('company_sale_id')->toArray();
+        $userSale = $this->user->getByCompanyId($companyId);
       } else {
-        $companyId = $customer->load('companySale')->companySale->pluck('company_mkt_id')->toArray();
+        $companyId = $user->load('companySale')->companySale->pluck('company_mkt_id')->toArray();
         $sources = $this->order->getListSourceByCompanyId($companyId)->load('source');
-        $userSale = $this->customer->getByCompanyId($customer->company_id);
+        $userSale = $this->user->getByCompanyId($user->company_id);
       }
-      $userMKT = $this->customer->getByCompanyId($customer->company_id);
+      $userMKT = $this->user->getByCompanyId($user->company_id);
     }
 
-    $companyConnect = $this->loadListCompanyConnect($customer);
+    $companyConnect = $this->loadListCompanyConnect($user);
 
     $actions = $this->action->get(['status' => 1]);
     return view('site.order.care')
@@ -225,10 +228,10 @@ class SiteOrderController extends Controller
       ->with('sources', $sources);
   }
 
-  public function loadListCompanyConnect($customer)
+  public function loadListCompanyConnect($user)
   {
-    if ($this->customer->isSale()) {
-      return $this->setting->getCompanyConnectFromSale($customer->company_id);
+    if ($this->user->isSale()) {
+      return $this->setting->getCompanyConnectFromSale($user->company_id);
     } else {
       return [];
     }
@@ -236,27 +239,27 @@ class SiteOrderController extends Controller
 
   public function checkPermission($order)
   {
-    $customer = $this->customer->info();
-    $check = App::filterByPermissionCustomer($customer, []);
+    $user = $this->user->info();
+    $check = App::filterByPermissionCustomer($user, []);
 
     return (in_array($order->_id, $this->order->search($check)->get()->pluck('_id')->toArray()) || in_array($order->_id, $this->orderCareService->search($check)->get()->pluck('_id')->toArray()));
     
   }
 
 
-  public function updateOrder($customer, $order)
+  public function updateOrder($user, $order)
   {
     if (isset($order->is_order_care) && $order->is_order_care == true) {
       if (empty($order->date_reciver)) {
         $data['date_reciver'] = $this->timeNow;
-        $data['user_care_id'] = $customer->_id;
+        $data['user_care_id'] = $user->_id;
         $this->orderCareService->update($order, $data);
       }
     }else{
-      if ($this->customer->isUserSale()) {
+      if ($this->user->isUserSale()) {
         if (empty($order->date_reciver)) {
           $data['date_reciver'] = $this->timeNow;
-          $data['user_reciver_id'] = $customer->_id;
+          $data['user_reciver_id'] = $user->_id;
           $this->order->update($order, $data);
         }
       }
@@ -265,7 +268,7 @@ class SiteOrderController extends Controller
 
   public function setActivityLogOrder($order, $note, $status = 1)
   {
-    $data['user_id'] = $this->customer->info()->_id;
+    $data['user_id'] = $this->user->info()->_id;
     $data['order_id'] = $order->_id;
     $data['note'] = $note;
     $data['status'] = $status;

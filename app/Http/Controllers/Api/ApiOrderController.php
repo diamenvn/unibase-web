@@ -9,7 +9,7 @@ use App\Http\Requests\RemoveOrderRequest;
 use App\Http\Requests\SaveAssignRequest;
 use App\Http\Requests\SaveOrderRequest;
 use App\Http\Requests\SearchPhoneRequest;
-use App\Services\CustomerService;
+use App\Services\UserService;
 use App\Services\ListProvinService;
 use App\Services\OrderActivityService;
 use App\Services\OrderCareService;
@@ -22,10 +22,11 @@ use XSSCleaner;
 
 class ApiOrderController extends Controller
 {
+  protected $select_order_fields = array('name', 'phone', 'date_reciver', 'product_id', 'source_id', 'user_reciver_id','user_create_id', 'proccessing', 'reason', 'created_at', 'filter_status', 'label_id', 'order_name');
   public function __construct(
     OrderListService $orderList, 
     OrderCareService $orderCareService, 
-    CustomerService $customer, 
+    UserService $user, 
     OrderActivityService $activity, 
     OrderShipService $ship, 
     ListProvinService $provin, 
@@ -35,7 +36,7 @@ class ApiOrderController extends Controller
     $this->order = $orderList;
     $this->orderCareService = $orderCareService;
     $this->activity = $activity;
-    $this->customer = $customer;
+    $this->user = $user;
     $this->ship = $ship;
     $this->provin = $provin;
     $this->setting = $setting;
@@ -47,8 +48,8 @@ class ApiOrderController extends Controller
 
   public function getListLabel(Request $request)
   {
-    $customer = $this->customer->info();
-    $columns = $this->order->getListLabelByCompanyId($customer->company_id)->load('order');
+    $user = $this->user->info();
+    $columns = $this->order->getListLabelByCompanyId($user->company_id)->load('order');
     if ($columns) {
       $this->response['success'] = true;
       $this->response['msg'] = 'Lấy dữ liệu thành công';
@@ -60,15 +61,15 @@ class ApiOrderController extends Controller
   public function getAllListOrder(Request $request)
   {
     
-    $customer = $this->customer->info()->load('settingOrder');
+    $user = $this->user->info()->load('settingOrder');
     $request = $this->acceptRequest($request);
     $request = $this->defaultRequest($request);
 
-    $request = App::filterByPermissionCustomer($customer, $request);
-    $request['label_ids'] = $this->order->getListLabelByCompanyId($customer->company_id)->pluck('_id')->toArray();
+    $request = App::filterByPermissionCustomer($user, $request);
+    $request['label_ids'] = $this->order->getListLabelByCompanyId($user->company_id)->pluck('_id')->toArray();
     $isPaginate = (isset($request['paginate']) && $request['paginate']);
     $lists = $this->order->search($request)
-      ->select('name', 'phone', 'date_reciver', 'product_id', 'source_id', 'user_reciver_id','user_create_id', 'proccessing', 'reason', 'created_at', 'filter_status', 'label_id')
+      ->select($this->select_order_fields)
       ->with('product')
       ->with('source')
       ->with('reciver')
@@ -116,7 +117,7 @@ class ApiOrderController extends Controller
 
   public function getAllListMyOrder(Request $request)
   {
-    $customer = $this->customer->info();
+    $user = $this->user->info();
     $request = $this->defaultRequest($request);
     $search = null;
     $products = $this->order->getByStatusActive()->keyBy('_id');
@@ -124,7 +125,7 @@ class ApiOrderController extends Controller
       $search = $request['search'];
       unset($request['search']);
     }
-    $lists = $this->activity->queryByCustomerId($customer->_id, $request)
+    $lists = $this->activity->queryByCustomerId($user->_id, $request)
       ->select('order_id', 'user_create_id', 'origin_note', 'reason', 'product_id', 'updated_at')
       ->with('order.filterStatus')
       ->with(['order' => function ($q) use ($search) {
@@ -184,16 +185,16 @@ class ApiOrderController extends Controller
   public function saveOrder(CreateOrderRequest $request)
   {
     $request = $this->acceptRequest($request);
-    $customer = $this->customer->info();
-    if (!$this->customer->isMkt()) {
+    $user = $this->user->info();
+    if (!$this->user->isMkt()) {
       $this->response['msg'] = "Chỉ Marketing mới có thể tạo đơn";
       return response()->json($this->response, 403);
     }
-    if ($this->customer->isUserMkt()) {
-      $request['user_create_id'] = $customer->_id;
+    if ($this->user->isUserMkt()) {
+      $request['user_create_id'] = $user->_id;
     }
 
-    $request['company_id'] = $customer->company_id;
+    $request['company_id'] = $user->company_id;
     $request['status'] = 1;
 
     $res = $this->order->create($request);
@@ -209,10 +210,10 @@ class ApiOrderController extends Controller
   public function saveAssign(SaveAssignRequest $request)
   {
     $request = $this->acceptRequest($request);
-    $customer = $this->customer->info()->load('customer');
+    $user = $this->user->info()->load('customer');
 
     // Validate permission
-    if (!$this->customer->isAdminSale() && !$customer->assign_order) {
+    if (!$this->user->isAdminSale() && !$user->assign_order) {
       $this->response['msg'] = "Bạn không có quyền gán đơn hàng";
       return response()->json($this->response, 200);
     }
@@ -221,7 +222,7 @@ class ApiOrderController extends Controller
       $order = $this->order->firstById($orderId);
       if (!empty($order)) {
         $userId = $request['user_reciver_id'];
-        // if (in_array($userId, $customerInCompanyArray)) {
+        // if (in_array($userId, $userInCompanyArray)) {
         $data['user_reciver_id'] = $userId;
         // }
         $this->createActivityLogAssign($order, $userId);
@@ -236,7 +237,7 @@ class ApiOrderController extends Controller
 
   public function updateOrder($order, $request)
   {
-    if ($this->customer->isMkt()) {
+    if ($this->user->isMkt()) {
       $data['name'] = $request['name'];
       $data['phone'] = $request['phone'];
       $data['product_id'] = $request['product_id'];
@@ -246,17 +247,17 @@ class ApiOrderController extends Controller
       $data['address'] = $request['address'];
       $data['filter_status'] = $request['filter_status'];
 
-      if ($this->customer->isAdminMkt()) {
+      if ($this->user->isAdminMkt()) {
         $data['user_create_id'] = $request['user_create_id'];
       }
     } else {
       $data['reason'] = $request['reason'];
       if (empty($order->user_reciver_id)) {
-        $data['user_reciver_id'] = $this->customer->info()->_id;
+        $data['user_reciver_id'] = $this->user->info()->_id;
       }
 
       if($order->is_order_care && empty($order->user_care_id)) {
-        $data['user_care_id'] = $this->customer->info()->_id;
+        $data['user_care_id'] = $this->user->info()->_id;
       }
     }
 
@@ -268,7 +269,7 @@ class ApiOrderController extends Controller
       $data['date_confirm'] = $this->timeNow;
     }
 
-    if ($this->customer->isSale()) {
+    if ($this->user->isSale()) {
       $data['proccessing'] = false;
     }
     return $this->order->update($order, $data);
@@ -300,8 +301,8 @@ class ApiOrderController extends Controller
 
   public function createActivityLog($order, $request, $data)
   {
-    $user = $this->customer->info();
-    if ($this->customer->isVandon() && !$this->customer->isAdmin()) {
+    $user = $this->user->info();
+    if ($this->user->isVandon() && !$this->user->isAdmin()) {
       $log['note'] = 'Tài khoản vận đơn ' . $user->username . ' đã cập nhật trạng thái.';
       if (!empty($request['note'])) {
         $log['note'] .= '<br><span class="co-green bold">Ghi chú: ' .  $request['note'] . '</span>';
@@ -348,8 +349,8 @@ class ApiOrderController extends Controller
 
   public function createActivityLogAssign($order, $userReciverId)
   {
-    $user = $this->customer->info();
-    $userReciver = $this->customer->first($userReciverId);
+    $user = $this->user->info();
+    $userReciver = $this->user->first($userReciverId);
 
     $log['note'] = '<span class="co-purple bold">Ghi chú: Tài khoản ' . $user->username . ' đã gán đơn hàng cho sale ' . $userReciver->username . '</span>';
 
@@ -366,14 +367,14 @@ class ApiOrderController extends Controller
     $data = array();
     $data['order_id'] = $order->_id;
 
-    if (empty($order->load('ship')->ship) || $this->customer->isUserSale() || $this->customer->isCare()) {
-      $data['user_create_id'] = $this->customer->info()->_id;
+    if (empty($order->load('ship')->ship) || $this->user->isUserSale() || $this->user->isCare()) {
+      $data['user_create_id'] = $this->user->info()->_id;
     }
 
     // Là sale
     // request gửi lên phải là success
     // chưa tồn tại ngày chốt đơn.\
-    if (($this->customer->isSale() || $this->customer->isCare()) && $request['reason'] == "success" && empty($order->load('ship')->ship->date_success_order)) {
+    if (($this->user->isSale() || $this->user->isCare()) && $request['reason'] == "success" && empty($order->load('ship')->ship->date_success_order)) {
       $data['date_success_order'] = $this->timeNow;
     }
 
@@ -407,17 +408,17 @@ class ApiOrderController extends Controller
   public function getCustomerFromArrayId($array)
   {
     if (!empty($array)) {
-      return $this->customer->get(['_id' => $array]);
+      return $this->user->get(['_id' => $array]);
     } else {
       return [];
     }
   }
 
-  public function getMembersGroupByCustomer($customer)
+  public function getMembersGroupByCustomer($user)
   {
-    // $group = $this->setting->findGroupByCustomerId($customer->_id)->pluck('members');
+    // $group = $this->setting->findGroupByCustomerId($user->_id)->pluck('members');
     $group = collect();
-    $group->push(array($customer->_id));
+    $group->push(array($user->_id));
     $groups = $this->arrayMerge($group->toArray());
     return $groups;
   }
@@ -433,38 +434,38 @@ class ApiOrderController extends Controller
 
   public function filterByPermissionCustomer($request)
   {
-    $customer = $this->customer->info();
-    $company = $customer->load('company')->company;
+    $user = $this->user->info();
+    $company = $user->load('company')->company;
 
 
     if ($company->divideOrder == 1) {
       $request['divideOrder'] = 1;
-      $request = $this->filterByDivideOrder($customer, $request);
+      $request = $this->filterByDivideOrder($user, $request);
     } else {
       $request['divideOrder'] = 0;
-      $request = $this->filterByAutoGetOrder($customer, $request);
+      $request = $this->filterByAutoGetOrder($user, $request);
     }
 
     return $request;
   }
 
-  public function filterByDivideOrder($customer, $request)
+  public function filterByDivideOrder($user, $request)
   {
-    if ($this->customer->isAdminMkt()) {
-      $request['company_id'] = $customer->company_id;
-    } elseif ($this->customer->isAdminSale() || $this->customer->isVandon()) {
-      $connect = $customer->load('companySale')->companySale;
+    if ($this->user->isAdminMkt()) {
+      $request['company_id'] = $user->company_id;
+    } elseif ($this->user->isAdminSale() || $this->user->isVandon()) {
+      $connect = $user->load('companySale')->companySale;
       $request['product_id'] = $connect->pluck('product_id')->toArray();
       $request['company_id'] = $connect->pluck('company_mkt_id')->toArray();
-    } elseif ($this->customer->isMkt()) {
-      $filter = $this->getMembersGroupByCustomer($customer);
+    } elseif ($this->user->isMkt()) {
+      $filter = $this->getMembersGroupByCustomer($user);
       $request['user_create_id'] = $filter;
-    } elseif ($this->customer->isSale()) {
-      $filter = $this->getMembersGroupByCustomer($customer);
+    } elseif ($this->user->isSale()) {
+      $filter = $this->getMembersGroupByCustomer($user);
       $request['user_reciver_id'] = $filter;
     }
 
-    if ($this->customer->isSale()) {
+    if ($this->user->isSale()) {
       if (!empty($request['user_id'])) {
         $request['user_reciver_id'] = $request['user_id'];
       }
@@ -477,32 +478,32 @@ class ApiOrderController extends Controller
     return $request;
   }
 
-  public function filterByAutoGetOrder($customer, $request)
+  public function filterByAutoGetOrder($user, $request)
   {
-    if ($this->customer->isAdminMkt()) {
-      $request['company_id'] = $customer->company_id;
-    } elseif ($this->customer->isAdminSale() || $this->customer->isVandon()) {
-      if ($customer->company->company_type == "all") {
-        $request['company_id'] = $customer->company->_id;
+    if ($this->user->isAdminMkt()) {
+      $request['company_id'] = $user->company_id;
+    } elseif ($this->user->isAdminSale() || $this->user->isVandon()) {
+      if ($user->company->company_type == "all") {
+        $request['company_id'] = $user->company->_id;
       }else{
-        $connect = $customer->load('companySale')->companySale;
+        $connect = $user->load('companySale')->companySale;
         $request['product_id'] = $connect->pluck('product_id')->toArray();
         $request['company_id'] = $connect->pluck('company_mkt_id')->toArray();
       }
-    } elseif ($this->customer->isMkt()) {
-      $filter = $this->getMembersGroupByCustomer($customer);
+    } elseif ($this->user->isMkt()) {
+      $filter = $this->getMembersGroupByCustomer($user);
       $request['user_create_id'] = $filter;
-    } elseif ($this->customer->isSale()) {
-      if ($customer->company->company_type == "all") {
-        $request['company_id'] = $customer->company->_id;
+    } elseif ($this->user->isSale()) {
+      if ($user->company->company_type == "all") {
+        $request['company_id'] = $user->company->_id;
       }else{
-        $connect = $customer->load('companySale')->companySale;
+        $connect = $user->load('companySale')->companySale;
         $request['product_id'] = $connect->pluck('product_id')->toArray();
         $request['company_id'] = $connect->pluck('company_mkt_id')->toArray();
       }
       
       // $request['date_reciver'] = null;
-      $request['user_reciver_id'] = array(null, $customer->_id);
+      $request['user_reciver_id'] = array(null, $user->_id);
     }
 
 
@@ -517,7 +518,7 @@ class ApiOrderController extends Controller
 
   public function searchPhone(SearchPhoneRequest $request)
   {
-    $customer = $this->customer->info();
+    $user = $this->user->info();
     $request = $this->acceptRequest($request);
     $phone = $request['phone'];
     $phoneRemoveFirstChracter = $phoneAddFirstChracter = $phone;
@@ -527,7 +528,7 @@ class ApiOrderController extends Controller
       $phoneAddFirstChracter = 0 . $phone;
     }
     $data['phone'] = [$phone, $phoneRemoveFirstChracter, $phoneAddFirstChracter];
-    $data['company_id'] = $customer->company_id;
+    $data['company_id'] = $user->company_id;
     $res = $this->order->searchPhone($data)->load('customerCreateOrder')->load('product');
     if ($res) {
       $this->response['success'] = true;
@@ -540,7 +541,7 @@ class ApiOrderController extends Controller
   public function defaultRequest($request)
   {
     $request['limit'] = !empty($request['limit']) ? (int) $request['limit'] : 20;
-    if ($this->customer->isVandon() && $this->customer->isUser()) {
+    if ($this->user->isVandon() && $this->user->isUser()) {
       $request['reason'] = "success";
     }
 

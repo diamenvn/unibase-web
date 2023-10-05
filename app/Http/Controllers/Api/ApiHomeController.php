@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Services\ActionActivityService;
-use App\Services\CustomerService;
+use App\Services\UserService;
 use App\Services\ListProvinService;
 use App\Services\OrderActivityService;
 use App\Services\OrderListService;
@@ -14,11 +14,11 @@ use Carbon\Carbon;
 
 class ApiHomeController extends Controller
 {
-    public function __construct(OrderListService $orderList, CustomerService $customer, OrderActivityService $activity, OrderShipService $ship, ListProvinService $provin, SettingService $setting, ActionActivityService $action)
+    public function __construct(OrderListService $orderList, UserService $user, OrderActivityService $activity, OrderShipService $ship, ListProvinService $provin, SettingService $setting, ActionActivityService $action)
     {
         $this->order = $orderList;
         $this->activity = $activity;
-        $this->customer = $customer;
+        $this->user = $user;
         $this->ship = $ship;
         $this->action = $action;
         $this->provin = $provin;
@@ -31,7 +31,7 @@ class ApiHomeController extends Controller
 
     public function reportHome()
     {
-        $customer = $this->customer->info();
+        $customer = $this->user->info();
         $data = [];
         $start = Carbon::parse(date('Y-m-d') . " " . "00:00:00");
         $end = Carbon::parse(date('Y-m-d') . " " . "23:59:59");

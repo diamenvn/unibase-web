@@ -26,13 +26,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+       
         $asideMenuItems = [
             [
                 'title' => 'Dashboard',
                 'items' => [
                     [
                         'label' => 'Báo cáo ngày',
-                        'url' => '/'
+                        'url' => '/report/daily-report'
                     ]
                 ]
             ],
@@ -41,15 +42,15 @@ class AppServiceProvider extends ServiceProvider
                 'items' => [
                     [
                         'label' => 'Tạo sản phẩm',
-                        'url' => '/'
+                        'url' => '/product/create'
                     ],
                     [
                         'label' => 'Danh sách sản phẩm',
-                        'url' => '/'
+                        'url' => '/product/lists'
                     ],
                     [
                         'label' => 'Import từ excel',
-                        'url' => '/'
+                        'url' => '/product/import/excel'
                     ],
                 ]
             ],
@@ -58,15 +59,15 @@ class AppServiceProvider extends ServiceProvider
                 'items' => [
                     [
                         'label' => 'Tạo đơn hàng',
-                        'url' => '/'
+                        'url' => '/order/create'
                     ],
                     [
                         'label' => 'Danh sách đơn hàng',
-                        'url' => '/'
+                        'url' => '/order/lists'
                     ],
                     [
                         'label' => 'Import từ excel',
-                        'url' => '/'
+                        'url' => '/order/import/excel'
                     ],
                 ]
             ],
@@ -75,15 +76,16 @@ class AppServiceProvider extends ServiceProvider
                 'items' => [
                     [
                         'label' => 'Tạo khách hàng',
-                        'url' => '/'
+                        'url' => '/customer/create'
                     ],
                     [
                         'label' => 'Danh sách',
-                        'url' => '/'
+                        'url' => '/customer/lists'
                     ]
                 ]
             ]
         ];
+
         view()->composer('*',function($view) use($asideMenuItems) {
             $view->with('user', Auth::user());
             $view->with('asideMenuItems', $asideMenuItems);

@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="app-content">
-    <div class="section flex-1 p-0">
+    <div class="section p-0 flex-1">
         <div class="main-body flex flex-column">
             <div class="source-filter source-filter--layout">
                 <ul class="list-source nav nav-tabs border-none">
@@ -11,6 +11,18 @@
                         <a href="#">
                             <i class="fal fa-list-ol"></i>
                             <strong>Tất cả</strong>
+                        </a>
+                    </li>
+                    <li class="list-source--item list-source--item-js">
+                        <a href="#">
+                            <i class="fal fa-list-ol"></i>
+                            <strong>Đang hoạt động</strong>
+                        </a>
+                    </li>
+                    <li class="list-source--item list-source--item-js">
+                        <a href="#">
+                            <i class="fal fa-list-ol"></i>
+                            <strong>Đã khóa</strong>
                         </a>
                     </li>
                 </ul>
@@ -22,13 +34,13 @@
                             <div class="flex-left d-flex">
                                 <div class="panel-heading-left panel-heading-title" id="panel-heading-title">
                                     <h6 class="panel-title mb-1">
-                                        <strong>Danh sách sản phẩm</strong>
+                                        <strong>Danh sách khách hàng</strong>
                                     </h6>
-                                    (Tìm thấy : <span id="all_record">0</span> sản phẩm)
+                                    (Tìm thấy : <span id="all_record">0</span> khách hàng)
                                 </div>
                                 <div class="panel-heading-left d-flex align-items-center form-group m-0 search h-100">
                                     <form class="input-group" onsubmit="return false">
-                                        <input type="search" name="search" class="form-control fs-14 view-large inp-find-item-order-js" placeholder="Tìm tên sản phẩm, mã sku">
+                                        <input type="search" name="search" class="form-control fs-14 view-large inp-find-item-order-js" placeholder="Tìm tên khách hàng, phone, email">
                                         <div class="input-group-append">
                                             <input class="btn btn-primary fs-14 btn-click-find-order-js" type="submit" value="Tìm kiếm" />
                                         </div>
@@ -37,12 +49,9 @@
                             </div>
                             <div class="flex-right">
                                 @if ($user->permission == "admin")
-                                <div class="btn btn-danger fs-13 btn-click-remove-js pointer"><i class="fal fa-trash-alt mr-1"></i>Xoá
-                                    sản phẩm</div>
+                                <div class="btn btn-danger fs-13 btn-click-remove-js pointer"><i class="fal fa-trash-alt mr-1"></i>Xoá khách hàng</div>
                                 @endif
-                                @if ($user->type_account == "mkt")
-                                <div class="btn btn-info fs-13 pointer"> <a href="{{route('site.product.create')}}"> <i class="fal fa-plus mr-1"></i>Tạo sản phẩm</a> </div>
-                                @endif
+                                <div class="btn btn-info fs-13 pointer"> <a href="{{route('site.customer.create')}}"> <i class="fal fa-plus mr-1"></i>Thêm khách hàng</a> </div>
                             </div>
                         </div>
                         <div class="base-table--data flex-1 overflow-auto">
@@ -50,8 +59,8 @@
                                 <thead>
                                     <tr class="text-center merge">
                                         <th></th>
-                                        <th colspan="8">Thông tin sản phẩm</th>
-                                        <th colspan="4">Tình trạng sản phẩm</th>
+                                        <th colspan="4">Thông tin cơ bản</th>
+                                        <th colspan="4">Thống kê đơn hàng</th>
                                     </tr>
                                     <tr class="sub-header">
                                         <th>
@@ -63,43 +72,28 @@
                                             </div>
                                         </th>
                                         <th data-index="0" class="th-typeview-name">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tên sản phẩm</span></div>
+                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Mã khách hàng</span></div>
                                         </th>
                                         <th data-index="1" class="th-typeview-phones">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Ảnh sản phẩm</span></div>
+                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tên khách hàng</span></div>
                                         </th>
                                         <th data-index="3" class="th-typeview-ngay_lead_chuyen_sale">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Chất liệu</span></div>
+                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Email khách hàng</span></div>
                                         </th>
                                         <th data-index="4" class="th-typeview-sale">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Màu sắc</span></div>
-                                        </th>
-                                        <th data-index="5" class="th-typeview-san_pham_quan_tam">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Kích thước</span></div>
+                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số điện thoại</span></div>
                                         </th>
                                         <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tổng khối lượng</span></div>
+                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số lượng đơn đã đặt</span></div>
                                         </th>
                                         <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Giá sản phẩm</span></div>
+                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số lượng đơn đã hoàn thành</span></div>
                                         </th>
                                         <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Mã SKU</span></div>
+                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số tiền đã thanh toán</span></div>
                                         </th>
                                         <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Tổng số lượng đơn</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số đơn đã xử lý</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số đơn chờ xử lý</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số đơn đang xử lý</span></div>
-                                        </th>
-                                        <th data-index="0" class="th-typeview-value">
-                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Chi tiết</span></div>
+                                            <div class="th-container" style="top: 0px; border-bottom: 0px;"><span class="vg-label fix_width" style="">Số tiền chờ thanh toán</span></div>
                                         </th>
                                     </tr>
                                 </thead>
@@ -138,7 +132,7 @@
 <script>
     const api = {
         getList: function (callback) {
-            lib.send.get('{{route("api.product.getListProduct")}}', callback, window.location.search);
+            lib.send.get('{{route("api.customer.getListCustomer")}}', callback, window.location.search);
         }
     }
 
@@ -156,6 +150,7 @@
                 }
 
             }
+
             Notiflix.Block.Remove('.base-table-content');
             activity.setTotalPage(res.data);
             activity.setPaginate(res.data.pagination);
@@ -224,7 +219,7 @@
 
     const html = {
         renderList: function (res, item) {
-            var detail = '{{ route("site.product.detail", ":id") }}';
+            var detail = '{{ route("site.customer.detail", ":id") }}';
             detail = detail.replace(':id', item._id);
 
             dataHtml = `<tr data-id="` + item._id + `">`;
@@ -236,40 +231,25 @@
               </li>
             </td>
             <td class="cell-hover-border td-typeview-name view-medium white-space-normal">
-                <div class="base_field_name"><a class="detail-js" href="` + detail + `" title="` + item.product_name + `" class="a_overflow_hidden">` + item.product_name + `</a></div>
+                <div class="base_field_name"><a class="detail-js" href="` + detail + `" title="` + item.customer_id + `" class="a_overflow_hidden">` + (item.customer_id || "") + `</a></div>
             </td>
             <td class="cell-hover-border td-typeview-phones ">
-                <div class="base_field_phones"><span>` + item.product_name + `</div>
+                <div class="base_field_phones"><span>` + item.name + `</div>
             </td>
             <td class="cell-hover-border">
-                ` + item.product_material + `
+                ` + item.email + `
             </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.product_color + `
+            <td class="cell-hover-border td-typeview-sale text-right">
+                ` + item.phone + `
             </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.product_size + `
+            <td class="cell-hover-border td-typeview-sale text-right">
+                ` + 0 + `
             </td>
-            <td class="cell-hover-border td-typeview-san_pham_quan_tam ">
-                <div class="js-value-container fix_width">` + item.product_weight + `</div>
+            <td class="cell-hover-border td-typeview-sale text-right">
+                <div class="js-value-container fix_width">` + 0 + `</div>
             </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.product_cost + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.product_sku_name + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.total_all_order + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.total_order_proccessed + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.total_order_wait_process + `
-            </td>
-            <td class="cell-hover-border td-typeview-sale">
-                ` + item.total_order_proccessing + `
+            <td class="cell-hover-border td-typeview-sale text-right">
+                ` + 0 + `
             </td>
             <td class="td-number text-center">
               <span><a href="` + detail + `"><i class="fal fa-edit"></i></a></span>
@@ -559,7 +539,7 @@
                 }
             });
             if (!checkOrder) {
-                Notify.show.error('Bạn chưa chọn đơn cần xoá!');
+                Notify.show.error('Bạn chưa chọn khách hàng cần xoá!');
                 return;
             }
             params = {
@@ -567,7 +547,7 @@
             };
 
             Notify.show.confirm(function () {
-                lib.send.post('{{route("api.order.removeOrder")}}', function (res) {
+                lib.send.post('{{route("api.customer.remove")}}', function (res) {
                     if (res.success) {
                         Notify.show.success(res.msg);
                         activity.getData();

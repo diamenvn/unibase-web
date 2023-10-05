@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Model\Mongo;
-use App\Model\Mongo\CustomerActivityModel;
+use App\Model\Mongo\OrderActivityModel;
 use App\Model\Mongo\SettingConnectModel;
 use App\Model\Mongo\CompanyProductModel;
 use App\Model\Mongo\CompanySourceModel;
@@ -10,11 +10,11 @@ use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Jenssegers\Mongodb\Auth\User as Authenticatable;
 
-class CustomerModel extends Authenticatable
+class UserModel extends Authenticatable
 {
     use HasApiTokens, Notifiable;
     protected $connection = 'mongodb';
-    protected $collection = 'az_customer_list';
+    protected $collection = 'az_user_account';
     protected $primaryKey = '_id';
 
     /**
@@ -33,7 +33,7 @@ class CustomerModel extends Authenticatable
 
     public function activity()
     {
-        return $this->hasMany(CustomerActivityModel::class, 'customer_id')->orderBy('_id', 'DESC');
+        return $this->hasMany(OrderActivityModel::class, 'user_create_id')->orderBy('_id', 'DESC');
     }
 
     public function companySale()
@@ -80,6 +80,4 @@ class CustomerModel extends Authenticatable
     {
         return $this->hasOne(SettingOrderModel::class, 'company_id', 'company_id');
     }
-
-    
 }

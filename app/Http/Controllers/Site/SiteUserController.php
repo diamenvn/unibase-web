@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
-use App\Services\CustomerService;
+use App\Services\UserService;
 use App\Services\OrderActivityService;
 use App\Services\OrderListService;
 use App\Services\SettingService;
@@ -11,33 +11,33 @@ use App\Helpers\App;
 
 class SiteUserController extends Controller
 {
-    public function __construct(CustomerService $customer, OrderActivityService $orderActivity, OrderListService $orderList, SettingService $setting)
+    public function __construct(UserService $user, OrderActivityService $orderActivity, OrderListService $orderList, SettingService $setting)
     {
-        $this->customer = $customer;
+        $this->user = $user;
         $this->activity = $orderActivity;
         $this->order = $orderList;
         $this->setting = $setting;
     }
 
-    public function create()
+    public function list()
     {
-        $customer = $this->customer->info();
+        $user = $this->user->info();
         
-        if ($this->customer->isAdmin()) {
-            $users = $this->customer->getAllByCompanyId($customer->company_id);
+        if ($this->user->isAdmin()) {
+            $users = $this->user->getAllByCompanyId($user->company_id);
         }else{
-            $group = $this->setting->findGroupByCustomerId($customer->_id);
+            $group = $this->setting->findGroupByCustomerId($user->_id);
             if (!empty($group)) {
                 $members = $group->pluck('members')->toArray();
                 $users = App::arrayMerge($members);
-                $users = $this->customer->getById($users);
+                $users = $this->user->getById($users);
             }else{
                 $users = [];
             }
         }
         $typeAccount = array('mkt' => 'Marketing', 'sale' => 'Sale', 'bill' => 'Vận đơn', 'hcns' => 'Hành chính nhân sự','care' => 'Chăm sóc khách hàng');
         return view('site.user.create')
-        ->with('customer', $customer)
+        ->with('customer', $user)
         ->with('typeAccount', $typeAccount)
         ->with('users', $users);
     }
@@ -45,24 +45,24 @@ class SiteUserController extends Controller
 
     public function dashboard()
     {
-        $customer = $this->customer->info();
-        $activity = $this->getActivityByCustomer($customer);
+        $user = $this->user->info();
+        $activity = $this->getActivityByCustomer($user);
         $newCustomer = $this->order->getNewDataCustomerLimitNumber(10);
 
         return view('site.home.dashboard')
-            ->with('customer', $customer)
+            ->with('customer', $user)
             ->with('activity', $activity)
             ->with('newCustomer', $newCustomer);
     }
 
-    public function getActivityByCustomer($customer)
+    public function getActivityByCustomer($user)
     {
         $activity = [];
         $limit = 10;
-        if ($customer->permission == "super" || $customer->permission == "admin") {
+        if ($user->permission == "super" || $user->permission == "admin") {
             $activity = $this->activity->getLastUpdateLimitNumber($limit)->load('customer');
-        } elseif ($customer->type_account == "mkt" || $customer->type_account == "sale") {
-            $activity = $customer->load('activity')->activity->take($limit);
+        } elseif ($user->type_account == "mkt" || $user->type_account == "sale") {
+            $activity = $user->load('activity')->activity->take($limit);
         }
         return $activity;
     }

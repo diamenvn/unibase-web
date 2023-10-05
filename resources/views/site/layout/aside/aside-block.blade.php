@@ -24,7 +24,10 @@
     @if (isset($items))
     <ul class="menu__list">
         @foreach($items as $item)
-        <div class="menu__item">
+        <div class="menu__item {{
+            (
+                strpos(Route::current()->getName(), str_replace('/', '.', $item['url'])) !== false
+            ) ? 'active' : ''}}">
             <ul>
                 <li><a class="text-one-line" href="{{$item['url']}}">{{$item['label']}}</a></li>
             </ul>

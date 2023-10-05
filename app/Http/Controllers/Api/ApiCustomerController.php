@@ -4,20 +4,79 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\CreateCustomerRequest;
 use App\Http\Requests\SaveDetailUserRequest;
+use App\Http\Requests\SearchPhoneRequest;
+use Illuminate\Http\Request;
 use App\Services\UserService;
 use App\Services\SettingService;
+use App\Services\CustomerService;
 use Illuminate\Support\Facades\Hash;
 
-class ApiUserController extends Controller
+class ApiCustomerController extends Controller
 {
-    public function __construct(UserService $user, SettingService $setting)
+    public function __construct(UserService $user, SettingService $setting, CustomerService $customerService)
     {
         $this->user = $user;
         $this->setting = $setting;
+        $this->customerService = $customerService;
         $this->response['msg'] = "Error!";
         $this->response['success'] = false;
         $this->response['data'] = [];
+    }
+
+    public function lists(Request $request)
+    {
+        $user = $this->user->info();
+        $customers = $this->customerService->queryAllByCompanyId($user->company_id, $request);
+        if ($customers) {
+            $customers = $customers->paginate($request['limit'])->setPath('');
+        }
+        if ($customers) {
+            $this->response['success'] = true;
+            $this->response['msg'] = 'Lấy thông tin thành công!';
+            $this->response['data'] = $customers;
+        }
+        return response()->json($this->response, 200); 
+    }
+
+    public function store(CreateCustomerRequest $request)
+    {
+        $request = $this->acceptRequest($request);
+        $user = $this->user->info();
+
+        $request['status'] = 1;
+        $request['created_by'] = $user->_id;
+        $request['company_id'] = $user->company_id;
+        $request['customer_id'] = date("mdHms");
+
+        $res = $this->customerService->create($request);
+        if (!empty($res)) {
+        $this->response['success'] = true;
+        $this->response['msg'] = "Đã tạo khách hàng thành công";
+        } else {
+        $this->response['msg'] = "Tạo khách hàng thất bại";
+        }
+        return response()->json($this->response, 200);
+    }
+
+    public function update($customerId, CreateCustomerRequest $request)
+    {
+        $request = $this->acceptRequest($request);
+        $user = $this->user->info();
+        $findCustomer = $this->customerService->first($customerId);
+        if (empty($findCustomer)) {
+            $this->response['msg'] = 'Không tìm khách hàng này!';
+            return response()->json($this->response, 404);
+        }
+
+        $update = $this->customerService->update($findCustomer, $request);
+        if (!empty($update)) {
+            $this->response['success'] = true;
+            $this->response['msg'] = 'Cập nhật khách hàng thành công';
+        }
+
+        return response()->json($this->response, 200);
     }
 
     public function getDetail($id)
@@ -152,31 +211,74 @@ class ApiUserController extends Controller
         }
     }
 
-    public function removeUser($id)
+    public function updateActivity($customerId, Request $request)
     {
-        if ($this->user->isAdmin()) {
-            $user = $this->user->first($id);
-            if (isset($user) && $this->user->info()->company_id != $user->company_id) {
-                $this->response['msg'] = 'Không tồn tại tài khoản này';
-            }
-            $remove = $this->user->remove($id);
-            if ($remove) {
-                $this->response['success'] = true;
-                $this->response['msg'] = 'Xoá tài khoản thành công';
-            }
-        }else{
-            $this->response['msg'] = 'Bạn không đủ quyền thực hiện';
+        $user = $this->user->info();
+        $request = $this->acceptRequest($request);
+
+        $request['user_create_id'] = $user->_id;
+        $request['reason'] = "wait";
+        $request['status'] = 1;
+        $request['customer_id'] = $customerId;
+
+        $update = $this->customerService->createActivity($request);
+        if ($update) {
+            $this->response['success'] = true;
+            $this->response['msg'] = "Cập nhật thành công!";
+            $this->response['data'] = $update;
+        }
+        return response()->json($this->response, 200);
+
+    }
+
+    public function searchPhone(SearchPhoneRequest $request)
+    {
+        $user = $this->user->info();
+        $request = $this->acceptRequest($request);
+        $phone = $request['phone'];
+        $phoneRemoveFirstChracter = $phoneAddFirstChracter = $phone;
+        if ($phone[0] == 0) {
+        $phoneRemoveFirstChracter = substr($phone, 1, strlen($phone));
+        } else {
+        $phoneAddFirstChracter = 0 . $phone;
+        }
+        $data['phone'] = [$phone, $phoneRemoveFirstChracter, $phoneAddFirstChracter];
+        $data['company_id'] = $user->company_id;
+        $res = $this->customerService->searchPhone($data);
+        if ($res) {
+        $this->response['success'] = true;
+        $this->response['msg'] = "Lấy data thành công!";
+        $this->response['data'] = $res;
         }
         return response()->json($this->response, 200);
     }
 
-    public function checkPermission($user, $user)
+    public function remove(Request $request)
+    {
+        $request = $request->only('_id');
+    
+        $customers = $this->customerService->firstById($request['_id']);
+
+        if ($customers) {
+            $res = $this->customerService->updateById($request['_id'], ['status' => 0]);
+            if ($res) {
+                $this->response['success'] = true;
+                $this->response['msg'] = "Đã xoá thành công!";
+            }
+        }else{
+        $this->response['msg'] = "Không thể xóa";
+        }
+        
+        return response()->json($this->response, 200);
+    }
+
+    public function checkPermission($targetUser, $user)
     {
         $allow = false;
-        $group = $this->setting->findGroupByCustomerId($user->_id);
+        $group = $this->setting->findGroupByCustomerId($targetUser->_id);
         if (!empty($group)) {
             $members = $group->pluck('members')->toArray();
-            if (in_array($user->_id, $this->arrayMerge($members))) {
+            if (in_array($targetUser->_id, $this->arrayMerge($members))) {
                 $allow = true;
             }
         }
@@ -214,7 +316,15 @@ class ApiUserController extends Controller
             'phone',
             'type_account',
             'permission',
-            'active'
+            'active',
+            'source_id',
+            'note',
+            'address',
+            'msdn_value',
+            'mst_value',
+            'company_name',
+            'rank',
+            'activity_value'
         );
     }
 }

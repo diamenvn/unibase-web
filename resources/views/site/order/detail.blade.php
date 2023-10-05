@@ -3,188 +3,223 @@
 
 @section('content')
 <div class="app-content">
-    <div class="section">
+    <div class="section p-0">
         <div id="app" class="main-body flex flex-column">
             <div class="container-fluid">
                 <form class="row">
-                    <div class="col-md-9 col-12">
+                    <div class="col-md-9 col-12 order-detail__body pt-0">
                         <div class="row">
-                            <div class="col-12 p-0">
-                                <div class="order-detail__header">
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="order-detail__title d-flex flex-column">
-                                                <strong>90950235 - {{$order->name}}</strong>
-                                            </div>
+                            <div class="col-12">
+                                <div class="d-flex order-detail__title px-0">
+                                    <div class="d-flex flex-1">
+                                        <a href="{{$urlBack}}" class="back-button-wrapper d-flex justify-content-center align-items-center px-3 mr-2">
+                                            <i class="fal fa-chevron-left fs-20 fw-600"></i>
+                                        </a>
+                                        <div class="flex-column d-flex">
+                                            <strong>#{{$order->order_number ?? '202300113'}} - {{$order->name}} - <span class="status-payment status-payment-pending">Chưa thanh toán</span></strong>
+                                            <span class="co-default fs-12 text-tranform-none fw-400">Ngày tạo: {{$order->created_at}}</span>
                                         </div>
-                                        <div class="order-detail__actions col-auto">
-
-                                        </div>
+                                    </div>
+                                    <div class="order-detail__actions d-flex align-items-center">
+                                        <div class="btn btn-success mr-2 pointer text-tranform-none fs-14">Chuyển tiếp</div>
+                                        <div class="btn btn-danger mr-2 pointer text-tranform-none fs-14">Đánh dấu thất bại</div>
                                     </div>
                                 </div>
-                                <div class="order-detail__body" id="panel1">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            @if (!empty($order->message))
-                                            <div class="alert alert-info" role="alert">
-                                                <strong>Ghi chú từ marketing:</strong> {{$order->message}}
-                                            </div>
-                                            @endif
-                                        </div>
-                                        <div class="col-12">
-                                            @if (!empty($order->filter_confirm) && $user->permission != "admin")
-                                            <div class="alert alert-warning fs-14" role="alert">
-                                                <strong>Không thể sửa đơn:</strong> Đơn này đã xác nhận bởi vận đơn nên bạn không thể tiếp tục chỉnh sửa đơn này!
-                                            </div>
-                                            @endif
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Tên khách hàng</label>
-                                                <input @if ($user->type_account == "sale") readonly @endif class="form-control bg-white" name="name" type="text" placeholder="" value="{{$order->name}}">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Số điện thoại</label>
-                                                <input @if ($user->type_account == "sale") readonly @endif class="form-control bold co-red" name="phone" type="text" placeholder="" value="{{$order->phone}}">
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="break-horizontal my-2"></div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex flex-column co-default fs-14">
+                                    <div class="w-100 mb-1">
+                                        <span class="ml-2 mr-3"><i class="fas fa-info-circle" style="width: 20px;"></i></span><span>Mã đơn hàng: #{{$order->order_number}}, trạng thái hiện tại: <strong class="co-green">đang chờ xác nhận</strong></span>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Công ty</label>
-                                                <input readonly class="form-control" type="text" placeholder="" value="{{$order->company->company_name}}">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Sản phẩm</label>
-                                                <select @if ($user->type_account == "sale") disabled @endif class="form-control" name="product_id" id="">
-                                                    @foreach($order->companyProduct as $item)
-                                                    <option @if($item->product->_id == $order->product_id) selected @endif value="{{$item->product->_id}}">{{$item->product->product_name}}</option>
-                                                    @endforeach
+                                    <div class="w-100 mb-1 d-flex">
+                                        <span class="ml-2 mr-3"><i class="fas fa-tags" style="width: 20px;"></i></span>
+                                        <span class="badgets d-flex">
+                                            <div class="badget badget--danger mr-2">quantrong</div>
+                                            <div class="badget badget--warning mr-2">hoatoc</div>
+                                            <div class="badget badget--facebook mr-2">facebook</div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="wrapper-arrow-steps">
+                                    <div class="arrow-steps clearfix my-3">
+                                        @php $indexActive = -1 @endphp
+                                        @foreach($steps as $index => $step)
+                                        @if ($step->_id == $order->label_id)
+                                        @php $indexActive = $index; @endphp
+                                        @endif
+                                        @endforeach
 
-                                                </select>
-                                            </div>
-                                        </div>
+                                        @foreach($steps as $index => $step)
+                                        @if ($step->step_type == "cancel") @php continue; @endphp @endif
+                                        @if ($index < $indexActive) <div class="step"> <span>{{$step->label_name}}</span>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Người tạo đơn</label>
-                                                <select @if ($user->type_account == "sale" || $user->permission == "user") disabled @endif name="user_create_id" class="form-control">
-                                                    @foreach($order->companyCustomer as $item)
-                                                    <option @if($item->_id == $order->user_create_id) selected @endif value="{{$item->_id}}">{{$item->name}}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Ngày tạo đơn</label>
-                                                <input readonly class="form-control" type="text" placeholder="" value="{{$order->created_at}}">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Mã đơn hàng</label>
-                                                <input readonly class="form-control" type="text" placeholder="" value="{{$order->_id}}">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Nguồn</label>
-                                                <select @if ($user->type_account == "sale") disabled @endif class="form-control" name="source_id" id="">
-                                                    @foreach($order->companySource as $item)
-                                                    <option @if($item->source->_id == $order->source_id) selected @endif value="{{$item->source->_id}}">{{$item->source->source_name}}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label>Link bài viết</label>
-                                                <input @if ($user->type_account == "sale") readonly @endif class="form-control" name="link" type="text" placeholder="" value="{{$order->link}}" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label>Địa chỉ</label>
-                                                <textarea rows="3" @if ($user->type_account == "sale") readonly @endif class="form-control" name="address" type="text" placeholder="">{{$order->address}}</textarea>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @elseif ($index == $indexActive)
+                                    <div class="step active fw-600"> <span>{{$step->label_name}}</span> </div>
+                                    @else
 
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <div class="option-status-order d-flex flex-around overflow-hidden">
-                                                    <label for="status-cancel" class="col-4 option__item cancel m-0">
-                                                        <span>Huỷ đơn hàng</span>
-                                                        <div class="select">
-                                                            <input @if ($order->reason == "cancel") checked @endif id="status-cancel" type="radio" value="cancel" name="reason">
-                                                        </div>
-                                                    </label>
-                                                    <label for="status-wait" class="col-4 option__item wait m-0">
-                                                        <span>Chưa chốt được</span>
-                                                        <div class="select">
-                                                            <input @if ($order->reason == "wait" || $order->reason == null) checked @endif id="status-wait" type="radio" value="wait" name="reason">
-                                                        </div>
-                                                    </label>
-                                                    <label for="status-success" class="col-4 option__item success m-0">
-                                                        <span>Chốt đơn hàng</span>
-                                                        <div class="select">
-                                                            <input @if ($order->reason == "success") checked @endif id="status-success" type="radio" value="success" name="reason">
-                                                        </div>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label>Tình trạng khách hàng</label>
-                                                <select class="form-control" name="filter_status">
-                                                    <option value="-1">Chọn tình trạng khách hàng</option>
-                                                    @foreach($actions as $action)
-                                                    @if ($action->type == "filter_status" || ($action->type == "filter_confirm"))
-                                                    <option @if($order->filter_status == $action->_id) selected @endif value="{{$action->_id}}">{{$action->text}}</option>
-                                                    @endif
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label>Note tình trạng đơn hàng</label>
-                                                <textarea rows="3" class="form-control" type="text" name="note" placeholder="Nhập nội dung ghi chú đơn..."></textarea>
-                                            </div>
-                                        </div>
+                                    <div class="step step-default"> <span>{{$step->label_name}}</span> </div>
+                                    @endif
+                                    @endforeach
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="break-horizontal mb-3"></div>
+                        </div>
+                        <div class="col-12 mb-2">
+                            <div class="form-group">
+                                <label class="text-transform-uppercase">Mô tả</label>
+                                <textarea class="form-control" name="description" type="text" placeholder="Mô tả">{{$order->description}}</textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group mb-0">
+                                <label class="text-transform-uppercase">Trường dữ liệu tùy chỉnh</label>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <div class="jumbotron py-0 px-2 mb-2 fs-14" style="background: #f3f3f3;">
+                                <div class="row">
+                                    <div class="col-12 mx-2">
+                                        <ul class="p-3 list-style-auto">
+                                            <li class="mb-3">
+                                                <div>Tên khách hàng</div>
+                                                <div class="mt-1"><strong>{{$order->customer->name}}</strong></div>
+                                            </li>
+                                            <li class="mb-3">
+                                                <div>Số điện thoại</div>
+                                                <div class="mt-1"><strong class="co-red">{{$order->customer->phone}}</strong></div>
+                                            </li>
+                                            <li class="mb-3">
+                                                <div>Tổng số tiền cần thanh toán</div>
+                                                <div class="mt-1"><strong class="co-green">{{$order->total ?? "200.000.000đ"}}</strong></div>
+                                            </li>
+                                            <li class="mb-3">
+                                                <div>Tổng giá trị đơn hàng</div>
+                                                <div class="mt-1"><strong class="co-green">{{$order->total ?? "200.000.000đ"}}</strong></div>
+                                            </li>
+                                            <li class="mb-3">
+                                                <div>Link file đơn hàng</div>
+                                                <div class="mt-1"><strong>{{$order->link_order_file ?? "https://stackoverflow.com/questions/18394891/how-to-get-a-list-of-registered-route-paths-in-laravel"}}</strong></div>
+                                            </li>
+                                            <li class="mb-3">
+                                                <div>Link file thiết kế</div>
+                                                <div class="mt-1"><strong>{{$order->link_order_design ?? "https://stackoverflow.com/questions/18394891/how-to-get-a-list-of-registered-route-paths-in-laravel"}}</strong></div>
+                                            </li>
+                                            <li class="mb-3">
+                                                <div>Ngày tạo đơn hàng</div>
+                                                <div class="mt-1"><strong>{{$order->created_at}}</strong></div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-12">
-                        <div class="bg-transparent">
-                            123123123
+                        <div class="col-12">
+                            <div class="form-group mb-0">
+                                <label class="text-transform-uppercase">Danh sách sản phẩm</label>
+                            </div>
+                            <div class="base-table--data flex-1 overflow-auto">
+                                <table class="table-filter w-100">
+                                    <thead>
+                                        <tr class="merge">
+                                            <th class="text-right">STT</th>
+                                            <th>Tên sản phẩm</th>
+                                            <th>Mã SKU</th>
+                                            <th>Số lượng</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-right">1</td>
+                                            <td>Ốp điện thoại hình mèo</td>
+                                            <td>SKU-002-003</td>
+                                            <td>500</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">1</td>
+                                            <td>Ốp điện thoại hình mèo</td>
+                                            <td>SKU-002-003</td>
+                                            <td>500</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </form>
             </div>
+            <div class="col-md-3 col-12">
+                <div class="bg-transparent my-2">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="module module-order-current-status p-3 mb-3">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="text-default-white fs-12 mb-2">GIAI ĐOẠN HIỆN TẠI</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <strong class="fs-20">[{{$indexActive}}/{{count($steps)}}] - {{$steps[$indexActive]->label_name}}</strong>
+                                        <div class="d-flex mt-2">
+                                            <div class="text-default-white fs-12">Thời hạn: 15:56 06/10/2023</div>
+                                        </div>
+                                        <div class="progress progress--white my-2">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <div class="text-default-white fs-12">Kỳ vọng: 5h</div>
+                                            <div class="text-default-white fs-12">Đã sử dụng: 3.5h</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="module module-order-info px-3 py-2 mb-3">
+                                <div class="title">Thông tin đơn hàng</div>
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-between align-items-center fs-14 my-1">
+                                        <div><i class="fal fa-info-circle" style="width: 25px;"></i>Mã đơn hàng</div>
+                                        <strong class="fs-12">#{{$order->order_number}}</strong>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-between align-items-center fs-14 my-1">
+                                        <div><i class="fal fa-user" style="width: 25px;"></i>Người tạo đơn</div>
+                                        <strong class="fs-12">{{$order->customerCreateOrder->name}}</strong>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-between align-items-center fs-14 my-1">
+                                        <div><i class="fal fa-clock" style="width: 25px;"></i>Last update</div>
+                                        <strong class="fs-12">{{$order->updated_at}}</strong>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-between align-items-center fs-14 my-1">
+                                        <div><i class="fal fa-tags" style="width: 25px;"></i>Giai đoạn hiện tại</div>
+                                        <strong class="fs-12">{{$steps[$indexActive]->label_name}}</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-2 mb-3">
+                                <ol class="activity-feed">
+                                    @foreach($order->activity as $activity)
+                                    <li class="feed-item">
+                                        <div class="feed-item-list">
+                                            <div class="d-block"><span class="name">{{$activity->customer->name}}</span><span class="date">{{$activity->created_at}}</span></div> <span class="activity-text">{!! $activity->note !!}</span>
+                                        </div>
+                                    </li>
+                                    @endforeach
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
         </div>
     </div>
+</div>
 </div>
 
 @endsection

@@ -194,6 +194,7 @@ body {
     min-width: $second-menu-width;
     height: 100%;
     color: var(--text-color-desc-2);
+    overflow: auto;
     .slide-item {
       display: flex;
       align-items: center;
@@ -232,6 +233,7 @@ body {
       padding: 6px 5px 6px 0px;
       transition: 0.3s;
       border-radius: 5px;
+      margin-bottom: 5px;
       cursor: pointer;
       &:hover {
         background: rgba(0, 0, 0, 0.1);
@@ -242,10 +244,16 @@ body {
           list-style-type: disc;
         }
       }
+      &.active {
+        border-left: 2px solid #fff;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        background: rgba(0, 0, 0, 0.1);
+      }
     }
 
     .menu__list {
-      margin: 5px 0px 30px;
+      margin: 4px 0px 30px;
       color: var(--text-color-desc-2);
       font-size: 15px;
     }

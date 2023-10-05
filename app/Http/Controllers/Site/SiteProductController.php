@@ -4,22 +4,22 @@ namespace App\Http\Controllers\Site;
 
 use App\Helpers\App;
 use App\Http\Controllers\Controller;
-use App\Services\CustomerService;
+use App\Services\UserService;
 use App\Services\CatalogService;
 use Carbon\Carbon;
 
 class SiteProductController extends Controller
 {
-  public function __construct(CustomerService $customer, CatalogService $catalogService)
+  public function __construct(UserService $user, CatalogService $catalogService)
   {
     $this->catalogService = $catalogService;
-    $this->customer = $customer;
+    $this->user = $user;
     $this->timeNow = Carbon::now();
   }
 
   public function create()
   {
-    $info = $this->customer->info()
+    $info = $this->user->info()
       ->load('product')
       ->load('company')
       ->load('source');
@@ -31,7 +31,7 @@ class SiteProductController extends Controller
 
   public function detail($id)
   {
-    $info = $this->customer->info()
+    $info = $this->user->info()
       ->load('product')
       ->load('company')
       ->load('source');
@@ -46,7 +46,7 @@ class SiteProductController extends Controller
   public function list()
   {
     $data['sources'] = [];
-    $data['info'] = $this->customer->info()
+    $data['info'] = $this->user->info()
       ->load('product')
       ->load('company')
       ->load('source');

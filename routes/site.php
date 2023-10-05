@@ -5,12 +5,12 @@ Route::middleware('auth.site')->group(function () {
     Route::get('/welcome', 'SiteHomeController@welcome')->name('home.welcome');
     Route::get('/dashboard', 'SiteHomeController@dashboard')->name('home.dashboard');
     //orders
-    Route::get('/orders/list-all', 'SiteOrderController@list')->name('order.list');
-    Route::get('/orders/detail/{id}', 'SiteOrderController@detail')->name('order.detail');
-    Route::get('/orders/my-list', 'SiteOrderController@myList')->name('order.mylist');
-    Route::get('/orders/customer-care', 'SiteOrderController@customerCare')->name('care');
+    Route::get('/order/lists', 'SiteOrderController@list')->name('order.lists');
+    Route::get('/order/detail/{id}', 'SiteOrderController@detail')->name('order.detail');
+    Route::get('/order/my-list', 'SiteOrderController@myList')->name('order.mylist');
+    Route::get('/order/customer-care', 'SiteOrderController@customerCare')->name('care');
 
-    Route::get('/orders/create', 'SiteOrderController@create')->name('order.create');
+    Route::get('/order/create', 'SiteOrderController@create')->name('order.create');
 
     //lading
     Route::get('/ladings/list-all', 'SiteOrderController@lading')->name('lading.list');
@@ -23,7 +23,7 @@ Route::middleware('auth.site')->group(function () {
     Route::get('/reports/note', 'SiteReportController@note')->name('report.note');
 
     //User
-    Route::get('/users/create', 'SiteUserController@create')->name('user.create');
+    Route::get('/users/lists', 'SiteUserController@list')->name('user.lists');
 
     //settings
     Route::get('/setting/group', 'SiteSettingController@group')->name('setting.group');
@@ -36,6 +36,13 @@ Route::middleware('auth.site')->group(function () {
 Route::middleware('auth.site')->prefix('product')->group(function () {
     Route::get('/create', 'SiteProductController@create')->name('product.create');
     Route::get('/detail/{id}', 'SiteProductController@detail')->name('product.detail');
-    Route::get('/list', 'SiteProductController@list')->name('product.list');
+    Route::get('/lists', 'SiteProductController@list')->name('product.lists');
+});
+
+/// Customer
+Route::middleware('auth.site')->prefix('customer')->group(function () {
+    Route::get('/create', 'SiteCustomerController@create')->name('customer.create');
+    Route::get('/detail/{id}', 'SiteCustomerController@detail')->name('customer.detail');
+    Route::get('/lists', 'SiteCustomerController@list')->name('customer.lists');
 });
 ?>

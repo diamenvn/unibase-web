@@ -21,7 +21,7 @@ class SettingApiImportModel extends EloquentModel
 
     public function customer()
     {
-        return $this->belongsTo(CustomerModel::class, 'user_create_id');
+        return $this->belongsTo(UserModel::class, 'user_create_id');
     }
 
 }

@@ -72,6 +72,17 @@ Route::middleware('auth.api')->prefix('product')->group(function () {
     Route::get('/get-list-product', 'ApiProductController@getListProduct')->name('product.getListProduct');
 });
 
+//Customer
+Route::middleware('auth.api')->prefix('customer')->group(function () {
+    Route::post('/store', 'ApiCustomerController@store')->name('customer.store');
+    Route::get('/get-list-customer', 'ApiCustomerController@lists')->name('customer.getListCustomer');
+    Route::post('/searchPhone', 'ApiCustomerController@searchPhone')->name('customer.searchPhone');
+    Route::post('/update/{id}', 'ApiCustomerController@update')->name('customer.update');
+    Route::post('/remove', 'ApiCustomerController@remove')->name('customer.remove');
+    Route::post('/update_activity/{id}', 'ApiCustomerController@updateActivity')->name('customer.update_activity');
+    
+});
+
 Route::get('/token/order/create', 'ApiTokenController@create')->name('token.order.create.save');
 Route::get('/token/order/add', 'ApiOrderController@tokenSaveOrder')->name('token.order.create.save');
 Route::post('/createOrderFromLadipage/{id}', 'ApiSettingController@pushDataImportFromAPI')->name('setting.import.api.push');

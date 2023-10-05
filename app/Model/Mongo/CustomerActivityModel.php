@@ -4,10 +4,10 @@ namespace App\Model\Mongo;
 use App\Model\Mongo\UserModel;
 use Jenssegers\Mongodb\Eloquent\Model as EloquentModel;
 
-class OrderActivityModel extends EloquentModel
+class CustomerActivityModel extends EloquentModel
 {
     protected $connection = 'mongodb';
-    protected $collection = 'az_order_activity';
+    protected $collection = 'az_customer_activity';
     protected $primaryKey = '_id';
     protected $dates = ['created_at', 'updated_at'];
 

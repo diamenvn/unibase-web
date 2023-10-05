@@ -48,7 +48,7 @@ class ApiOrderController extends Controller
   public function getListLabel(Request $request)
   {
     $customer = $this->customer->info();
-    $columns = $this->order->getListLabelByCompanyId($customer->company_id);
+    $columns = $this->order->getListLabelByCompanyId($customer->company_id)->load('order');
     if ($columns) {
       $this->response['success'] = true;
       $this->response['msg'] = 'Lấy dữ liệu thành công';
@@ -168,15 +168,10 @@ class ApiOrderController extends Controller
     $dataOld = [];
     if (!empty($order)) {
       $dataOld = $order->toArray();
-      if (!empty($order->filter_confirm) && $this->customer->info()->permission != "admin") {
-        $this->response['msg'] = 'Đơn đã xác nhận không thể chỉnh sửa';
-        return response()->json($this->response, 200);
-      }
 
       $update = $this->updateOrder($order, $request);
       if (!empty($update)) {
         $this->createActivityLog($order, $request, $dataOld);
-        $this->newOrderShip($order, $request);
         $this->response['success'] = true;
         $this->response['msg'] = 'Cập nhật đơn hàng thành công!';
       }

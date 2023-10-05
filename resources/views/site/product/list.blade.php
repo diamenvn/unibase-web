@@ -1,28 +1,9 @@
-@extends('site.layout.master', ['useTopHeader' => 'light'])
+@extends('site.layout.master')
 @section('title', 'Danh sách sản phẩm')
-@section('page-title', 'B2B - Quản trị đơn hàng')
-
-@section('page-navigate')
-<li class="active">
-    <a href=""><span>Danh sách</span></a>
-</li>
-<li>
-    <a href=""><span>Báo cáo nhanh</span></a>
-</li>
-<li>
-    <a href=""><span>Chỉnh sửa cột</span></a>
-</li>
-<li>
-    <a href=""><span>Nhiệm vụ</span></a>
-</li>
-<li>
-    <a href=""><span>Nhiệm vụ</span></a>
-</li>
-@endsection
 
 @section('content')
 <div class="app-content">
-    <div class="section p-0 flex-1">
+    <div class="section flex-1">
         <div class="main-body flex flex-column">
             <div class="source-filter source-filter--layout">
                 <ul class="list-source nav nav-tabs border-none">

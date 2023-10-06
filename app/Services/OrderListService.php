@@ -438,4 +438,12 @@ class OrderListService
         $query = $query->orderBy('created_at', 'DESC');
         return $query->get();
     }
+
+    public function firstLabelByCompanyId($companyId)
+    {
+        $query = $this->labelListModel;
+        $query = $query->where('company_id', $companyId);
+        $query = $query->orderBy('index', 'ASC');
+        return $query->first();
+    }
 }

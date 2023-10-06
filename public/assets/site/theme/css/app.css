@@ -2967,6 +2967,168 @@ body .filepond--root {
   margin-bottom: 0px;
 }
 
+body .dropup,
+body .dropdown {
+  position: relative;
+}
+
+body .dropdown-toggle {
+  border: 1px solid #ced4da !important;
+}
+
+body .dropdown-toggle:focus {
+  outline: 0;
+}
+
+body .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 15px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+body .dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+
+body .dropdown-menu .divider {
+  height: 1px;
+  margin: 9.5px 0;
+  overflow: hidden;
+  background-color: #464545;
+}
+
+body .dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+
+body .dropdown-menu > li > a:hover,
+body .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #0084d1;
+}
+
+body .dropdown-menu > .active > a,
+body .dropdown-menu > .active > a:hover,
+body .dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #0084d1;
+}
+
+body .dropdown-menu > .active > a .text-muted,
+body .dropdown-menu > .active > a:hover .text-muted,
+body .dropdown-menu > .active > a:focus .text-muted {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body .dropdown-menu > .disabled > a,
+body .dropdown-menu > .disabled > a:hover,
+body .dropdown-menu > .disabled > a:focus {
+  color: #999999;
+}
+
+body .dropdown-menu > .disabled > a:hover,
+body .dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  cursor: not-allowed;
+}
+
+body .open > .dropdown-menu {
+  display: block;
+}
+
+body .open > a {
+  outline: 0;
+}
+
+body .dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+
+body .dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+
+body .dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #999999;
+  white-space: nowrap;
+}
+
+body .dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 990;
+}
+
+body .pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+body .dropup .caret,
+body .navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px dashed;
+  border-bottom: 4px solid \9;
+  content: "";
+}
+
+body .dropup .dropdown-menu,
+body .navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px;
+}
+
+@media (min-width: 768px) {
+  body .navbar-right .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+
+  body .navbar-right .dropdown-menu-left {
+    left: 0;
+    right: auto;
+  }
+}
+
 .welcome__block__search__input::-webkit-input-placeholder {
   color: var(--text-color-desc);
   font-size: 16px;

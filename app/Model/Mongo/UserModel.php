@@ -5,6 +5,7 @@ use App\Model\Mongo\OrderActivityModel;
 use App\Model\Mongo\SettingConnectModel;
 use App\Model\Mongo\CompanyProductModel;
 use App\Model\Mongo\CompanySourceModel;
+use App\Model\Mongo\CustomerModel;
 use App\Model\Mongo\CompanyListModel;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -49,6 +50,11 @@ class UserModel extends Authenticatable
     public function customer()
     {
         return $this->hasMany(UserModel::class, 'company_id', 'company_id')->orderBy('_id', 'DESC');
+    }
+
+    public function customer_new()
+    {
+        return $this->hasMany(CustomerModel::class, 'company_id', 'company_id')->orderBy('_id', 'DESC');
     }
 
     public function product()

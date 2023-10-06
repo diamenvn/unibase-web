@@ -166,7 +166,9 @@ class SiteOrderController extends Controller
     $info = $this->user->info()
       ->load('product')
       ->load('company')
+      ->load('customer_new')
       ->load('source');
+
     return view('site.order.create')
       ->with('info', $info);
   }

@@ -2,8 +2,10 @@
 
 namespace App\Model\Mongo;
 use App\Model\Mongo\UserModel;
+use App\Model\Mongo\CustomerModel;
 use App\Model\Mongo\ListProductModel;
 use App\Model\Mongo\ListSourceModel;
+use App\Model\Mongo\LabelListModel;
 use App\Model\Mongo\CompanyListModel;
 use App\Model\Mongo\OrderActivityModel;
 use App\Model\Mongo\ActionActivityModel;
@@ -29,6 +31,7 @@ class OrderListModel extends EloquentModel
         'fid',
         'data',
         'time',
+        'customer_id',
         'user_reciver_id'
     ];
     public function getDateFormat()
@@ -40,7 +43,11 @@ class OrderListModel extends EloquentModel
     {
         return $this->belongsTo(UserModel::class, 'user_create_id');
     }
-
+    public function customer_1()
+    {
+        return $this->belongsTo(CustomerModel::class, 'customer_id');
+    }
+    
     public function reciver()
     {
         return $this->belongsTo(UserModel::class, 'user_reciver_id');
@@ -124,5 +131,10 @@ class OrderListModel extends EloquentModel
     public function activityLanding()
     {
         return $this->hasMany(OrderActivityModel::class, 'order_id')->orderBy('_id', 'DESC');
+    }
+
+    public function step()
+    {
+        return $this->belongsTo(LabelListModel::class, 'label_id');
     }
 }

@@ -20,6 +20,7 @@ Route::middleware('auth.api')->group(function () {
     Route::get('/order/export-excel-order', 'ApiExportController@exportExcelOrder')->name('order.export.excel');
     Route::post('/order/choose-customer', 'ApiOrderController@chooseCustomer')->name('order.choose-customer');
     Route::post('/order/status/next-step/{id}', 'ApiOrderController@nextStep')->name('order.next-step');
+    Route::post('/order/status/cancel-step/{id}', 'ApiOrderController@cancelStep')->name('order.cancel-step');
     //Info 
 
     Route::get('/info/provin', 'ApiInfoController@getProvin')->name('info.getProvin');

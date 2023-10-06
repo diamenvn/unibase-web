@@ -29,7 +29,7 @@
                                     </div>
                                     <div class="order-detail__actions d-flex align-items-center">
                                         <div class="btn btn-success mr-2 pointer text-tranform-none btn-next-step-js fs-14">Chuyển tiếp</div>
-                                        <div class="btn btn-danger mr-2 pointer text-tranform-none fs-14">Đánh dấu thất bại</div>
+                                        <div class="btn btn-danger mr-2 pointer text-tranform-none btn-cancel-step-js fs-14">Đánh dấu thất bại</div>
                                     </div>
                                 </div>
                             </div>
@@ -241,6 +241,19 @@
         $('.btn-next-step-js').click(function () {
             Notiflix.Loading.Dots('Đang lưu dữ liệu...');
             lib.send.post('{{route("api.order.next-step", $order->_id)}}', function (res) {
+                Notiflix.Loading.Remove();
+                if (res.success) {
+                    Notify.show.success('Thành công');
+                    window.location.href = '{!! $urlBack !!}';
+                } else {
+                    Notify.show.error('Lưu dữ liệu thất bại!');
+                }
+            });
+        });
+
+        $('.btn-cancel-step-js').click(function () {
+            Notiflix.Loading.Dots('Đang lưu dữ liệu...');
+            lib.send.post('{{route("api.order.cancel-step", $order->_id)}}', function (res) {
                 Notiflix.Loading.Remove();
                 if (res.success) {
                     Notify.show.success('Thành công');

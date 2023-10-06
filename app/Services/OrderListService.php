@@ -446,4 +446,13 @@ class OrderListService
         $query = $query->orderBy('index', 'ASC');
         return $query->first();
     }
+
+    public function firstLabelByStep($companyId, $step_type)
+    {
+        $query = $this->labelListModel;
+        $query = $query->where('company_id', $companyId);
+        $query = $query->where('step_type', $step_type);
+        $query = $query->orderBy('index', 'ASC');
+        return $query->first();
+    }
 }

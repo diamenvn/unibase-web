@@ -310,6 +310,21 @@ class ApiOrderController extends Controller
   return response()->json($this->response, 200);
   }
 
+  public function cancelStep($id)
+  {
+    $user = $this->user->info();
+    $step = $this->order->firstLabelByStep($user->company_id, 'cancel');
+    $order = $this->order->firstById($id)->load('step');
+    if ($step) {
+      $data['label_id'] = $step->_id;
+      $this->response['success'] = true;
+      $update = $this->order->update($order, $data);
+
+    }
+   
+  return response()->json($this->response, 200);
+  }
+
   public function removeOrder(RemoveOrderRequest $request)
   {
     $request = $request->only('_id');

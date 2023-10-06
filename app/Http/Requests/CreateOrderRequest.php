@@ -27,22 +27,12 @@ class CreateOrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'phone' => 'required',
-            'user_create_id' => 'required',
-            'product_id' => 'required',
-            'source_id' => 'required',
         ];
     }
 
     public function messages()
     {
         return [
-            'username.required' => 'Bạn vui lòng nhập tên khách hàng',
-            'phone.required' => 'Bạn vui lòng nhập số điện thoại khách hàng',
-            'product_id.required' => 'Bạn vui lòng nhập sản phẩm',
-            'user_create_id.required' => 'Thiếu thông tin người tạo',
-            'source_id.required' => 'Thiếu nguồn sản phẩm',
         ];
     }
 

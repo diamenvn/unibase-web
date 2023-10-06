@@ -18,6 +18,8 @@ Route::middleware('auth.api')->group(function () {
     Route::get('/order/get-my-list-order', 'ApiOrderController@getAllListMyOrder')->name('order.getAllListMyOrder');
     Route::get('/order/export-excel-lading', 'ApiExportController@exportExcelLading')->name('order.export.excel.lading');
     Route::get('/order/export-excel-order', 'ApiExportController@exportExcelOrder')->name('order.export.excel');
+    Route::post('/order/choose-customer', 'ApiOrderController@chooseCustomer')->name('order.choose-customer');
+    Route::post('/order/status/next-step/{id}', 'ApiOrderController@nextStep')->name('order.next-step');
     //Info 
 
     Route::get('/info/provin', 'ApiInfoController@getProvin')->name('info.getProvin');

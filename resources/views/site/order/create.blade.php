@@ -11,7 +11,14 @@
                     <div class="order-detail__body">
                         <div class="row">
                             <div class="col-6">
-                                @include('site.uikit.input.text', ['label' => "Tên khách hàng", 'model' => "customer_name", 'require' => true])
+                                <div class="form-group">
+                                    <label>Tên khách hàng</label>
+                                    <select id="selectpicker" class="selectpicker form-control" name="customer_id" data-live-search="true">
+                                        @foreach ($info->customer_new as $customer)
+                                        <option value="{{$customer->_id}}" data-subtext="{{$customer->email}}">{{$customer->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
@@ -29,21 +36,41 @@
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label>Nhãn đơn hàng</label>
+                                    <label>Email KH <span class="co-red">*</span></label>
+                                    <input disabled class="form-control bold" disabled name="email" type="text" placeholder="" value="">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label>Tình trạng thanh toán <span class="co-red">*</span></label>
+                                    <select name="paid_order" id="" class="form-control">
+                                        <option value="paid">Đã thanh toán</option>
+                                        <option value="wait">Chưa thanh toán</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group base-table--data">
+                                    <label>Loại đơn hàng</label>
                                     <div class="d-flex">
                                         <div class="form-check-inline">
                                             <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input" value="">Quan trọng
+                                                <input name="order_type[]" value="quantrong" type="checkbox" class="form-check-input" value="">Quan trọng
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
                                             <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input" value="">Hỏa tốc
+                                                <input name="order_type[]" value="hoatoc" type="checkbox" class="form-check-input" value="">Hỏa tốc
                                             </label>
                                         </div>
                                         <div class="form-check-inline">
                                             <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input" value="">Cần xử lý ngay
+                                                <input name="order_type[]" value="cod" type="checkbox" class="form-check-input" value="">COD
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input name="order_type[]" value="facebook" type="checkbox" class="form-check-input" value="">Facebook
                                             </label>
                                         </div>
                                     </div>
@@ -192,10 +219,11 @@
     var timeout;
     var table = $('.table-body-data');
     var empty = '<td class="text-center p-3 bold fs-18" colspan="4">Không tìm thấy số trùng!</td>';
+
     $(function () {
         $('.btn-success').click(function () {
             form = $(this).closest('form');
-            elementValid = ['name', 'phone', 'user_create_id', 'product_id', 'source_id'];
+            elementValid = ['name', 'phone', 'email'];
             hasContinue = true;
             $.each(elementValid, function (index, value) {
                 item = $('*[name="' + value + '"]');
@@ -262,6 +290,22 @@
         });
         table.append(empty);
     });
+
+    $('.selectpicker').selectpicker();
+    $('select.after-init').append('<option value="neque.venenatis.lacus@neque.com" data-subtext="neque.venenatis.lacus@neque.com" selected="selected">Chancellor</option>').selectpicker('refresh');
+    $('select').trigger('change');
+
+    $('.selectpicker').change(function (event) {
+        Notiflix.Loading.Dots('Đang cập nhật dữ liệu...');
+        val = $(this).val()
+        lib.send.post('{{route("api.order.choose-customer")}}', function (res) {
+            if (res.success) {
+                $('[name="phone"]').val(res.data.phone);
+                $('[name="email"]').val(res.data.email);
+            }
+            Notiflix.Loading.Remove();
+        }, { _id: val });
+    })
 
     var html = function (data) {
         response = `<tr>

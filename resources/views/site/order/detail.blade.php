@@ -2,6 +2,12 @@
 @section('title', 'Chi tiết đơn hàng')
 
 @section('content')
+@php $indexActive = -1 @endphp
+@foreach($steps as $index => $step)
+@if ($step->_id == $order->label_id)
+@php $indexActive = $index; @endphp
+@endif
+@endforeach
 <div class="app-content">
     <div class="section p-0">
         <div id="app" class="main-body flex flex-column">
@@ -16,12 +22,13 @@
                                             <i class="fal fa-chevron-left fs-20 fw-600"></i>
                                         </a>
                                         <div class="flex-column d-flex">
-                                            <strong>#{{$order->order_number ?? '202300113'}} - {{$order->name}} - <span class="status-payment status-payment-pending">Chưa thanh toán</span></strong>
+                                            <strong>#{{$order->order_number ?? '202300113'}} - {{$order->customer_1->name}} - <span class="status-payment {{$order->paid_order == 'paid' ? 'status-payment-paid' : 'status-payment-pending'}}">{{$order->paid_order == 'paid' ? 'Đã thanh toán' : 'Chưa
+                                                    thanh toán'}}</span></strong>
                                             <span class="co-default fs-12 text-tranform-none fw-400">Ngày tạo: {{$order->created_at}}</span>
                                         </div>
                                     </div>
                                     <div class="order-detail__actions d-flex align-items-center">
-                                        <div class="btn btn-success mr-2 pointer text-tranform-none fs-14">Chuyển tiếp</div>
+                                        <div class="btn btn-success mr-2 pointer text-tranform-none btn-next-step-js fs-14">Chuyển tiếp</div>
                                         <div class="btn btn-danger mr-2 pointer text-tranform-none fs-14">Đánh dấu thất bại</div>
                                     </div>
                                 </div>
@@ -32,14 +39,14 @@
                             <div class="col-12">
                                 <div class="d-flex flex-column co-default fs-14">
                                     <div class="w-100 mb-1">
-                                        <span class="ml-2 mr-3"><i class="fas fa-info-circle" style="width: 20px;"></i></span><span>Mã đơn hàng: #{{$order->order_number}}, trạng thái hiện tại: <strong class="co-green">đang chờ xác nhận</strong></span>
+                                        <span class="ml-2 mr-3"><i class="fas fa-info-circle" style="width: 20px;"></i></span><span>Mã đơn hàng: #{{$order->order_number}}, trạng thái hiện tại: <strong class="co-green">{{$steps[$indexActive]->label_name}}</strong></span>
                                     </div>
                                     <div class="w-100 mb-1 d-flex">
                                         <span class="ml-2 mr-3"><i class="fas fa-tags" style="width: 20px;"></i></span>
                                         <span class="badgets d-flex">
-                                            <div class="badget badget--danger mr-2">quantrong</div>
-                                            <div class="badget badget--warning mr-2">hoatoc</div>
-                                            <div class="badget badget--facebook mr-2">facebook</div>
+                                            @foreach($order->order_type as $badget)
+                                            <div class="badget badget--danger mr-2">{{$badget}}</div>
+                                            @endforeach
                                         </span>
                                     </div>
                                 </div>
@@ -47,13 +54,6 @@
                             <div class="col-12">
                                 <div class="wrapper-arrow-steps">
                                     <div class="arrow-steps clearfix my-3">
-                                        @php $indexActive = -1 @endphp
-                                        @foreach($steps as $index => $step)
-                                        @if ($step->_id == $order->label_id)
-                                        @php $indexActive = $index; @endphp
-                                        @endif
-                                        @endforeach
-
                                         @foreach($steps as $index => $step)
                                         @if ($step->step_type == "cancel") @php continue; @endphp @endif
                                         @if ($index < $indexActive) <div class="step"> <span>{{$step->label_name}}</span>
@@ -75,7 +75,7 @@
                         <div class="col-12 mb-2">
                             <div class="form-group">
                                 <label class="text-transform-uppercase">Mô tả</label>
-                                <textarea class="form-control" name="description" type="text" placeholder="Mô tả">{{$order->description}}</textarea>
+                                <textarea class="form-control" name="description" type="text" rows="5" placeholder="Mô tả">{{$order->note}}</textarea>
                             </div>
                         </div>
                         <div class="col-12">
@@ -90,27 +90,27 @@
                                         <ul class="p-3 list-style-auto">
                                             <li class="mb-3">
                                                 <div>Tên khách hàng</div>
-                                                <div class="mt-1"><strong>{{$order->customer->name}}</strong></div>
+                                                <div class="mt-1"><strong>{{$order->customer_1->name}}</strong></div>
                                             </li>
                                             <li class="mb-3">
                                                 <div>Số điện thoại</div>
-                                                <div class="mt-1"><strong class="co-red">{{$order->customer->phone}}</strong></div>
+                                                <div class="mt-1"><strong class="co-red">{{$order->customer_1->phone}}</strong></div>
                                             </li>
                                             <li class="mb-3">
                                                 <div>Tổng số tiền cần thanh toán</div>
-                                                <div class="mt-1"><strong class="co-green">{{$order->total ?? "200.000.000đ"}}</strong></div>
+                                                <div class="mt-1"><strong class="co-green">{{$order->total_pending_price ?? "200.000.000đ"}}</strong></div>
                                             </li>
                                             <li class="mb-3">
                                                 <div>Tổng giá trị đơn hàng</div>
-                                                <div class="mt-1"><strong class="co-green">{{$order->total ?? "200.000.000đ"}}</strong></div>
+                                                <div class="mt-1"><strong class="co-green">{{$order->total_price ?? "200.000.000đ"}}</strong></div>
                                             </li>
                                             <li class="mb-3">
                                                 <div>Link file đơn hàng</div>
-                                                <div class="mt-1"><strong>{{$order->link_order_file ?? "https://stackoverflow.com/questions/18394891/how-to-get-a-list-of-registered-route-paths-in-laravel"}}</strong></div>
+                                                <div class="mt-1"><strong>{{$order->link_order_file ?? ""}}</strong></div>
                                             </li>
                                             <li class="mb-3">
                                                 <div>Link file thiết kế</div>
-                                                <div class="mt-1"><strong>{{$order->link_order_design ?? "https://stackoverflow.com/questions/18394891/how-to-get-a-list-of-registered-route-paths-in-laravel"}}</strong></div>
+                                                <div class="mt-1"><strong>{{$order->link_order_design ?? ""}}</strong></div>
                                             </li>
                                             <li class="mb-3">
                                                 <div>Ngày tạo đơn hàng</div>
@@ -238,6 +238,19 @@
     @endforeach
 
     $(function () {
+        $('.btn-next-step-js').click(function () {
+            Notiflix.Loading.Dots('Đang lưu dữ liệu...');
+            lib.send.post('{{route("api.order.next-step", $order->_id)}}', function (res) {
+                Notiflix.Loading.Remove();
+                if (res.success) {
+                    Notify.show.success('Thành công');
+                    window.location.href = '{!! $urlBack !!}';
+                } else {
+                    Notify.show.error('Lưu dữ liệu thất bại!');
+                }
+            });
+        });
+
         if (!!filterConfirm && permission != 'admin') {
             input = $('input');
             select = $('select');
@@ -255,25 +268,6 @@
                 $(element).attr('disabled', true);
             });
         }
-        $('.btn-add-product-ship').click(function () {
-            panel = $('#area-product');
-            html = `<tr id="ship-order">
-                                                <td class="relative">
-                                                    <select name="ship-product[]" class="form-control changeProduct" id="">
-                                                        @foreach($order->companyProduct as $item)
-                                                            <option @if($item->product->_id == $order->product_id) selected @endif value="{{$item->product->_id}}">{{$item->product->product_name}}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </td>
-                                                <td><input name="ship-amount[]" class="form-control amount" data-type="currency" onkeypress='number(event)' type="text" value="1" placeholder="Số lượng"></td>
-                                                <td><input name="ship-price[]"data-type="currency" data-type="currency" onkeypress='number(event)' class="form-control price" type="text" placeholder="Thành tiền" value="{{number_format($order->product->price)}}"></td>
-                                                <td class="text-center"><i class="fas fa-trash-alt"></i></td>
-                                            </tr>`;
-            panel.append(html);
-            sum();
-            $("input[data-type='currency']").simpleMoneyFormat();
-        });
-
         $(document).on('click', '.fa-trash-alt', function () {
             self = $(this);
             self.closest('tr').remove();

@@ -15,6 +15,7 @@ use App\Services\OrderActivityService;
 use App\Services\OrderCareService;
 use App\Services\OrderListService;
 use App\Services\OrderShipService;
+use App\Services\CustomerService;
 use App\Services\SettingService;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -22,7 +23,7 @@ use XSSCleaner;
 
 class ApiOrderController extends Controller
 {
-  protected $select_order_fields = array('name', 'phone', 'date_reciver', 'product_id', 'source_id', 'user_reciver_id','user_create_id', 'proccessing', 'reason', 'created_at', 'filter_status', 'label_id', 'order_name');
+  protected $select_order_fields = array('name', 'phone', 'date_reciver', 'product_id', 'paid_order', 'source_id', 'customer_id', 'user_reciver_id','user_create_id', 'proccessing', 'reason', 'created_at', 'filter_status', 'label_id', 'order_name', 'order_type', 'note', 'order_number');
   public function __construct(
     OrderListService $orderList, 
     OrderCareService $orderCareService, 
@@ -30,12 +31,14 @@ class ApiOrderController extends Controller
     OrderActivityService $activity, 
     OrderShipService $ship, 
     ListProvinService $provin, 
-    SettingService $setting
+    SettingService $setting,
+    CustomerService $customerService
   )
   {
     $this->order = $orderList;
     $this->orderCareService = $orderCareService;
     $this->activity = $activity;
+    $this->customerService = $customerService;
     $this->user = $user;
     $this->ship = $ship;
     $this->provin = $provin;
@@ -76,6 +79,7 @@ class ApiOrderController extends Controller
       ->with('care')
       ->with('customerCreateOrder')
       ->with('filterStatus')
+      ->with('customer_1')
       ->with('activity')
       ->with([
         'order' => function ($query) use ($request) {
@@ -94,7 +98,6 @@ class ApiOrderController extends Controller
     } else {
       $lists = $lists->get();
       $renderLists = array();
-
       foreach ($lists as $key => $order) {
         array_push($renderLists, array(
           'label_id' => $order->label_id, 
@@ -102,10 +105,12 @@ class ApiOrderController extends Controller
         );
       }
     }
+  
     $results = array(
       'result'       => $isPaginate ? $lists : $renderLists,
       'pagination' => (isset($request['paginate']) && $request['paginate']) ? (string) $lists->links() : false
     );
+
     if ($lists) {
       $this->response['success'] = true;
       $this->response['msg'] = 'Lấy dữ liệu thành công';
@@ -146,7 +151,7 @@ class ApiOrderController extends Controller
     }
     $lists = $data->paginate($request['limit'])->setPath('');
 
-
+    
     $lists = array(
       'result'       => $lists,
       'product'      => $products,
@@ -158,6 +163,18 @@ class ApiOrderController extends Controller
       $this->response['data'] = $lists;
     }
 
+    return response()->json($this->response, 200);
+  }
+
+  public function chooseCustomer(Request $request)
+  {
+    $id = $request->_id;
+    $customer = $this->customerService->first($id);
+    if ($customer) {
+      $this->response['success'] = true;
+      $this->response['msg'] = 'Lấy dữ liệu thành công';
+      $this->response['data'] = $customer;
+    }
     return response()->json($this->response, 200);
   }
 
@@ -186,16 +203,13 @@ class ApiOrderController extends Controller
   {
     $request = $this->acceptRequest($request);
     $user = $this->user->info();
-    if (!$this->user->isMkt()) {
-      $this->response['msg'] = "Chỉ Marketing mới có thể tạo đơn";
-      return response()->json($this->response, 403);
-    }
-    if ($this->user->isUserMkt()) {
-      $request['user_create_id'] = $user->_id;
-    }
+    $label = $this->order->firstLabelByCompanyId($user->company_id);
 
+    $request['label_id'] = $label->_id;
+    $request['user_create_id'] = $user->_id;
     $request['company_id'] = $user->company_id;
     $request['status'] = 1;
+    $request['order_number'] = "UNB-" . date("yhms");
 
     $res = $this->order->create($request);
     if (!empty($res)) {
@@ -273,6 +287,27 @@ class ApiOrderController extends Controller
       $data['proccessing'] = false;
     }
     return $this->order->update($order, $data);
+  }
+
+  public function nextStep($id)
+  {
+    $nextStep = null;
+    $user = $this->user->info();
+    $order = $this->order->firstById($id)->load('step');
+    $steps = $this->order->getListLabelByCompanyId($user->company_id);
+    foreach ($steps as $index => $step) {
+      if ($step->_id == $order->step->_id) {
+        $nextStep = $steps[$index + 1];
+      }
+    }
+    if ($nextStep) {
+      $data['label_id'] = $nextStep->_id;
+      $this->response['success'] = true;
+      $update = $this->order->update($order, $data);
+
+    }
+   
+  return response()->json($this->response, 200);
   }
 
   public function removeOrder(RemoveOrderRequest $request)
@@ -607,6 +642,13 @@ class ApiOrderController extends Controller
       'filter_date_by',
       'limit',
       'paginate',
+      'link_order_file',
+      'link_order_design',
+      'total_pending_price',
+      'total_price',
+      'order_type',
+      'customer_id',
+      'order_type',
       ''
     );
   }

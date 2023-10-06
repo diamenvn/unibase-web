@@ -6,7 +6,7 @@
   <div class="section">
 
     <div class="main-body">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-xl-4">
             <div class="card overflow-hidden card--block-1">

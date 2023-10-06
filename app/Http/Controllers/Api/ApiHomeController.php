@@ -44,7 +44,7 @@ class ApiHomeController extends Controller
         $action = $this->action->get(['type' => 'filter_confirm'])->keyBy('type_confirm');
         $idActionReturn = $action[4]->_id;
 
-        if ($this->customer->isMkt()) {
+        if ($this->user->isMkt()) {
             $order = $this->order->getByUserCreateId($customer);
         } else {
             $order = $this->order->getByUserReciverId($customer);

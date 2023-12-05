@@ -49,7 +49,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="d-flex justify-content-end align-items-center w-100">
-                                        <a id="{{$id}}" v-click="{{$callAjaxModal}}" v-display-mode="update" width="600px" href=""
+                                        <a id="{{$id}}" v-click="{{$callAjaxModal}}" v-display-mode="update" v-modal-align="center" width="600px" href=""
                                             class="btn btn-primary pointer fw-600 ml-2 disabled"><span>Tiếp tục</span></a>
                                     </div>
                                 </div>

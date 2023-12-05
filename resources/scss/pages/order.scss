@@ -352,7 +352,7 @@
       color: white;
       border-radius: 5px;
     }
-    &[data-selected="true"] {
+    &[data-selected="true"], &:hover {
       background: antiquewhite;
     }
   }

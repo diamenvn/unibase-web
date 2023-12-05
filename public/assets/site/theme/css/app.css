@@ -1059,8 +1059,8 @@ li {
   list-style-type: auto !important;
 }
 
-.right {
-  text-align: right;
+.border-radius-5px {
+  border-radius: 5px;
 }
 
 .bold {
@@ -2482,7 +2482,8 @@ main {
   border-radius: 5px;
 }
 
-.base-table--data tr[data-selected=true] {
+.base-table--data tr[data-selected=true],
+.base-table--data tr:hover {
   background: antiquewhite;
 }
 

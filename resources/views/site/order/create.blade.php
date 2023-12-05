@@ -277,7 +277,7 @@
                     if (res.success) {
                         if (!!res.data.length) {
                             res.data.forEach(item => {
-                                table.append(html(item));
+                                table.append(createHtml(item));
                             });
                             $('#modalExistNumber').modal();
                         } else {
@@ -291,23 +291,24 @@
         table.append(empty);
     });
 
+    
     $('.selectpicker').selectpicker();
     $('select.after-init').append('<option value="neque.venenatis.lacus@neque.com" data-subtext="neque.venenatis.lacus@neque.com" selected="selected">Chancellor</option>').selectpicker('refresh');
-    $('select').trigger('change');
+    // $('select').trigger('change');
 
     $('.selectpicker').change(function (event) {
-        Notiflix.Loading.Dots('Đang cập nhật dữ liệu...');
+        // Notiflix.Loading.Dots('Đang cập nhật dữ liệu...');
         val = $(this).val()
         lib.send.post('{{route("api.order.choose-customer")}}', function (res) {
             if (res.success) {
                 $('[name="phone"]').val(res.data.phone);
                 $('[name="email"]').val(res.data.email);
             }
-            Notiflix.Loading.Remove();
+            // Notiflix.Loading.Remove();
         }, { _id: val });
     })
 
-    var html = function (data) {
+    var createHtml = function (data) {
         response = `<tr>
             <td class="td">` + data.name + `</td>
             <td class="td">` + data.phone + `</td>

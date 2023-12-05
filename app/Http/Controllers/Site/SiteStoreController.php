@@ -26,12 +26,13 @@ class SiteStoreController extends Controller
     $this->timeNow = Carbon::now();
   }
 
-  public function list()
+  public function list(Request $request)
   {
     $user = $this->user->info()->load('customer')->load('company');
     $data['route_list'] = route('api.store.list');
     $data['tabs'] = $this->getListTabs();
     $data['form'] = route('site.store.form');
+    $data['request'] = $request->all();
 
     return view('site.store.list', $data);
   }
@@ -43,7 +44,7 @@ class SiteStoreController extends Controller
     $step = $request['step'] ?? "1";
     $data["sso_url"] = "";
     $fileViewName = "site.store.add.step" . $step;
-    
+
     if ($app == "tiktok") {
       $data["sso_url"] = config("url.tiktok-sso-uri");
     }

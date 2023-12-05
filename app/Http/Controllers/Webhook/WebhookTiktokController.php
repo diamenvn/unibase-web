@@ -28,7 +28,9 @@ class WebhookTiktokController extends Controller
     ];
     $fetch = $this->apiService->post(config('api.store.create'), $body);
     $parse = $this->apiService->parse($fetch);
+
     $request["connected"] = $parse['success'];
+    $request["shopId"] = $parse['response']->result->shopId;
     
     return redirect()->route('site.store.lists', $request);
   }

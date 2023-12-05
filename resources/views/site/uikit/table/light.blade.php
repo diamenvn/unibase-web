@@ -89,6 +89,7 @@
     <script>
         var columns = @json($columns);
         var columnsName = [];
+        var id = "{{$config['id'] ?? ""}}";
         var isUseCheckbox = Boolean(parseInt('{{ $config['checkboxAll'] }}'));
         @if (isset($columns))
             @foreach ($columns as $key => $column)
@@ -117,7 +118,7 @@
                                 if (typeof item[column?.name] != "undefined") {
                                     resHtml = html.renderRow(item[column.name], resHtml, column);
                                 }else{
-                                    resHtml = html.renderRow(column?.default ?? "", resHtml);
+                                    resHtml = html.renderRow(column?.default ?? "", resHtml, column);
                                 }
                             });
 
@@ -225,7 +226,16 @@
                 return dataHtml;
             },
             newRows: function(item) {
-                dataHtml = `<tr data-id="` + item?.id + `">`;
+                var detailUrl = '{{ $config["detail_url"] ?? "" }}';
+                detailUrl = detailUrl.replace(':id', item[id]);
+
+                dataHtml = `<tr v-dblclick="` + window.event.callAjaxModal + `" href="` + detailUrl +`" data-id="` + item?.[id] + `">`;
+
+                if ('{{$config["detail_url"] ?? ""}}' == '') {
+                    dataHtml = `<tr data-id="` + item?.[id] + `">`;
+                }
+
+                
                 if (isUseCheckbox) {
                     dataHtml += `
                         <td class="td-first">
@@ -353,6 +363,7 @@
                 self = $(this);
                 inp = self.find('.stt-order-js');
                 select = self.attr('data-selected');
+                if (!isUseCheckbox) return
                 if (select == "true") {
                     self.attr('data-selected', 'false');
                     inp.prop('checked', false);
@@ -398,11 +409,7 @@
 
 
                 activity.getData();
-            });
-
-            $(document).on('dblclick', '.base-table--data tbody tr', function() {
-                window.location.href = $(this).find('.detail-js').attr('href');
-            });
+            })
 
             $(document).on('click', '.btn-click-find-order-js', function() {
                 inp = $('.inp-find-item-order-js').val();

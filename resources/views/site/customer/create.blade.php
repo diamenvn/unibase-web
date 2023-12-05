@@ -3,9 +3,9 @@
 
 @section('content')
 <div class="app-content">
-    <div class="section">
+    <div class="section p-0">
         <div class="main-body flex flex-column">
-            <form action="google.com" method="POST" class="row row--custom h-100 overflow-auto">
+            <form action="#" method="POST" class="row row--custom h-100 overflow-auto">
                 <div class="order-detail--item col-md-8 col-12 h-100 col--custom">
                     <div class="order-detail__title"><i class="fal fa-info-circle mr-1"></i>Thêm mới khách hàng</div>
                     <div class="order-detail__body">

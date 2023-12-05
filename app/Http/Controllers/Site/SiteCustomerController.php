@@ -38,8 +38,9 @@ class SiteCustomerController extends Controller
         $user = $this->user->info();
         $activity = $this->getActivityByCustomer($user);
         $newCustomer = $this->order->getNewDataCustomerLimitNumber(10);
-
-        return view('site.customer.list');
+        $data['route_list'] = route('api.customer.getListCustomer');
+        $data['tabs'] = $this->getListTabs();
+        return view('site.customer.list', $data);
     }
 
     public function detail($id)
@@ -84,5 +85,31 @@ class SiteCustomerController extends Controller
             $activity = $user->load('activity')->activity->take($limit);
         }
         return $activity;
+    }
+
+    public function getListTabs()
+    {
+        return [
+            [
+                'title' => 'Tất cả',
+                'value' => 'all',
+            ],
+            [
+                'title' => 'Tiktok',
+                'value' => 'tiktok',
+            ],
+            [
+                'title' => 'Shopee',
+                'value' => 'shopee',
+            ],
+            [
+                'title' => 'Etsy',
+                'value' => 'etsy',
+            ],
+            [
+                'title' => 'Lazada',
+                'value' => 'lazada',
+            ]
+        ];
     }
 }

@@ -19522,35 +19522,9 @@ $(function () {
     });
   });
   $(document).on("click", "[v-click=" + window.event.callAjaxModal + "]", function (e) {
-    e.preventDefault();
-    href = $(this).attr("data-href") || $(this).attr("href");
-    self = $(this);
-    width = self.attr("width") || "80%";
-    params = "?popup=true";
-    if (isDisabled(self)) return;
-    options = {
-      width: self.attr("width") || "80%",
-      align: self.attr("v-modal-align") || "right",
-      isUpdate: self.attr("v-display-mode") == "update" ? true : false
-    };
-    if (href.includes("?")) {
-      params = "&popup=true";
-    }
-    loading.show(self);
-    $.ajax({
-      url: href + params,
-      type: "GET",
-      dataType: "html"
-    }).done(function (res, status, xhr) {
-      loading.remove(self);
-      if (xhr.status == 200) {
-        openModal(res, options);
-      }
-    }).fail(function (res) {
-      if (res.status == 401) {
-        window.location.href = window.loginURI + "?callback=" + window.location.href;
-      }
-    });
+    callAjaxModal($(this), e);
+  }).on("dblclick", "[v-dblclick=" + window.event.callAjaxModal + "]", function (e) {
+    callAjaxModal($(this), e);
   });
   $(document).on("click", "[v-click]", function (e) {
     self = $(this);
@@ -19597,6 +19571,9 @@ $(function () {
       }
     }, params);
   });
+  $("#modal").on("hidden.bs.modal", function () {
+    $("#modal .modal-body").html("");
+  });
 });
 var login = function login(self) {
   form = self.closest("form");
@@ -19623,11 +19600,43 @@ openModal = function openModal() {
   }
   if (options.align != "right") {
     modal.removeClass("right").addClass(options.align);
+  } else {
+    modal.removeClass("center").addClass(options.align);
   }
   modal.find(".modal-body").html(html);
   if (!options.isUpdate) {
     modal.modal("toggle");
   }
+};
+callAjaxModal = function callAjaxModal(self, e) {
+  e.preventDefault();
+  href = self.attr("data-href") || self.attr("href");
+  width = self.attr("width") || "80%";
+  params = "?popup=true";
+  if (isDisabled(self)) return;
+  options = {
+    width: self.attr("width") || "80%",
+    align: self.attr("v-modal-align") || "right",
+    isUpdate: self.attr("v-display-mode") == "update" ? true : false
+  };
+  if (href.includes("?")) {
+    params = "&popup=true";
+  }
+  loading.show(self);
+  $.ajax({
+    url: href + params,
+    type: "GET",
+    dataType: "html"
+  }).done(function (res, status, xhr) {
+    loading.remove(self);
+    if (xhr.status == 200) {
+      openModal(res, options);
+    }
+  }).fail(function (res) {
+    if (res.status == 401) {
+      window.location.href = window.loginURI + "?callback=" + window.location.href;
+    }
+  });
 };
 
 /***/ }),

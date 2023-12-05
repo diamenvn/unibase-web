@@ -250,7 +250,7 @@
                     if (res.success) {
                         if (!!res.data.length) {
                             res.data.forEach(item => {
-                                table.append(html(item));
+                                table.append(insertHtml(item));
                             });
                             $('#modalExistNumber').modal();
                         } else {
@@ -264,7 +264,7 @@
         table.append(empty);
     });
 
-    var html = function (data) {
+    let insertHtml = function (data) {
         response = `<tr>
             <td class="td">` + data.name + `</td>
             <td class="td">` + data.phone + `</td>

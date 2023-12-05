@@ -4,10 +4,13 @@ const loading = {
     return res;
   },
   show: function(element) {
-    element.html(loading.html());
+    element.addClass('is-loading').addClass('loading-spinner').attr("v-disabled", "");
   },
-  remove: function() {
-    $(".anticon-loading").remove();
+  remove: function(element) {
+    if (element) {
+      element.removeClass('is-loading').removeClass('loading-spinner').removeAttr("v-disabled");
+    }
+    
     Notiflix.Loading.Remove();
   },
   order: {

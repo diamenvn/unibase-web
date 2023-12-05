@@ -128,8 +128,14 @@ a {
   color: rgba(0, 0, 0, 0.7);
 }
 
-ul {
+ul:not(.default) {
   padding: 0px;
+}
+
+ul.default {
+  li {
+    list-style-type: unset;
+  }
 }
 
 li {
@@ -140,6 +146,9 @@ li {
   list-style-type: auto !important;
 }
 
+.right {
+  text-align: right;
+}
 .bold {
   font-weight: 600;
 }
@@ -197,6 +206,15 @@ li {
   padding-bottom: 15px;
 }
 
+.mt-30px {
+  margin-top: 30px;
+}
+
+.my-30px {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .break-horizontal {
   height: 1px;
   width: 100%;
@@ -230,16 +248,61 @@ i {
   height: auto !important;
 }
 
+.btn {
+  font-size: 13px;
+}
+
+.loading-spinner {
+  position: relative;
+}
+
+@keyframes loading-spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner * {
+  visibility: hidden;
+}
+
+.loading-spinner::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #999999;
+  border-top-color: #4c4c4c;
+  animation: loading-spinner 1.2s cubic-bezier(.5,0,.5,1) infinite;
+}
+
+.text-sm-600 {
+  color: var(--neutral-600);
+}
+
+.text-sm-800 {
+  color: var(--neutral-800);
+}
+
 .btn-primary,
 .bg-primary,
 .bg-site-primary {
   background: $primary-color;
   background-color: $primary-color;
+  border-color: $primary-color;
 }
 
 .btn-outline-primary {
   border: 1px solid $primary-color;
   color: $primary-color;
+}
+
+.source-filter--layout {
+  border-bottom: 1px solid #ddd;
 }
 
 .anticon {

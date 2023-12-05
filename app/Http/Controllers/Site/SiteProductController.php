@@ -50,6 +50,35 @@ class SiteProductController extends Controller
       ->load('product')
       ->load('company')
       ->load('source');
+    $data['tabs'] = $this->getListTabs();
+    $data['route_list'] = route('api.product.getListProduct');
+
     return view('site.product.list', $data);
   }
+
+  public function getListTabs()
+  {
+    return [
+        [
+            'title' => 'Tất cả',
+            'value' => 'all',
+        ],
+        [
+            'title' => 'Tiktok',
+            'value' => 'tiktok',
+        ],
+        [
+            'title' => 'Shopee',
+            'value' => 'shopee',
+        ],
+        [
+            'title' => 'Etsy',
+            'value' => 'etsy',
+        ],
+        [
+            'title' => 'Lazada',
+            'value' => 'lazada',
+        ]
+        ];
+    }
 }

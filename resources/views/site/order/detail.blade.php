@@ -22,8 +22,8 @@
                                             <i class="fal fa-chevron-left fs-20 fw-600"></i>
                                         </a>
                                         <div class="flex-column d-flex">
-                                            <strong>#{{$order->order_number ?? '202300113'}} - {{$order->customer_1->name}} - <span class="status-payment {{$order->paid_order == 'paid' ? 'status-payment-paid' : 'status-payment-pending'}}">{{$order->paid_order == 'paid' ? 'Đã thanh toán' : 'Chưa
-                                                    thanh toán'}}</span></strong>
+                                            <div>#{{$order->order_number ?? '202300113'}} - {{$order->customer_1->name}} - <span class="status-payment {{$order->paid_order == 'paid' ? 'status-payment-paid' : 'status-payment-pending'}}">{{$order->paid_order == 'paid' ? 'Đã thanh toán' : 'Chưa
+                                                    thanh toán'}}</span></div>
                                             <span class="co-default fs-12 text-tranform-none fw-400">Ngày tạo: {{$order->created_at}}</span>
                                         </div>
                                     </div>

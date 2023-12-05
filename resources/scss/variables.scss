@@ -2,14 +2,18 @@
   --text-color-desc: rgba(255, 255, 255, 0.6);
   --text-color-desc-2: rgba(255, 255, 255, 0.77);
   --sidebar-bg: #12649a;
+  --blue-600: #0084D1;
+  --purple-600: #5966cd;
+  --neutral-600: #5E6A6E;
+  --neutral-800: #363F44;
 }
 
-$primary-color: #556ee6;
-$sidebar-width: 255px;
+$primary-color: #5966cd;
+$sidebar-width: 210px;
 $first-menu-width: 45px;
 $second-menu-width: 210px;
-$navbar-height: 70px;
-$box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.1);
+$navbar-height: 50px;
+$box-shadow: 0 0.125rem 0.125rem -0.0625rem rgba(0,0,0,.149);
 $green: #269c71;
 $fz-primary: 13px;
 $text-color-primary: #3c4858;

@@ -86,6 +86,12 @@ Route::middleware('auth.api')->prefix('customer')->group(function () {
     
 });
 
+//Store
+Route::middleware('auth.api')->prefix('store')->group(function () {
+    Route::post('/store', 'ApiStoreController@store')->name('store.store');
+    Route::get('/get-list-store', 'Store\ApiStoreController@list')->name('store.list');
+});
+
 Route::get('/token/order/create', 'ApiTokenController@create')->name('token.order.create.save');
 Route::get('/token/order/add', 'ApiOrderController@tokenSaveOrder')->name('token.order.create.save');
 Route::post('/createOrderFromLadipage/{id}', 'ApiSettingController@pushDataImportFromAPI')->name('setting.import.api.push');

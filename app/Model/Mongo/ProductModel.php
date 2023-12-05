@@ -17,7 +17,7 @@ class ProductModel extends EloquentModel
      * @var array
      */
     protected $fillable = [
-        
+
     ];
 
     public function product()

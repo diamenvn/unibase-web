@@ -29,66 +29,49 @@ class AppServiceProvider extends ServiceProvider
        
         $asideMenuItems = [
             [
-                'title' => 'Dashboard',
-                'items' => [
-                    [
-                        'label' => 'Báo cáo ngày',
-                        'url' => '/report/daily-report'
-                    ]
-                ]
+                'icon' => 'fas fa-chart-bar',
+                'title' => 'Thống kê',
+                'uri' => '/dashboard'
             ],
             [
                 'title' => 'Sản phẩm',
-                'items' => [
-                    [
-                        'label' => 'Tạo sản phẩm',
-                        'url' => '/product/create'
-                    ],
-                    [
-                        'label' => 'Danh sách sản phẩm',
-                        'url' => '/product/lists'
-                    ],
-                    [
-                        'label' => 'Import từ excel',
-                        'url' => '/product/import/excel'
-                    ],
-                ]
+                'icon' => 'fas fa-shopping-bag',
+                'uri' => '/product/lists'
             ],
             [
                 'title' => 'Đơn hàng',
-                'items' => [
-                    [
-                        'label' => 'Tạo đơn hàng',
-                        'url' => '/order/create'
-                    ],
-                    [
-                        'label' => 'Danh sách đơn hàng',
-                        'url' => '/order/lists'
-                    ],
-                    [
-                        'label' => 'Import từ excel',
-                        'url' => '/order/import/excel'
-                    ],
-                ]
+                'icon' => 'fas fa-tags',
+                'uri' => '/order/lists'
             ],
             [
                 'title' => 'Khách hàng',
-                'items' => [
-                    [
-                        'label' => 'Tạo khách hàng',
-                        'url' => '/customer/create'
-                    ],
-                    [
-                        'label' => 'Danh sách',
-                        'url' => '/customer/lists'
-                    ]
-                ]
+                'icon' => 'fas fa-users',
+                'uri' => '/customer/lists'
+            ],
+            [
+                'title' => 'Cửa hàng',
+                'icon' => 'fas fa-store',
+                'uri' => '/store/lists'
             ]
         ];
 
-        view()->composer('*',function($view) use($asideMenuItems) {
+        $events = [
+            "callAjaxModal" => "call-ajax-modal-js",
+            "callAjaxReplaceContent" => "call-ajax-repalce-content-js",
+            "filterStatus" => "filter-status",
+        ];
+
+        // $linkInQuickAction = [
+        //     "create-store" => route("api.customer.getListCustomer")
+        // ];
+        
+
+        view()->composer('*',function($view) use($asideMenuItems, $events) {
             $view->with('user', Auth::user());
             $view->with('asideMenuItems', $asideMenuItems);
+            $view->with('callAjaxModal', $events["callAjaxModal"]);
+            $view->with('filterStatus', $events["filterStatus"]);
+            $view->with('callAjaxReplaceContent', $events["callAjaxReplaceContent"]);
         });
         Collection::macro('paginate', function($perPage, $total = null, $page = null, $pageName = 'page') {
             $page = $page ?: LengthAwarePaginator::resolveCurrentPage($pageName);

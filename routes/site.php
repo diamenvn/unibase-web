@@ -29,6 +29,7 @@ Route::middleware('auth.site')->group(function () {
     Route::get('/setting/group', 'SiteSettingController@group')->name('setting.group');
     Route::get('/setting/add-product', 'SiteSettingController@addProduct')->name('setting.addProduct');
     Route::get('/setting/import/api', 'SiteSettingController@importFromAPI')->name('setting.import.api');
+
 });
 
 
@@ -45,4 +46,12 @@ Route::middleware('auth.site')->prefix('customer')->group(function () {
     Route::get('/detail/{id}', 'SiteCustomerController@detail')->name('customer.detail');
     Route::get('/lists', 'SiteCustomerController@list')->name('customer.lists');
 });
+
+/// Store
+Route::middleware('auth.site')->prefix('store')->group(function () {
+    Route::get('/lists', 'SiteStoreController@list')->name('store.lists');
+    Route::get('/form', 'SiteStoreController@form')->name('store.form');
+});
+
+
 ?>

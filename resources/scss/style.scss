@@ -1,3 +1,5 @@
+@import "./responsive";
+@import "./fonts";
 @import "./variables";
 @import "./pages/layout";
 @import "./pages/home";
@@ -6,6 +8,7 @@
 @import "./pages/setting";
 @import "./auth/login";
 @import "./pages/user";
+@import "./pages/store";
 @import "./pages/thirdparty";
 @import "../css/notiflix-2.1.2.css";
 

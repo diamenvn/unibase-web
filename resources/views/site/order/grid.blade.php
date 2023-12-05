@@ -1,4 +1,4 @@
-@extends('site.layout.master', ['useTopHeader' => 'light'])
+@extends('site.layout.master')
 @section('title', 'Danh sách đơn hàng')
 @section('page-title', 'B2B - Quản trị đơn hàng')
 @section('navigate')

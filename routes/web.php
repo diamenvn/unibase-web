@@ -10,6 +10,10 @@ Route::namespace('Site')->name('site.')->group(function () {
     require "site.php";
 });
 
+Route::namespace('Webhook')->name('webhook.')->group(function () {
+    require "webhook.php";
+});
+
 Route::namespace('Api')->name('api.')->group(function () {
     Route::prefix('api')->group(function () {
         require "api.php";

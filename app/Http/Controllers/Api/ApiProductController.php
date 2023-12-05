@@ -8,21 +8,37 @@ use App\Http\Requests\SaveAddProductRequest;
 use App\Services\UserService;
 use App\Services\CatalogService;
 use App\Services\OrderActivityService;
+use App\Services\ApiService;
 use Illuminate\Http\Request;
 
 class ApiProductController extends Controller
 {
-    public function __construct(UserService $user, CatalogService $catalogService, OrderActivityService $activity)
+    public function __construct(UserService $user, CatalogService $catalogService, OrderActivityService $activity, ApiService $apiService)
     {
         $this->user = $user;
         $this->catalogService = $catalogService;
         $this->activity = $activity;
+        $this->apiService = $apiService;
         $this->response['msg'] = "Error!";
         $this->response['success'] = false;
         $this->response['data'] = [];
     }
 
     public function getListProduct(Request $request)
+    {
+        $fetch = $this->apiService->get(config('api.product.list'));
+        $parse = $this->apiService->parse($fetch);
+        
+        if ($parse['success']) {
+            $this->response['success'] = true;
+            $this->response['msg'] = 'Lấy dữ liệu thành công';
+            $this->response['data'] = $parse['response']->result;
+          }
+      
+          return response()->json($this->response, 200);
+    }
+
+    public function getListProductOld(Request $request)
     {
         $user = $this->user->info();
         $res = $this->catalogService->paginateListProductByUserID($user->_id);

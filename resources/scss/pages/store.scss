@@ -1,0 +1,99 @@
+.thirdparty-icon {
+    width: 100%;
+    padding: 30px;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    user-select: none;
+    cursor: pointer;
+    &:not(.disabled):hover, &.active {
+        border-color: var(--purple-600);
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+    }
+    &.disabled {
+        opacity: .4;
+        cursor: not-allowed;
+    }
+}
+
+
+/*progressbar*/
+#progressbar {
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: rgba(0,0,0,.45);
+    font-size: 12px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    letter-spacing: 0.8px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    span {
+        display: block;
+        max-width: 150px;
+    }
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 20px;
+    display: block;
+    font-size: 12px;
+    color: rgba(0,0,0,.45);
+    background: #fff;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+    z-index: 11;
+    position: relative;
+    border: 2px solid rgba(0,0,0,.45);
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: calc(100% - 50px);
+    height: 1px;
+    background: #f0f0f0;
+    position: absolute;
+    left: -50%;
+    top: 10px;
+    z-index: 1; /*put it behind the numbers*/
+    border-radius: 1px;
+    transition: background .3s;
+    margin-left: 25px;
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+    border-color: var(--purple-600);
+    color: var(--purple-600);
+}
+
+#progressbar li.active {
+    color: #000;
+}
+
+#progressbar li.active:after {
+    background: var(--purple-600);
+}

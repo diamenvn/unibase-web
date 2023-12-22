@@ -90,6 +90,7 @@ Route::middleware('auth.api')->prefix('customer')->group(function () {
 Route::middleware('auth.api')->prefix('store')->group(function () {
     Route::post('/store', 'ApiStoreController@store')->name('store.store');
     Route::get('/get-list-store', 'Store\ApiStoreController@list')->name('store.list');
+    Route::post('/update-setting-condition', 'Store\ApiStoreController@updateSettingCondition')->name('store.update-setting-condition');
 });
 
 Route::get('/token/order/create', 'ApiTokenController@create')->name('token.order.create.save');

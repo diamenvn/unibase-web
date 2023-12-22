@@ -6,7 +6,7 @@
                 <div class="d-flex flex-1"><i class="mr-2 menu__item__icon {{ $icon ?? '' }}"></i>
                     <h4 class="menu__title m-0">{{ $title }}</h4>
                 </div>
-                <small>0</small>
+                <small>{{ $number ?? "" }}</small>
             </a>
         </div>
         @if (isset($items) && count($items) > 0)

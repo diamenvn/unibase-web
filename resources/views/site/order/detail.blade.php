@@ -121,7 +121,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        {{-- <div class="col-12">
                             <div class="form-group mb-0">
                                 <label class="text-transform-uppercase">Danh sách sản phẩm</label>
                             </div>
@@ -151,7 +151,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
             </div>
             <div class="col-md-3 col-12">

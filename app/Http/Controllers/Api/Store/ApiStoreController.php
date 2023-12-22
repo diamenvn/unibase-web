@@ -38,4 +38,18 @@ class ApiStoreController extends Controller
 
     return response()->json($this->response, 200);
   }
+
+  public function updateSettingCondition(Request $request)
+  {
+    $fetch = $this->apiService->post(config('api.store.setting'), $request->all());
+    $parse = $this->apiService->parse($fetch);
+    
+    if ($parse['success']) {
+      $this->response['success'] = true;
+      $this->response['msg'] = 'Cài đặt thành công';
+      $this->response['data'] = $parse['response']->result;
+    }
+
+    return response()->json($this->response, 200);
+  }
 }

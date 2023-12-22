@@ -17,7 +17,7 @@
                                     <div class="col-12">
                                         <ul id="progressbar">
                                             <li class="active"><span>Kết nối đến store</span></li>
-                                            <li class="active"><span>Đồng bộ cài đặt</span></li>
+                                            <li><span>Đồng bộ cài đặt</span></li>
                                             <li><span>Hoàn thành</span></li>
                                         </ul>
                                     </div>
@@ -37,7 +37,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="d-flex justify-content-end align-items-center w-100">
-                                        <div v-click="{{ $callAjaxModal }}" v-display-mode="update" width="600px"
+                                        <div v-click="{{ $callAjaxModal }}" v-modal-align="center" v-display-mode="update" width="600px"
                                             href="{{ route('site.store.form') }}" class="btn btn-secondary pointer fw-600">
                                             <span>Quay lại</span></div>
                                         <a href="{{ $sso_url }}"

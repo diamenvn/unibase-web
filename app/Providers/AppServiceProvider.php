@@ -31,27 +31,31 @@ class AppServiceProvider extends ServiceProvider
             [
                 'icon' => 'fas fa-chart-bar',
                 'title' => 'Thống kê',
-                'uri' => '/dashboard'
+                'uri' => '/dashboard',
             ],
             [
                 'title' => 'Sản phẩm',
                 'icon' => 'fas fa-shopping-bag',
-                'uri' => '/product/lists'
+                'uri' => '/product/lists',
+                'number' => 4
             ],
             [
                 'title' => 'Đơn hàng',
                 'icon' => 'fas fa-tags',
-                'uri' => '/order/lists'
+                'uri' => '/order/lists',
+                'number' => 15
             ],
             [
                 'title' => 'Khách hàng',
                 'icon' => 'fas fa-users',
-                'uri' => '/customer/lists'
+                'uri' => '/customer/lists',
+                'number' => 10
             ],
             [
                 'title' => 'Cửa hàng',
                 'icon' => 'fas fa-store',
-                'uri' => '/store/lists'
+                'uri' => '/store/lists',
+                'number' => 3
             ]
         ];
 

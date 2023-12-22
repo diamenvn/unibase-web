@@ -39,6 +39,7 @@ class SiteStoreController extends Controller
 
   public function form(Request $request)
   {
+    $req = $request;
     $request = $request->only("app", "step");
     $app = $request['app'] ?? "";
     $step = $request['step'] ?? "1";
@@ -48,6 +49,8 @@ class SiteStoreController extends Controller
     if ($app == "tiktok") {
       $data["sso_url"] = config("url.tiktok-sso-uri");
     }
+
+    $data['request'] = $req->all();
 
     return view($fileViewName, $data);
   }

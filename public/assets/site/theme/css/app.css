@@ -1217,6 +1217,12 @@ i:hover {
   border-color: #5966cd;
 }
 
+.link {
+  color: #0084D1;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .btn-outline-primary {
   border: 1px solid #5966cd;
   color: #5966cd;

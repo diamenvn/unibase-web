@@ -83,7 +83,7 @@
                                     <h6 class="page-title mb-1">
                                         <strong>Danh sách sản phẩm</strong>
                                     </h6>
-                                    <span class="page-subtitle">Danh sách các cửa hàng bên thứ 3 đang kết nối, có thể đồng bộ tất cả sản phẩm và đơn hàng vào đây sau khi đã kết nối. Nhấn thêm mới góc bên phải để thêm 1 kết nối mới và đồng bộ vào hệ thống</span>
+                                    <span class="page-subtitle">Danh sách các sản phẩm của các cửa hàng đang kết nối bao gồm cả những sản phẩm do bạn tự tạo ra trên Unibase</span>
                                 </div>
                                 <div>
                                     @if ($user->permission == 'admin')

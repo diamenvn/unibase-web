@@ -297,6 +297,12 @@ i {
   border-color: $primary-color;
 }
 
+.link {
+  color: #0084D1;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .btn-outline-primary {
   border: 1px solid $primary-color;
   color: $primary-color;
